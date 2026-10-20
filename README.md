@@ -43,4 +43,4 @@ Settings → Pages → Build and deployment: **Deploy from a branch**, branch `m
 
 ## Licences
 
-The bundled fonts are under the SIL Open Font License (`fonts/OFL.txt`). Starter books are the app's own.
+The code is under the licence in `LICENSE`. The bundled fonts are under the SIL Open Font License (`fonts/OFL.txt`).
