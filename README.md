@@ -4,7 +4,7 @@
 
 **[Open Recipe Box →](https://spagoodlers.github.io/recipe-box-web/)**
 
-The web version of [Recipe Box for Android](https://github.com/Spagoodlers/eink-recipes). It reads and writes the same sync file as the app, so a box kept on your phone opens here too, and the other way round. It needs no install, no account and no server: everything stays in your browser and in your own sync file.
+The web version of [Recipe Box for Android](https://github.com/Spagoodlers/recipe-box-android). It reads and writes the same sync file as the app, so a box kept on your phone opens here too, and the other way round. It needs no install, no account and no server: everything stays in your browser and in your own sync file.
 
 ## What it does
 
