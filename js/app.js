@@ -611,7 +611,7 @@ function viewSetup() {
       <div class="section a keep">About</div>
       <p class="a"><b>Recipe Box</b>. The no-nonsense recipe box. No ads. No accounts. No life stories, pop-ups or autoplay videos. Just the card.</p>
       <div class="a">Recipe Box is free. If it’s earned a place in your kitchen, you can tip the cook.<br><a class="btn" style="margin-top:6px;text-decoration:none" href="${KO_FI}" target="_blank" rel="noopener">Support on Ko-fi</a></div>
-      <p class="small dim a">Version ${VERSION} · <a href="fonts/OFL.txt" target="_blank">Font licences</a> · Everything stays in this browser and your own sync file.</p>
+      <p class="small dim a">Version ${VERSION} · <a href="privacy.html" target="_blank">Privacy</a> · <a href="fonts/OFL.txt" target="_blank">Font licences</a> · Everything stays in this browser and your own sync file.</p>
     </div></div><div class="count"></div>`,
     mount(el) { paged(el, 'setup'); },
   };
