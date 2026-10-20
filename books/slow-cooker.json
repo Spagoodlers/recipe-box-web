@@ -1,0 +1,347 @@
+{
+ "format": "recipebox",
+ "version": 2,
+ "about": "Put it in this morning, eat it tonight.",
+ "folders": [
+  {
+   "id": "starter-slow-cooker",
+   "name": "Slow Cooker"
+  }
+ ],
+ "recipes": [
+  {
+   "id": "starter-slow-cooker-slow-cooker-pulled-pork",
+   "title": "Slow Cooker Pulled Pork",
+   "description": "",
+   "ingredients": [
+    "4 lb pork shoulder",
+    "1 tbsp brown sugar",
+    "2 tsp paprika",
+    "1 tsp garlic powder",
+    "1 tsp salt",
+    "½ tsp black pepper",
+    "1 onion, sliced",
+    "½ cup chicken stock",
+    "1 cup barbecue sauce"
+   ],
+   "steps": [
+    "Mix the sugar, paprika, garlic powder, salt and pepper. Rub all over the pork.",
+    "Put the onion and stock in the slow cooker. Set the pork on top.",
+    "Cook on low for 8 hours, until it pulls apart easily with a fork (about 195°F).",
+    "Shred with two forks. Stir in the barbecue sauce."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 520",
+    "Protein: 33 g",
+    "Fat: 35 g",
+    "Carbohydrate: 18 g",
+    "Fiber: 1 g",
+    "Sugar: 14 g",
+    "Sodium: 820 mg"
+   ],
+   "servings": 8,
+   "yieldText": "8 servings",
+   "prepMin": 15,
+   "cookMin": 480,
+   "totalMin": 495,
+   "folderId": "starter-slow-cooker",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-slow-cooker-slow-cooker-chili",
+   "title": "Slow Cooker Chili",
+   "description": "",
+   "ingredients": [
+    "2 lb ground beef",
+    "1 onion, chopped",
+    "2 cloves garlic",
+    "2 cans (15 oz) kidney beans, drained",
+    "1 can (28 oz) crushed tomatoes",
+    "2 tbsp chili powder",
+    "1 tsp cumin",
+    "1 tsp salt"
+   ],
+   "steps": [
+    "Brown the beef with the onion and garlic in a pan until no pink remains. Drain the fat.",
+    "Put everything in the slow cooker and stir.",
+    "Cook on low for 6 hours."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 540",
+    "Protein: 35 g",
+    "Fat: 31 g",
+    "Carbohydrate: 31 g",
+    "Fiber: 8 g",
+    "Sugar: 7 g",
+    "Sodium: 940 mg"
+   ],
+   "servings": 6,
+   "yieldText": "6 servings",
+   "prepMin": 15,
+   "cookMin": 360,
+   "totalMin": 375,
+   "folderId": "starter-slow-cooker",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-slow-cooker-slow-cooker-chicken-tortilla-soup",
+   "title": "Slow Cooker Chicken Tortilla Soup",
+   "description": "",
+   "ingredients": [
+    "1½ lb chicken thighs",
+    "1 onion, chopped",
+    "1 can (15 oz) black beans, drained",
+    "1 cup frozen corn",
+    "1 can (14 oz) diced tomatoes",
+    "4 cups chicken stock",
+    "1 tsp cumin",
+    "1 tsp chili powder",
+    "1 tsp salt",
+    "tortilla chips, to serve",
+    "1 lime"
+   ],
+   "steps": [
+    "Put everything except the chips and lime in the slow cooker.",
+    "Cook on low for 6 hours, until the chicken shreds easily and reads 165°F.",
+    "Shred the chicken in the pot. Squeeze in the lime.",
+    "Serve over crushed tortilla chips."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 320",
+    "Protein: 28 g",
+    "Fat: 14 g",
+    "Carbohydrate: 22 g",
+    "Fiber: 5 g",
+    "Sugar: 6 g",
+    "Sodium: 1260 mg"
+   ],
+   "servings": 6,
+   "yieldText": "6 servings",
+   "prepMin": 10,
+   "cookMin": 360,
+   "totalMin": 370,
+   "folderId": "starter-slow-cooker",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-slow-cooker-slow-cooker-beef-stroganoff",
+   "title": "Slow Cooker Beef Stroganoff",
+   "description": "",
+   "ingredients": [
+    "2 lb beef chuck, in strips",
+    "1 onion, sliced",
+    "8 oz mushrooms, sliced",
+    "2 cloves garlic",
+    "1 cup beef stock",
+    "1 tbsp Worcestershire sauce",
+    "1 tsp salt",
+    "1 cup sour cream",
+    "2 tbsp flour",
+    "egg noodles, to serve"
+   ],
+   "steps": [
+    "Put the beef, onion, mushrooms, garlic, stock, Worcestershire and salt in the slow cooker.",
+    "Cook on low for 8 hours, until the beef is tender enough to cut with a spoon.",
+    "Mix the sour cream and flour. Stir it in and cook 30 minutes more.",
+    "Serve over egg noodles."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 490",
+    "Protein: 32 g",
+    "Fat: 37 g",
+    "Carbohydrate: 8 g",
+    "Fiber: 1 g",
+    "Sugar: 3 g",
+    "Sodium: 660 mg"
+   ],
+   "servings": 6,
+   "yieldText": "6 servings",
+   "prepMin": 15,
+   "cookMin": 480,
+   "totalMin": 495,
+   "folderId": "starter-slow-cooker",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-slow-cooker-slow-cooker-lentil-soup",
+   "title": "Slow Cooker Lentil Soup",
+   "description": "",
+   "ingredients": [
+    "1½ cups brown lentils, rinsed",
+    "1 onion, chopped",
+    "2 carrots, diced",
+    "2 celery sticks, diced",
+    "2 cloves garlic",
+    "1 can (14 oz) diced tomatoes",
+    "6 cups vegetable stock",
+    "1 tsp cumin",
+    "1 tsp salt",
+    "2 cups spinach"
+   ],
+   "steps": [
+    "Put everything except the spinach in the slow cooker.",
+    "Cook on low for 8 hours, until the lentils are soft and falling apart.",
+    "Stir in the spinach until it wilts."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 230",
+    "Protein: 15 g",
+    "Fat: 1 g",
+    "Carbohydrate: 41 g",
+    "Fiber: 8 g",
+    "Sugar: 7 g",
+    "Sodium: 1360 mg"
+   ],
+   "servings": 6,
+   "yieldText": "6 servings",
+   "prepMin": 15,
+   "cookMin": 480,
+   "totalMin": 495,
+   "folderId": "starter-slow-cooker",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-slow-cooker-slow-cooker-pot-roast",
+   "title": "Slow Cooker Pot Roast",
+   "description": "",
+   "ingredients": [
+    "3 lb beef chuck roast",
+    "1 tsp salt",
+    "½ tsp black pepper",
+    "1 lb small potatoes",
+    "4 carrots, in chunks",
+    "1 onion, quartered",
+    "1 cup beef stock",
+    "2 sprigs rosemary"
+   ],
+   "steps": [
+    "Season the beef with the salt and pepper.",
+    "Put the potatoes, carrots and onion in the slow cooker. Set the beef on top.",
+    "Pour in the stock and add the rosemary.",
+    "Cook on low for 8 hours, until the beef is very tender."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 570",
+    "Protein: 45 g",
+    "Fat: 34 g",
+    "Carbohydrate: 19 g",
+    "Fiber: 3 g",
+    "Sugar: 4 g",
+    "Sodium: 700 mg"
+   ],
+   "servings": 6,
+   "yieldText": "6 servings",
+   "prepMin": 15,
+   "cookMin": 480,
+   "totalMin": 495,
+   "folderId": "starter-slow-cooker",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-slow-cooker-slow-cooker-butter-chicken",
+   "title": "Slow Cooker Butter Chicken",
+   "description": "",
+   "ingredients": [
+    "2 lb chicken thighs, in chunks",
+    "1 onion, chopped",
+    "3 cloves garlic",
+    "1 tbsp grated ginger",
+    "2 tbsp garam masala",
+    "1 tsp turmeric",
+    "1 tsp salt",
+    "1 can (14 oz) tomato sauce",
+    "½ cup heavy cream",
+    "2 tbsp butter",
+    "rice, to serve"
+   ],
+   "steps": [
+    "Put everything except the cream and butter in the slow cooker.",
+    "Cook on low for 4 hours, until the chicken is tender and reads 165°F.",
+    "Stir in the cream and butter. Serve with rice."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 400",
+    "Protein: 30 g",
+    "Fat: 28 g",
+    "Carbohydrate: 7 g",
+    "Fiber: 1 g",
+    "Sugar: 4 g",
+    "Sodium: 870 mg"
+   ],
+   "servings": 6,
+   "yieldText": "6 servings",
+   "prepMin": 15,
+   "cookMin": 240,
+   "totalMin": 255,
+   "folderId": "starter-slow-cooker",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-slow-cooker-slow-cooker-oatmeal",
+   "title": "Slow Cooker Oatmeal",
+   "description": "",
+   "ingredients": [
+    "1½ cups steel-cut oats",
+    "6 cups water",
+    "1 cup milk",
+    "2 apples, diced",
+    "1 tsp cinnamon",
+    "pinch of salt",
+    "maple syrup, to serve"
+   ],
+   "steps": [
+    "Grease the slow cooker. Put in everything except the maple syrup.",
+    "Cook on low for 8 hours, overnight.",
+    "Stir well. Serve with maple syrup."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 220",
+    "Protein: 7 g",
+    "Fat: 4 g",
+    "Carbohydrate: 40 g",
+    "Fiber: 6 g",
+    "Sugar: 9 g",
+    "Sodium: 50 mg"
+   ],
+   "servings": 6,
+   "yieldText": "6 servings",
+   "prepMin": 5,
+   "cookMin": 480,
+   "totalMin": 485,
+   "folderId": "starter-slow-cooker",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  }
+ ]
+}

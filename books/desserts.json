@@ -1,0 +1,390 @@
+{
+ "format": "recipebox",
+ "version": 2,
+ "about": "Crumbles, puddings, pies and bars.",
+ "folders": [
+  {
+   "id": "starter-desserts",
+   "name": "Desserts"
+  }
+ ],
+ "recipes": [
+  {
+   "id": "starter-desserts-apple-crumble",
+   "title": "Apple Crumble",
+   "description": "",
+   "ingredients": [
+    "6 apples, peeled and sliced",
+    "2 tbsp sugar",
+    "1 tsp cinnamon",
+    "1 tbsp lemon juice",
+    "## Topping",
+    "1 cup flour",
+    "½ cup brown sugar",
+    "½ cup rolled oats",
+    "½ cup cold butter, cubed",
+    "pinch of salt"
+   ],
+   "steps": [
+    "Heat the oven to 375°F.",
+    "Toss the apples with the sugar, cinnamon and lemon juice. Spread in a baking dish.",
+    "Rub the flour, brown sugar, oats, butter and salt together until it looks like rough crumbs.",
+    "Scatter the topping over the apples.",
+    "Bake for 40 minutes, until golden and bubbling at the edges."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 420",
+    "Protein: 4 g",
+    "Fat: 16 g",
+    "Carbohydrate: 69 g",
+    "Fiber: 6 g",
+    "Sugar: 40 g",
+    "Sodium: 90 mg"
+   ],
+   "servings": 6,
+   "yieldText": "6 servings",
+   "prepMin": 20,
+   "cookMin": 40,
+   "totalMin": 60,
+   "folderId": "starter-desserts",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-desserts-rice-pudding",
+   "title": "Rice Pudding",
+   "description": "",
+   "ingredients": [
+    "½ cup short-grain rice",
+    "4 cups whole milk",
+    "⅓ cup sugar",
+    "pinch of salt",
+    "1 tsp vanilla extract",
+    "nutmeg or cinnamon, to serve"
+   ],
+   "steps": [
+    "Put the rice, milk, sugar and salt in a heavy pan. Bring to a simmer, stirring.",
+    "Cook on the lowest heat for 40 minutes, stirring often, until thick and creamy.",
+    "Stir in the vanilla. Serve warm or cold, dusted with nutmeg or cinnamon."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 300",
+    "Protein: 9 g",
+    "Fat: 8 g",
+    "Carbohydrate: 48 g",
+    "Fiber: 0 g",
+    "Sugar: 29 g",
+    "Sodium: 140 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 5,
+   "cookMin": 40,
+   "totalMin": 45,
+   "folderId": "starter-desserts",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-desserts-chocolate-mousse",
+   "title": "Chocolate Mousse",
+   "description": "",
+   "ingredients": [
+    "6 oz dark chocolate, chopped",
+    "3 eggs, separated",
+    "2 tbsp sugar",
+    "1 cup heavy cream",
+    "pinch of salt"
+   ],
+   "steps": [
+    "Melt the chocolate in a bowl over a pan of simmering water. Let it cool for 5 minutes.",
+    "Stir the egg yolks into the chocolate one at a time.",
+    "Whip the cream to soft peaks.",
+    "In a clean bowl, whisk the egg whites and salt to soft peaks, then whisk in the sugar until glossy.",
+    "Fold the cream into the chocolate, then fold in the whites gently.",
+    "Spoon into glasses. Chill for 4 hours."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 510",
+    "Protein: 9 g",
+    "Fat: 39 g",
+    "Carbohydrate: 30 g",
+    "Fiber: 3 g",
+    "Sugar: 25 g",
+    "Sodium: 120 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 20,
+   "cookMin": null,
+   "totalMin": 20,
+   "folderId": "starter-desserts",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-desserts-panna-cotta",
+   "title": "Panna Cotta",
+   "description": "",
+   "ingredients": [
+    "2½ tsp powdered gelatin",
+    "3 tbsp cold water",
+    "2 cups heavy cream",
+    "1 cup whole milk",
+    "½ cup sugar",
+    "1 tsp vanilla extract",
+    "berries, to serve"
+   ],
+   "steps": [
+    "Sprinkle the gelatin over the cold water and leave for 5 minutes.",
+    "Warm the cream, milk and sugar until steaming. Do not boil.",
+    "Take off the heat. Stir in the gelatin until dissolved, then the vanilla.",
+    "Pour into 6 glasses or ramekins. Chill for 4 hours, until set.",
+    "Serve with berries."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 360",
+    "Protein: 5 g",
+    "Fat: 30 g",
+    "Carbohydrate: 21 g",
+    "Fiber: 0 g",
+    "Sugar: 21 g",
+    "Sodium: 40 mg"
+   ],
+   "servings": 6,
+   "yieldText": "6 servings",
+   "prepMin": 15,
+   "cookMin": 5,
+   "totalMin": 20,
+   "folderId": "starter-desserts",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-desserts-lemon-bars",
+   "title": "Lemon Bars",
+   "description": "",
+   "ingredients": [
+    "## Base",
+    "1 cup flour",
+    "½ cup butter, softened",
+    "¼ cup powdered sugar",
+    "## Filling",
+    "2 eggs",
+    "1 cup sugar",
+    "2 tbsp flour",
+    "⅓ cup lemon juice",
+    "1 tbsp lemon zest"
+   ],
+   "steps": [
+    "Heat the oven to 350°F. Line an 8-inch square pan.",
+    "Mix the base ingredients into a dough and press into the pan.",
+    "Bake the base for 20 minutes, until pale gold.",
+    "Whisk the filling ingredients together and pour over the hot base.",
+    "Bake for 25 minutes, until just set.",
+    "Cool, then chill before cutting into 16 squares. Dust with powdered sugar."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 150",
+    "Protein: 2 g",
+    "Fat: 6 g",
+    "Carbohydrate: 21 g",
+    "Fiber: 0 g",
+    "Sugar: 15 g",
+    "Sodium: 30 mg"
+   ],
+   "servings": 16,
+   "yieldText": "16 bars",
+   "prepMin": 20,
+   "cookMin": 45,
+   "totalMin": 65,
+   "folderId": "starter-desserts",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-desserts-bread-pudding",
+   "title": "Bread Pudding",
+   "description": "",
+   "ingredients": [
+    "6 cups day-old bread, in cubes",
+    "3 eggs",
+    "2 cups milk",
+    "½ cup sugar",
+    "2 tbsp butter, melted",
+    "1 tsp cinnamon",
+    "1 tsp vanilla extract",
+    "½ cup raisins"
+   ],
+   "steps": [
+    "Heat the oven to 350°F. Butter a baking dish.",
+    "Put the bread and raisins in the dish.",
+    "Whisk the eggs, milk, sugar, butter, cinnamon and vanilla. Pour over the bread.",
+    "Press the bread down and leave to soak for 10 minutes.",
+    "Bake for 45 minutes, until puffed and set in the middle."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 300",
+    "Protein: 9 g",
+    "Fat: 10 g",
+    "Carbohydrate: 45 g",
+    "Fiber: 1 g",
+    "Sugar: 29 g",
+    "Sodium: 230 mg"
+   ],
+   "servings": 6,
+   "yieldText": "6 servings",
+   "prepMin": 15,
+   "cookMin": 45,
+   "totalMin": 60,
+   "folderId": "starter-desserts",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-desserts-peach-cobbler",
+   "title": "Peach Cobbler",
+   "description": "",
+   "ingredients": [
+    "6 cups sliced peaches (fresh or frozen)",
+    "½ cup sugar",
+    "1 tbsp cornstarch",
+    "1 tsp cinnamon",
+    "## Topping",
+    "1 cup flour",
+    "¼ cup sugar",
+    "1½ tsp baking powder",
+    "½ tsp salt",
+    "4 tbsp cold butter",
+    "½ cup milk"
+   ],
+   "steps": [
+    "Heat the oven to 375°F.",
+    "Toss the peaches with the sugar, cornstarch and cinnamon. Spread in a baking dish.",
+    "Mix the flour, sugar, baking powder and salt. Rub in the butter, then stir in the milk.",
+    "Drop spoonfuls of the topping over the peaches.",
+    "Bake for 45 minutes, until golden and bubbling."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 320",
+    "Protein: 4 g",
+    "Fat: 9 g",
+    "Carbohydrate: 59 g",
+    "Fiber: 3 g",
+    "Sugar: 39 g",
+    "Sodium: 350 mg"
+   ],
+   "servings": 6,
+   "yieldText": "6 servings",
+   "prepMin": 15,
+   "cookMin": 45,
+   "totalMin": 60,
+   "folderId": "starter-desserts",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-desserts-no-bake-cheesecake",
+   "title": "No-Bake Cheesecake",
+   "description": "",
+   "ingredients": [
+    "## Base",
+    "1½ cups graham cracker crumbs",
+    "6 tbsp butter, melted",
+    "## Filling",
+    "16 oz cream cheese, softened",
+    "½ cup powdered sugar",
+    "1 tsp vanilla extract",
+    "1 tbsp lemon juice",
+    "1 cup heavy cream"
+   ],
+   "steps": [
+    "Mix the crumbs and butter. Press into a 9-inch pan.",
+    "Beat the cream cheese, powdered sugar, vanilla and lemon juice until smooth.",
+    "Whip the cream to stiff peaks and fold it in.",
+    "Spread the filling over the base. Chill for 6 hours, until firm."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 470",
+    "Protein: 5 g",
+    "Fat: 40 g",
+    "Carbohydrate: 23 g",
+    "Fiber: 1 g",
+    "Sugar: 14 g",
+    "Sodium: 290 mg"
+   ],
+   "servings": 8,
+   "yieldText": "8 servings",
+   "prepMin": 25,
+   "cookMin": null,
+   "totalMin": 25,
+   "folderId": "starter-desserts",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-desserts-baked-apples",
+   "title": "Baked Apples",
+   "description": "",
+   "ingredients": [
+    "4 baking apples",
+    "¼ cup brown sugar",
+    "¼ cup chopped walnuts",
+    "¼ cup raisins",
+    "1 tsp cinnamon",
+    "2 tbsp butter",
+    "½ cup water"
+   ],
+   "steps": [
+    "Heat the oven to 350°F.",
+    "Core the apples, leaving the bottoms whole.",
+    "Mix the sugar, walnuts, raisins and cinnamon. Pack into the apples and top each with butter.",
+    "Stand in a dish with the water. Bake for 40 minutes, until tender."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 280",
+    "Protein: 2 g",
+    "Fat: 11 g",
+    "Carbohydrate: 50 g",
+    "Fiber: 6 g",
+    "Sugar: 39 g",
+    "Sodium: 30 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 10,
+   "cookMin": 40,
+   "totalMin": 50,
+   "folderId": "starter-desserts",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  }
+ ]
+}

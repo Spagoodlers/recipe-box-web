@@ -1,0 +1,375 @@
+{
+ "format": "recipebox",
+ "version": 2,
+ "about": "Turkey, ham, stuffing, gravy and pie.",
+ "folders": [
+  {
+   "id": "starter-holiday-classics",
+   "name": "Holiday Classics"
+  }
+ ],
+ "recipes": [
+  {
+   "id": "starter-holiday-classics-roast-turkey",
+   "title": "Roast Turkey",
+   "description": "",
+   "ingredients": [
+    "1 turkey (12 to 14 lb), thawed",
+    "½ cup butter, softened",
+    "2 tsp salt",
+    "1 tsp black pepper",
+    "1 onion, quartered",
+    "1 lemon, halved",
+    "a few sprigs thyme and sage"
+   ],
+   "steps": [
+    "Heat the oven to 325°F. Take out the neck and giblets. Pat the turkey dry.",
+    "Rub the butter, salt and pepper all over. Put the onion, lemon and herbs inside.",
+    "Roast for 3 hours, until the thickest part of the thigh reads 165°F. Cover loosely with foil if it browns too fast.",
+    "Rest for 30 minutes before carving."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 470",
+    "Protein: 49 g",
+    "Fat: 27 g",
+    "Carbohydrate: 2 g",
+    "Fiber: 0 g",
+    "Sugar: 1 g",
+    "Sodium: 590 mg"
+   ],
+   "servings": 12,
+   "yieldText": "12 servings",
+   "prepMin": 30,
+   "cookMin": 210,
+   "totalMin": 240,
+   "folderId": "starter-holiday-classics",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-holiday-classics-turkey-gravy",
+   "title": "Turkey Gravy",
+   "description": "",
+   "ingredients": [
+    "pan drippings from the turkey",
+    "¼ cup flour",
+    "3 cups turkey or chicken stock",
+    "salt and pepper"
+   ],
+   "steps": [
+    "Pour off all but ¼ cup of fat from the roasting pan.",
+    "Set the pan over medium heat. Whisk in the flour and cook for 2 minutes.",
+    "Whisk in the stock slowly. Simmer for 8 minutes, until thick. Season."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 20",
+    "Protein: 1 g",
+    "Fat: 0 g",
+    "Carbohydrate: 3 g",
+    "Fiber: 0 g",
+    "Sugar: 0 g",
+    "Sodium: 310 mg"
+   ],
+   "servings": 8,
+   "yieldText": "8 servings",
+   "prepMin": 5,
+   "cookMin": 10,
+   "totalMin": 15,
+   "folderId": "starter-holiday-classics",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-holiday-classics-bread-stuffing",
+   "title": "Bread Stuffing",
+   "description": "",
+   "ingredients": [
+    "1 loaf day-old bread, in cubes (about 12 cups)",
+    "½ cup butter",
+    "1 onion, chopped",
+    "3 celery sticks, chopped",
+    "2 tsp dried sage",
+    "1 tsp dried thyme",
+    "1 tsp salt",
+    "½ tsp black pepper",
+    "2 eggs",
+    "2 cups chicken stock"
+   ],
+   "steps": [
+    "Heat the oven to 350°F. Butter a large baking dish.",
+    "Melt the butter. Cook the onion and celery for 8 minutes, until soft. Stir in the herbs, salt and pepper.",
+    "Toss with the bread. Whisk the eggs and stock and pour over.",
+    "Spread in the dish. Cover with foil and bake for 25 minutes, then uncover and bake 20 minutes more."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 230",
+    "Protein: 6 g",
+    "Fat: 12 g",
+    "Carbohydrate: 24 g",
+    "Fiber: 2 g",
+    "Sugar: 3 g",
+    "Sodium: 670 mg"
+   ],
+   "servings": 10,
+   "yieldText": "10 servings",
+   "prepMin": 20,
+   "cookMin": 45,
+   "totalMin": 65,
+   "folderId": "starter-holiday-classics",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-holiday-classics-cranberry-sauce",
+   "title": "Cranberry Sauce",
+   "description": "",
+   "ingredients": [
+    "12 oz fresh cranberries",
+    "1 cup sugar",
+    "1 cup orange juice",
+    "1 tsp orange zest"
+   ],
+   "steps": [
+    "Put the sugar and orange juice in a pan. Bring to a boil.",
+    "Add the cranberries and zest. Simmer for 10 minutes, until most have burst.",
+    "Cool. It thickens as it cools."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 130",
+    "Protein: 1 g",
+    "Fat: 0 g",
+    "Carbohydrate: 33 g",
+    "Fiber: 1 g",
+    "Sugar: 31 g",
+    "Sodium: 0 mg"
+   ],
+   "servings": 8,
+   "yieldText": "8 servings",
+   "prepMin": 2,
+   "cookMin": 12,
+   "totalMin": 14,
+   "folderId": "starter-holiday-classics",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-holiday-classics-glazed-ham",
+   "title": "Glazed Ham",
+   "description": "",
+   "ingredients": [
+    "1 bone-in spiral ham (8 lb)",
+    "½ cup brown sugar",
+    "¼ cup honey",
+    "2 tbsp Dijon mustard",
+    "¼ tsp ground cloves"
+   ],
+   "steps": [
+    "Heat the oven to 325°F. Put the ham cut-side down in a roasting pan. Cover with foil.",
+    "Bake for 90 minutes.",
+    "Simmer the sugar, honey, mustard and cloves for 2 minutes.",
+    "Uncover the ham, brush with the glaze and bake 30 minutes more, glazing twice."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 400",
+    "Protein: 42 g",
+    "Fat: 17 g",
+    "Carbohydrate: 18 g",
+    "Fiber: 0 g",
+    "Sugar: 17 g",
+    "Sodium: 2570 mg"
+   ],
+   "servings": 12,
+   "yieldText": "12 servings",
+   "prepMin": 10,
+   "cookMin": 120,
+   "totalMin": 130,
+   "folderId": "starter-holiday-classics",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-holiday-classics-green-bean-casserole",
+   "title": "Green Bean Casserole",
+   "description": "",
+   "ingredients": [
+    "1½ lb green beans, trimmed and halved",
+    "1 can (10.5 oz) cream of mushroom soup",
+    "¾ cup milk",
+    "1 tsp soy sauce",
+    "black pepper",
+    "1⅓ cups crispy fried onions"
+   ],
+   "steps": [
+    "Heat the oven to 350°F.",
+    "Boil the beans for 5 minutes. Drain.",
+    "Mix the soup, milk, soy sauce and pepper. Stir in the beans and half the onions.",
+    "Bake for 25 minutes. Top with the rest of the onions and bake 5 minutes more."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 190",
+    "Protein: 8 g",
+    "Fat: 6 g",
+    "Carbohydrate: 25 g",
+    "Fiber: 6 g",
+    "Sugar: 2 g",
+    "Sodium: 560 mg"
+   ],
+   "servings": 8,
+   "yieldText": "8 servings",
+   "prepMin": 10,
+   "cookMin": 30,
+   "totalMin": 40,
+   "folderId": "starter-holiday-classics",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-holiday-classics-sweet-potato-casserole",
+   "title": "Sweet Potato Casserole",
+   "description": "",
+   "ingredients": [
+    "3 lb sweet potatoes",
+    "½ cup brown sugar",
+    "4 tbsp butter, melted",
+    "2 eggs",
+    "1 tsp vanilla extract",
+    "½ tsp salt",
+    "## Topping",
+    "1 cup chopped pecans",
+    "½ cup brown sugar",
+    "¼ cup flour",
+    "3 tbsp butter, melted"
+   ],
+   "steps": [
+    "Heat the oven to 400°F. Bake the sweet potatoes for 45 minutes, until soft. Lower the oven to 350°F.",
+    "Scoop out the flesh and mash with the sugar, butter, eggs, vanilla and salt. Spread in a baking dish.",
+    "Mix the topping and scatter it over.",
+    "Bake for 25 minutes."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 470",
+    "Protein: 6 g",
+    "Fat: 21 g",
+    "Carbohydrate: 66 g",
+    "Fiber: 7 g",
+    "Sugar: 34 g",
+    "Sodium: 300 mg"
+   ],
+   "servings": 8,
+   "yieldText": "8 servings",
+   "prepMin": 15,
+   "cookMin": 70,
+   "totalMin": 85,
+   "folderId": "starter-holiday-classics",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-holiday-classics-pumpkin-pie",
+   "title": "Pumpkin Pie",
+   "description": "",
+   "ingredients": [
+    "1 unbaked 9-inch pie crust",
+    "1 can (15 oz) pumpkin purée",
+    "¾ cup sugar",
+    "2 eggs",
+    "1 can (12 oz) evaporated milk",
+    "1 tsp cinnamon",
+    "½ tsp ground ginger",
+    "¼ tsp ground cloves",
+    "½ tsp salt"
+   ],
+   "steps": [
+    "Heat the oven to 425°F.",
+    "Whisk everything except the crust until smooth. Pour into the crust.",
+    "Bake for 15 minutes. Lower the oven to 350°F and bake 40 minutes more, until a knife comes out clean.",
+    "Cool for 2 hours before slicing."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 290",
+    "Protein: 7 g",
+    "Fat: 12 g",
+    "Carbohydrate: 41 g",
+    "Fiber: 2 g",
+    "Sugar: 26 g",
+    "Sodium: 350 mg"
+   ],
+   "servings": 8,
+   "yieldText": "8 servings",
+   "prepMin": 15,
+   "cookMin": 55,
+   "totalMin": 70,
+   "folderId": "starter-holiday-classics",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-holiday-classics-gingerbread-cookies",
+   "title": "Gingerbread Cookies",
+   "description": "",
+   "ingredients": [
+    "3 cups flour",
+    "1 tbsp ground ginger",
+    "1 tsp cinnamon",
+    "¼ tsp ground cloves",
+    "1 tsp baking soda",
+    "¼ tsp salt",
+    "¾ cup butter, softened",
+    "¾ cup brown sugar",
+    "1 egg",
+    "½ cup molasses"
+   ],
+   "steps": [
+    "Mix the flour, spices, baking soda and salt.",
+    "Beat the butter and sugar until fluffy. Beat in the egg and molasses.",
+    "Stir in the dry mix. Wrap the dough and chill for 1 hour.",
+    "Heat the oven to 350°F. Roll out ¼ inch thick and cut shapes.",
+    "Bake for 10 minutes. Cool on a rack before icing."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 160",
+    "Protein: 2 g",
+    "Fat: 6 g",
+    "Carbohydrate: 24 g",
+    "Fiber: 0 g",
+    "Sugar: 12 g",
+    "Sodium: 110 mg"
+   ],
+   "servings": 24,
+   "yieldText": "about 24 cookies",
+   "prepMin": 30,
+   "cookMin": 10,
+   "totalMin": 40,
+   "folderId": "starter-holiday-classics",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  }
+ ]
+}

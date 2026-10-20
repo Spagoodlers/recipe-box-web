@@ -1,0 +1,562 @@
+{
+ "format": "recipebox",
+ "version": 2,
+ "about": "Sunday roasts, stews, biscuits and cookies.",
+ "folders": [
+  {
+   "id": "starter-grandmas-kitchen",
+   "name": "Grandma's Kitchen"
+  }
+ ],
+ "recipes": [
+  {
+   "id": "starter-grandmas-kitchen-whole-roast-chicken",
+   "title": "Whole Roast Chicken",
+   "description": "",
+   "ingredients": [
+    "1 whole chicken (about 4 lb)",
+    "2 tbsp butter, softened",
+    "1 lemon, halved",
+    "4 cloves garlic",
+    "1 tsp salt",
+    "½ tsp black pepper",
+    "a few sprigs thyme"
+   ],
+   "steps": [
+    "Heat the oven to 425°F.",
+    "Pat the chicken dry. Rub it all over with the butter, salt and pepper.",
+    "Put the lemon, garlic and thyme inside the bird.",
+    "Roast breast-side up for 75 minutes, until the juices run clear and the thickest part of the thigh reads 165°F.",
+    "Rest for 15 minutes before carving."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 640",
+    "Protein: 51 g",
+    "Fat: 47 g",
+    "Carbohydrate: 2 g",
+    "Fiber: 0 g",
+    "Sugar: 0 g",
+    "Sodium: 790 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 15,
+   "cookMin": 90,
+   "totalMin": 105,
+   "folderId": "starter-grandmas-kitchen",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-grandmas-kitchen-pot-roast",
+   "title": "Pot Roast",
+   "description": "",
+   "ingredients": [
+    "3 lb beef chuck roast",
+    "1 tsp salt",
+    "½ tsp black pepper",
+    "2 tbsp oil",
+    "1 onion, quartered",
+    "2 cloves garlic",
+    "1 tbsp tomato paste",
+    "2 cups beef stock",
+    "2 sprigs rosemary",
+    "4 carrots, in chunks",
+    "3 celery sticks, in chunks"
+   ],
+   "steps": [
+    "Heat the oven to 300°F. Season the beef with the salt and pepper.",
+    "Heat the oil in a heavy lidded pot. Brown the beef well, 4 minutes per side. Lift it out.",
+    "Cook the onion and garlic in the same pot for 3 minutes. Stir in the tomato paste.",
+    "Put the beef back. Add the stock and rosemary. Cover and cook in the oven for 2 hours.",
+    "Add the carrots and celery, cover again and cook 1 hour more, until the beef falls apart."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 570",
+    "Protein: 45 g",
+    "Fat: 39 g",
+    "Carbohydrate: 8 g",
+    "Fiber: 2 g",
+    "Sugar: 4 g",
+    "Sodium: 850 mg"
+   ],
+   "servings": 6,
+   "yieldText": "6 servings",
+   "prepMin": 20,
+   "cookMin": 190,
+   "totalMin": 210,
+   "folderId": "starter-grandmas-kitchen",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-grandmas-kitchen-beef-stew",
+   "title": "Beef Stew",
+   "description": "",
+   "ingredients": [
+    "2 lb beef chuck, in 1½-inch cubes",
+    "3 tbsp flour",
+    "1 tsp salt",
+    "½ tsp black pepper",
+    "2 tbsp oil",
+    "1 onion, chopped",
+    "2 cloves garlic",
+    "2 tbsp tomato paste",
+    "4 cups beef stock",
+    "1 bay leaf",
+    "4 carrots, in chunks",
+    "1 lb potatoes, in chunks"
+   ],
+   "steps": [
+    "Toss the beef with the flour, salt and pepper.",
+    "Brown the beef in the oil in batches in a heavy pot. Set aside.",
+    "Soften the onion and garlic for 3 minutes. Stir in the tomato paste.",
+    "Return the beef. Add the stock and bay leaf. Cover and simmer gently for 90 minutes.",
+    "Add the carrots and potatoes. Simmer 45 minutes more, until everything is tender."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 480",
+    "Protein: 33 g",
+    "Fat: 28 g",
+    "Carbohydrate: 24 g",
+    "Fiber: 4 g",
+    "Sugar: 5 g",
+    "Sodium: 1070 mg"
+   ],
+   "servings": 6,
+   "yieldText": "6 servings",
+   "prepMin": 20,
+   "cookMin": 150,
+   "totalMin": 170,
+   "folderId": "starter-grandmas-kitchen",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-grandmas-kitchen-meatloaf",
+   "title": "Meatloaf",
+   "description": "",
+   "ingredients": [
+    "2 lb ground beef",
+    "1 onion, finely chopped",
+    "2 eggs",
+    "1 cup breadcrumbs",
+    "½ cup milk",
+    "1 tsp salt",
+    "½ tsp black pepper",
+    "1 tbsp Worcestershire sauce",
+    "½ cup ketchup",
+    "2 tbsp brown sugar"
+   ],
+   "steps": [
+    "Heat the oven to 350°F.",
+    "Mix the beef, onion, eggs, breadcrumbs, milk, salt, pepper and Worcestershire with your hands until just combined.",
+    "Shape into a loaf in a baking pan.",
+    "Stir the ketchup and brown sugar together and spread over the top.",
+    "Bake for 60 minutes, until the middle reads 160°F.",
+    "Rest for 10 minutes before slicing."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 540",
+    "Protein: 31 g",
+    "Fat: 33 g",
+    "Carbohydrate: 27 g",
+    "Fiber: 1 g",
+    "Sugar: 12 g",
+    "Sodium: 860 mg"
+   ],
+   "servings": 6,
+   "yieldText": "6 servings",
+   "prepMin": 15,
+   "cookMin": 60,
+   "totalMin": 75,
+   "folderId": "starter-grandmas-kitchen",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-grandmas-kitchen-chicken-noodle-soup",
+   "title": "Chicken Noodle Soup",
+   "description": "",
+   "ingredients": [
+    "1 tbsp butter",
+    "1 onion, chopped",
+    "2 carrots, sliced",
+    "2 celery sticks, sliced",
+    "8 cups chicken stock",
+    "1 lb boneless chicken thighs",
+    "1 tsp dried thyme",
+    "2 cups egg noodles",
+    "salt and pepper",
+    "a handful of parsley, chopped"
+   ],
+   "steps": [
+    "Melt the butter and soften the onion, carrots and celery for 5 minutes.",
+    "Add the stock, chicken and thyme. Simmer for 20 minutes, until the chicken is cooked through (165°F).",
+    "Lift out the chicken and shred it with two forks.",
+    "Add the noodles and cook for 8 minutes.",
+    "Return the chicken. Season and stir in the parsley."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 240",
+    "Protein: 19 g",
+    "Fat: 12 g",
+    "Carbohydrate: 16 g",
+    "Fiber: 2 g",
+    "Sugar: 3 g",
+    "Sodium: 1190 mg"
+   ],
+   "servings": 6,
+   "yieldText": "6 servings",
+   "prepMin": 15,
+   "cookMin": 40,
+   "totalMin": 55,
+   "folderId": "starter-grandmas-kitchen",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-grandmas-kitchen-mashed-potatoes",
+   "title": "Mashed Potatoes",
+   "description": "",
+   "ingredients": [
+    "3 lb potatoes, peeled, in chunks",
+    "1 tsp salt",
+    "½ cup butter",
+    "¾ cup warm milk",
+    "black pepper"
+   ],
+   "steps": [
+    "Cover the potatoes with cold salted water. Bring to a boil.",
+    "Simmer for 15 minutes, until a knife slides in easily.",
+    "Drain well. Return to the pot over low heat for 1 minute to steam dry.",
+    "Mash with the butter, then beat in the milk until smooth. Season."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 330",
+    "Protein: 6 g",
+    "Fat: 17 g",
+    "Carbohydrate: 40 g",
+    "Fiber: 5 g",
+    "Sugar: 3 g",
+    "Sodium: 470 mg"
+   ],
+   "servings": 6,
+   "yieldText": "6 servings",
+   "prepMin": 10,
+   "cookMin": 25,
+   "totalMin": 35,
+   "folderId": "starter-grandmas-kitchen",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-grandmas-kitchen-roast-potatoes",
+   "title": "Roast Potatoes",
+   "description": "",
+   "ingredients": [
+    "2 lb potatoes, peeled, in large chunks",
+    "4 tbsp oil or beef fat",
+    "1 tsp salt"
+   ],
+   "steps": [
+    "Heat the oven to 425°F with the oil in a roasting tin.",
+    "Boil the potatoes in salted water for 10 minutes.",
+    "Drain, then shake them in the pan to rough up the edges.",
+    "Carefully tip them into the hot oil, turn to coat, and sprinkle with salt.",
+    "Roast for 45 minutes, turning once, until golden and crisp."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 300",
+    "Protein: 5 g",
+    "Fat: 14 g",
+    "Carbohydrate: 39 g",
+    "Fiber: 5 g",
+    "Sugar: 2 g",
+    "Sodium: 590 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 10,
+   "cookMin": 60,
+   "totalMin": 70,
+   "folderId": "starter-grandmas-kitchen",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-grandmas-kitchen-roast-vegetables",
+   "title": "Roast Vegetables",
+   "description": "",
+   "ingredients": [
+    "3 carrots",
+    "2 parsnips",
+    "1 sweet potato",
+    "1 red onion",
+    "1 bell pepper",
+    "3 tbsp olive oil",
+    "1 tsp salt",
+    "½ tsp black pepper",
+    "1 tsp dried thyme"
+   ],
+   "steps": [
+    "Heat the oven to 425°F.",
+    "Cut all the vegetables into chunks of about the same size.",
+    "Toss with the oil, salt, pepper and thyme. Spread in one layer on a tray.",
+    "Roast for 35 minutes, turning halfway, until tender and browned at the edges."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 210",
+    "Protein: 2 g",
+    "Fat: 11 g",
+    "Carbohydrate: 28 g",
+    "Fiber: 7 g",
+    "Sugar: 9 g",
+    "Sodium: 640 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 15,
+   "cookMin": 35,
+   "totalMin": 50,
+   "folderId": "starter-grandmas-kitchen",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-grandmas-kitchen-pan-gravy",
+   "title": "Pan Gravy",
+   "description": "",
+   "ingredients": [
+    "pan drippings from a roast",
+    "2 tbsp flour",
+    "2 cups stock",
+    "salt and pepper"
+   ],
+   "steps": [
+    "Pour off all but about 2 tbsp of fat from the roasting pan.",
+    "Set the pan over medium heat. Stir in the flour and cook for 1 minute.",
+    "Slowly whisk in the stock, scraping up the brown bits.",
+    "Simmer for 5 minutes, until thick. Season to taste."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 10",
+    "Protein: 1 g",
+    "Fat: 0 g",
+    "Carbohydrate: 2 g",
+    "Fiber: 0 g",
+    "Sugar: 0 g",
+    "Sodium: 270 mg"
+   ],
+   "servings": 6,
+   "yieldText": "about 2 cups",
+   "prepMin": 2,
+   "cookMin": 8,
+   "totalMin": 10,
+   "folderId": "starter-grandmas-kitchen",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-grandmas-kitchen-buttermilk-biscuits",
+   "title": "Buttermilk Biscuits",
+   "description": "",
+   "ingredients": [
+    "2 cups flour",
+    "1 tbsp baking powder",
+    "½ tsp baking soda",
+    "1 tsp salt",
+    "½ cup cold butter, cubed",
+    "¾ cup cold buttermilk"
+   ],
+   "steps": [
+    "Heat the oven to 450°F.",
+    "Mix the flour, baking powder, baking soda and salt.",
+    "Rub in the butter until it's the size of peas.",
+    "Stir in the buttermilk just until it comes together.",
+    "Pat to 1 inch thick, fold in half twice, pat out again and cut into rounds.",
+    "Bake on a sheet for 12 minutes, until tall and golden."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 230",
+    "Protein: 4 g",
+    "Fat: 12 g",
+    "Carbohydrate: 25 g",
+    "Fiber: 1 g",
+    "Sugar: 1 g",
+    "Sodium: 620 mg"
+   ],
+   "servings": 8,
+   "yieldText": "8 biscuits",
+   "prepMin": 15,
+   "cookMin": 12,
+   "totalMin": 27,
+   "folderId": "starter-grandmas-kitchen",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-grandmas-kitchen-chocolate-chip-cookies",
+   "title": "Chocolate Chip Cookies",
+   "description": "",
+   "ingredients": [
+    "1 cup butter, softened",
+    "¾ cup sugar",
+    "¾ cup brown sugar",
+    "2 eggs",
+    "1 tsp vanilla",
+    "2¼ cups flour",
+    "1 tsp baking soda",
+    "1 tsp salt",
+    "2 cups chocolate chips"
+   ],
+   "steps": [
+    "Heat the oven to 375°F.",
+    "Beat the butter and both sugars until fluffy.",
+    "Beat in the eggs and vanilla.",
+    "Stir in the flour, baking soda and salt.",
+    "Fold in the chocolate chips.",
+    "Drop rounded tablespoons onto ungreased sheets, 2 inches apart.",
+    "Bake 9 to 11 minutes, until golden at the edges.",
+    "Cool on the sheet for 2 minutes, then on a rack."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 230",
+    "Protein: 2 g",
+    "Fat: 12 g",
+    "Carbohydrate: 31 g",
+    "Fiber: 1 g",
+    "Sugar: 21 g",
+    "Sodium: 190 mg"
+   ],
+   "servings": 24,
+   "yieldText": "24 cookies",
+   "prepMin": 15,
+   "cookMin": 11,
+   "totalMin": 26,
+   "folderId": "starter-grandmas-kitchen",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-grandmas-kitchen-oatmeal-raisin-cookies",
+   "title": "Oatmeal Raisin Cookies",
+   "description": "",
+   "ingredients": [
+    "1 cup butter, softened",
+    "1 cup brown sugar",
+    "½ cup sugar",
+    "2 eggs",
+    "1 tsp vanilla",
+    "1½ cups flour",
+    "1 tsp baking soda",
+    "1 tsp cinnamon",
+    "½ tsp salt",
+    "3 cups rolled oats",
+    "1 cup raisins"
+   ],
+   "steps": [
+    "Heat the oven to 350°F.",
+    "Beat the butter and both sugars. Beat in the eggs and vanilla.",
+    "Stir in the flour, baking soda, cinnamon and salt.",
+    "Stir in the oats and raisins.",
+    "Drop tablespoons onto sheets, 2 inches apart.",
+    "Bake 10 to 12 minutes, until golden at the edges."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 210",
+    "Protein: 3 g",
+    "Fat: 9 g",
+    "Carbohydrate: 32 g",
+    "Fiber: 2 g",
+    "Sugar: 17 g",
+    "Sodium: 140 mg"
+   ],
+   "servings": 24,
+   "yieldText": "24 cookies",
+   "prepMin": 15,
+   "cookMin": 12,
+   "totalMin": 27,
+   "folderId": "starter-grandmas-kitchen",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-grandmas-kitchen-apple-crumble",
+   "title": "Apple Crumble",
+   "description": "",
+   "ingredients": [
+    "6 apples, peeled and sliced",
+    "2 tbsp sugar",
+    "1 tsp cinnamon",
+    "1 cup flour",
+    "½ cup brown sugar",
+    "½ cup cold butter, cubed",
+    "½ cup rolled oats"
+   ],
+   "steps": [
+    "Heat the oven to 375°F.",
+    "Toss the apples with the sugar and cinnamon in a baking dish.",
+    "Rub the flour, brown sugar and butter together with your fingers into crumbs. Stir in the oats.",
+    "Scatter the crumble over the apples.",
+    "Bake for 40 minutes, until golden and bubbling."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 420",
+    "Protein: 4 g",
+    "Fat: 16 g",
+    "Carbohydrate: 69 g",
+    "Fiber: 6 g",
+    "Sugar: 40 g",
+    "Sodium: 60 mg"
+   ],
+   "servings": 6,
+   "yieldText": "6 servings",
+   "prepMin": 15,
+   "cookMin": 40,
+   "totalMin": 55,
+   "folderId": "starter-grandmas-kitchen",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  }
+ ]
+}

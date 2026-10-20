@@ -1,0 +1,342 @@
+{
+ "format": "recipebox",
+ "version": 2,
+ "about": "Filling meals without meat.",
+ "folders": [
+  {
+   "id": "starter-vegetarian",
+   "name": "Vegetarian"
+  }
+ ],
+ "recipes": [
+  {
+   "id": "starter-vegetarian-chickpea-curry",
+   "title": "Chickpea Curry",
+   "description": "",
+   "ingredients": [
+    "1 tbsp oil",
+    "1 onion, chopped",
+    "2 cloves garlic",
+    "1 tbsp grated ginger",
+    "2 tbsp curry powder",
+    "1 can (14 oz) chopped tomatoes",
+    "1 can (14 oz) coconut milk",
+    "2 cans chickpeas, drained",
+    "2 cups spinach",
+    "salt",
+    "rice, to serve"
+   ],
+   "steps": [
+    "Soften the onion in the oil for 5 minutes.",
+    "Add the garlic, ginger and curry powder for 1 minute.",
+    "Add the tomatoes, coconut milk and chickpeas. Simmer for 15 minutes.",
+    "Stir in the spinach until wilted. Season and serve with rice."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 430",
+    "Protein: 14 g",
+    "Fat: 25 g",
+    "Carbohydrate: 42 g",
+    "Fiber: 11 g",
+    "Sugar: 8 g",
+    "Sodium: 520 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 10,
+   "cookMin": 25,
+   "totalMin": 35,
+   "folderId": "starter-vegetarian",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-vegetarian-red-lentil-dal",
+   "title": "Red Lentil Dal",
+   "description": "",
+   "ingredients": [
+    "1 cup red lentils, rinsed",
+    "3 cups water",
+    "1 tsp turmeric",
+    "1 tsp salt",
+    "2 tbsp butter or oil",
+    "1 tsp cumin seeds",
+    "1 onion, chopped",
+    "2 cloves garlic",
+    "1 tbsp grated ginger",
+    "1 tomato, chopped",
+    "cilantro"
+   ],
+   "steps": [
+    "Simmer the lentils, water and turmeric for 20 minutes, until soft.",
+    "Meanwhile, fry the cumin seeds in the butter for 30 seconds.",
+    "Add the onion for 5 minutes, then the garlic, ginger and tomato for 3 minutes.",
+    "Stir everything into the lentils with the salt. Top with cilantro."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 240",
+    "Protein: 13 g",
+    "Fat: 6 g",
+    "Carbohydrate: 35 g",
+    "Fiber: 6 g",
+    "Sugar: 3 g",
+    "Sodium: 610 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 5,
+   "cookMin": 25,
+   "totalMin": 30,
+   "folderId": "starter-vegetarian",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-vegetarian-veggie-chili",
+   "title": "Veggie Chili",
+   "description": "",
+   "ingredients": [
+    "1 tbsp oil",
+    "1 onion, chopped",
+    "1 bell pepper, chopped",
+    "2 cloves garlic",
+    "2 tbsp chili powder",
+    "1 tsp ground cumin",
+    "1 can (28 oz) chopped tomatoes",
+    "2 cans beans, drained",
+    "1 cup corn",
+    "1 cup stock",
+    "salt"
+   ],
+   "steps": [
+    "Soften the onion and pepper in the oil for 5 minutes.",
+    "Add the garlic and spices for 1 minute.",
+    "Add everything else. Simmer for 25 minutes. Season."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 200",
+    "Protein: 10 g",
+    "Fat: 4 g",
+    "Carbohydrate: 37 g",
+    "Fiber: 9 g",
+    "Sugar: 9 g",
+    "Sodium: 590 mg"
+   ],
+   "servings": 6,
+   "yieldText": "6 servings",
+   "prepMin": 15,
+   "cookMin": 35,
+   "totalMin": 50,
+   "folderId": "starter-vegetarian",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-vegetarian-mushroom-risotto",
+   "title": "Mushroom Risotto",
+   "description": "",
+   "ingredients": [
+    "4 cups vegetable stock",
+    "2 tbsp butter",
+    "1 onion, finely chopped",
+    "8 oz mushrooms, sliced",
+    "1½ cups arborio rice",
+    "½ cup white wine (optional)",
+    "½ cup grated parmesan",
+    "salt and pepper"
+   ],
+   "steps": [
+    "Keep the stock hot in a pan.",
+    "Cook the onion and mushrooms in the butter for 5 minutes.",
+    "Stir in the rice for 1 minute. Add the wine and stir until absorbed.",
+    "Add the stock a ladle at a time, stirring, letting each be absorbed. About 20 minutes, until creamy and just tender.",
+    "Off the heat, stir in the parmesan. Season."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 420",
+    "Protein: 13 g",
+    "Fat: 11 g",
+    "Carbohydrate: 67 g",
+    "Fiber: 2 g",
+    "Sugar: 4 g",
+    "Sodium: 1030 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 10,
+   "cookMin": 30,
+   "totalMin": 40,
+   "folderId": "starter-vegetarian",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-vegetarian-bean-burritos",
+   "title": "Bean Burritos",
+   "description": "",
+   "ingredients": [
+    "2 cans pinto beans, drained",
+    "1 tsp ground cumin",
+    "1 tsp chili powder",
+    "1 cup cooked rice",
+    "1 cup grated cheese",
+    "4 large tortillas",
+    "salsa"
+   ],
+   "steps": [
+    "Warm the beans with the spices for 5 minutes. Mash lightly.",
+    "Fill the tortillas with beans, rice, cheese and salsa. Roll up.",
+    "Toast seam-side down in a dry pan for 2 minutes per side."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 450",
+    "Protein: 21 g",
+    "Fat: 14 g",
+    "Carbohydrate: 62 g",
+    "Fiber: 10 g",
+    "Sugar: 1 g",
+    "Sodium: 810 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 10,
+   "cookMin": 10,
+   "totalMin": 20,
+   "folderId": "starter-vegetarian",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-vegetarian-roasted-cauliflower",
+   "title": "Roasted Cauliflower",
+   "description": "",
+   "ingredients": [
+    "1 head cauliflower, in florets",
+    "3 tbsp olive oil",
+    "1 tsp ground cumin",
+    "1 tsp paprika",
+    "½ tsp salt"
+   ],
+   "steps": [
+    "Heat the oven to 425°F.",
+    "Toss the cauliflower with everything else on a tray.",
+    "Roast for 30 minutes, turning once, until browned."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 130",
+    "Protein: 3 g",
+    "Fat: 11 g",
+    "Carbohydrate: 7 g",
+    "Fiber: 3 g",
+    "Sugar: 3 g",
+    "Sodium: 330 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 5,
+   "cookMin": 30,
+   "totalMin": 35,
+   "folderId": "starter-vegetarian",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-vegetarian-tomato-mozzarella-pasta",
+   "title": "Tomato Mozzarella Pasta",
+   "description": "",
+   "ingredients": [
+    "8 oz pasta",
+    "2 cups cherry tomatoes, halved",
+    "2 cloves garlic, sliced",
+    "3 tbsp olive oil",
+    "4 oz mozzarella, cubed",
+    "a handful of basil",
+    "salt"
+   ],
+   "steps": [
+    "Cook the pasta in salted boiling water.",
+    "Meanwhile, cook the tomatoes and garlic in the oil for 5 minutes, until they start to burst.",
+    "Toss with the drained pasta, mozzarella and basil. Season."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 810",
+    "Protein: 29 g",
+    "Fat: 35 g",
+    "Carbohydrate: 93 g",
+    "Fiber: 6 g",
+    "Sugar: 8 g",
+    "Sodium: 370 mg"
+   ],
+   "servings": 2,
+   "yieldText": "2 servings",
+   "prepMin": 5,
+   "cookMin": 12,
+   "totalMin": 17,
+   "folderId": "starter-vegetarian",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-vegetarian-tofu-stir-fry",
+   "title": "Tofu Stir-Fry",
+   "description": "",
+   "ingredients": [
+    "14 oz firm tofu, pressed and cubed",
+    "2 tbsp oil",
+    "1 bell pepper, sliced",
+    "1 cup snap peas",
+    "2 cloves garlic, minced",
+    "3 tbsp soy sauce",
+    "1 tbsp honey",
+    "1 tsp cornstarch mixed with 2 tbsp water"
+   ],
+   "steps": [
+    "Fry the tofu in the oil for 8 minutes, turning, until golden. Lift it out.",
+    "Stir-fry the pepper and snap peas for 3 minutes.",
+    "Add the garlic for 30 seconds.",
+    "Return the tofu with the soy sauce, honey and cornstarch mix. Toss for 1 minute."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 490",
+    "Protein: 33 g",
+    "Fat: 32 g",
+    "Carbohydrate: 23 g",
+    "Fiber: 6 g",
+    "Sugar: 14 g",
+    "Sodium: 1350 mg"
+   ],
+   "servings": 2,
+   "yieldText": "2 servings",
+   "prepMin": 10,
+   "cookMin": 12,
+   "totalMin": 22,
+   "folderId": "starter-vegetarian",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  }
+ ]
+}

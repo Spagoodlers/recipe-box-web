@@ -1,0 +1,666 @@
+{
+ "format": "recipebox",
+ "version": 2,
+ "about": "For people who've never cooked. The basics you need to eat.",
+ "folders": [
+  {
+   "id": "starter-learning-to-cook",
+   "name": "Learning to Cook",
+   "ordered": true
+  }
+ ],
+ "recipes": [
+  {
+   "id": "starter-learning-to-cook-how-to-chop-an-onion",
+   "title": "How to Chop an Onion",
+   "description": "You'll learn: holding a knife safely and chopping evenly, the first step of most savoury recipes. You need: a sharp chef's knife and a chopping board.",
+   "ingredients": [
+    "1 onion"
+   ],
+   "steps": [
+    "Put a damp cloth under your chopping board so it can't slide.",
+    "Cut the onion in half from the top (the pointed end) through the root (the hairy end).",
+    "Peel off the papery skin and the first tough layer from each half. Leave the root on: it holds the layers together.",
+    "Lay one half flat side down. Curl the fingertips of your other hand under, knuckles towards the blade, and hold the onion.",
+    "Make cuts from the top towards the root, ¼ inch apart. Stop just short of the root so the half stays in one piece.",
+    "Now slice across those cuts, ¼ inch apart, starting at the top. The onion falls into small squares.",
+    "Throw away the root end. Repeat with the other half."
+   ],
+   "notes": "A sharp knife is safer than a blunt one: it doesn't slip.\nKeep your fingertips curled under and let the side of the blade rest against your knuckles.\nEyes stinging? Chill the onion for 10 minutes first, and keep your face back from the board.\nEven pieces cook evenly. Big and small pieces together means some burn while others stay raw.",
+   "nutrition": [
+    "Calories: 60",
+    "Protein: 2 g",
+    "Fat: 0 g",
+    "Carbohydrate: 14 g",
+    "Fiber: 3 g",
+    "Sugar: 6 g",
+    "Sodium: 10 mg"
+   ],
+   "servings": 1,
+   "yieldText": "about 1 cup chopped onion",
+   "prepMin": 5,
+   "cookMin": null,
+   "totalMin": 5,
+   "folderId": "starter-learning-to-cook",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-learning-to-cook-how-to-mince-garlic",
+   "title": "How to Mince Garlic",
+   "description": "You'll learn: peeling and mincing garlic. You need: a chef's knife and a chopping board.",
+   "ingredients": [
+    "1 clove garlic"
+   ],
+   "steps": [
+    "Pull one clove of garlic off the bulb.",
+    "Lay the flat side of your knife on the clove and press down hard with the heel of your hand until it cracks.",
+    "Peel off the loose skin and cut off the hard end.",
+    "Slice the clove thinly, then rock the knife back and forth over the slices until the pieces are as small as rice grains."
+   ],
+   "notes": "1 clove is about 1 teaspoon minced.\nGarlic burns fast. Add it to a hot pan after onions have softened, and cook it only until it smells good, about 30 seconds.\nBurnt garlic tastes bitter. If it turns dark brown, start it again.",
+   "nutrition": [],
+   "servings": 1,
+   "yieldText": "about 1 tsp minced garlic",
+   "prepMin": 3,
+   "cookMin": null,
+   "totalMin": 3,
+   "folderId": "starter-learning-to-cook",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-learning-to-cook-scrambled-eggs",
+   "title": "Scrambled Eggs",
+   "description": "You'll learn: gentle heat, and stopping before food is overcooked. You need: a non-stick frying pan, a bowl, a fork and a spatula.",
+   "ingredients": [
+    "2 large eggs",
+    "1 tsp butter",
+    "1 pinch of salt",
+    "1 pinch of black pepper"
+   ],
+   "steps": [
+    "Tap each egg firmly on the counter (not the bowl's edge, which pushes shell inside) and open it into a bowl. Scoop out any shell with a bigger piece of shell.",
+    "Add the salt. Beat with a fork until there are no streaks of white left.",
+    "Put a non-stick pan over LOW heat. Add the butter and let it melt, about 1 minute. It should foam gently, not turn brown.",
+    "Pour in the eggs. Wait until a thin set layer forms around the edge.",
+    "Slowly push the set egg from the edge to the middle with a spatula. Keep doing this every few seconds for 2 minutes, until soft curds form.",
+    "Turn off the heat while the eggs still look a little wet and shiny: they keep cooking from the pan's heat.",
+    "Tip them onto a plate straight away and add the pepper."
+   ],
+   "notes": "Done when: soft, moist curds with no runny egg left on the plate.\nRubbery and dry? The heat was too high or they cooked too long. Next time keep the heat low and stop sooner.\nWash your hands after handling raw eggs.",
+   "nutrition": [
+    "Calories: 180",
+    "Protein: 13 g",
+    "Fat: 13 g",
+    "Carbohydrate: 1 g",
+    "Fiber: 0 g",
+    "Sugar: 0 g",
+    "Sodium: 310 mg"
+   ],
+   "servings": 1,
+   "yieldText": "1 servings",
+   "prepMin": 2,
+   "cookMin": 3,
+   "totalMin": 5,
+   "folderId": "starter-learning-to-cook",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-learning-to-cook-fried-eggs",
+   "title": "Fried Eggs",
+   "description": "You'll learn: heating a pan properly, and how egg whites tell you they're cooked. You need: a non-stick frying pan, a cup and a spatula.",
+   "ingredients": [
+    "2 large eggs",
+    "1 tsp oil or butter",
+    "1 pinch of salt"
+   ],
+   "steps": [
+    "Put a non-stick pan over MEDIUM heat with the oil. Heat for 1 minute, until a drop of water flicked in sizzles.",
+    "Crack each egg into a cup first, then slide it gently into the pan. This keeps the yolk whole and shell out of the pan.",
+    "Cook without touching for 3 minutes, until the whites are completely white and set, with no clear jelly left near the yolk.",
+    "Sprinkle with the salt. For sunny-side up, lift out with a spatula now.",
+    "For over easy: slide the spatula under, flip gently and cook 30 seconds more, then lift out."
+   ],
+   "notes": "Done when: the white is opaque all the way to the yolk. A runny yolk is fine; runny white is not.\nEdges burning before the white sets? Turn the heat down a little, or cover the pan for the last minute.\nYolk broke? It still tastes the same. Call it a fried egg sandwich.",
+   "nutrition": [
+    "Calories: 180",
+    "Protein: 13 g",
+    "Fat: 13 g",
+    "Carbohydrate: 1 g",
+    "Fiber: 0 g",
+    "Sugar: 0 g",
+    "Sodium: 310 mg"
+   ],
+   "servings": 1,
+   "yieldText": "1 servings",
+   "prepMin": 1,
+   "cookMin": 4,
+   "totalMin": 5,
+   "folderId": "starter-learning-to-cook",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-learning-to-cook-boiled-eggs",
+   "title": "Boiled Eggs",
+   "description": "You'll learn: boiling versus simmering, and timing to get exactly the yolk you want. You need: a small pan, a spoon and a bowl.",
+   "ingredients": [
+    "2 large eggs",
+    "water",
+    "a bowl of cold water"
+   ],
+   "steps": [
+    "Fill a small pan halfway with water. Bring it to a boil over HIGH heat: big bubbles rolling all over the surface.",
+    "Turn the heat down to MEDIUM so the water bubbles steadily but gently.",
+    "Lower the eggs in one at a time on a spoon, so they don't crack on the bottom.",
+    "Start the timer for the yolk you want: runny 6 minutes, jammy 8 minutes, firm 10 minutes.",
+    "Lift the eggs into the cold water and leave them for 2 minutes. This stops the cooking and makes peeling easier.",
+    "Tap all over on the counter, roll gently, and peel under running water, starting at the wide end."
+   ],
+   "notes": "Eggs straight from the fridge: these times are for those. Room-temperature eggs cook about 1 minute faster.\nHard to peel? Very fresh eggs peel badly. Eggs a week old peel easily.\nKeep peeled hard-boiled eggs in the fridge and eat within 5 days.",
+   "nutrition": [
+    "Calories: 140",
+    "Protein: 13 g",
+    "Fat: 10 g",
+    "Carbohydrate: 1 g",
+    "Fiber: 0 g",
+    "Sugar: 0 g",
+    "Sodium: 140 mg"
+   ],
+   "servings": 1,
+   "yieldText": "1 servings",
+   "prepMin": 1,
+   "cookMin": 10,
+   "totalMin": 11,
+   "folderId": "starter-learning-to-cook",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-learning-to-cook-poached-eggs",
+   "title": "Poached Eggs",
+   "description": "You'll learn: what a simmer looks like, and cooking in gently moving water. You need: a deep pan, two cups, a spoon and a slotted spoon.",
+   "ingredients": [
+    "2 very fresh eggs",
+    "1 tsp white vinegar",
+    "water"
+   ],
+   "steps": [
+    "Fill a deep pan with 3 inches of water. Heat over MEDIUM until small bubbles rise from the bottom but the surface barely moves. That's a simmer.",
+    "Add the vinegar. It helps the white hold together.",
+    "Crack each egg into its own cup.",
+    "Stir the water into a slow whirlpool with a spoon. Slide one egg into the middle from just above the surface.",
+    "Cook for 3 minutes, until the white is set and the yolk wobbles when you nudge it.",
+    "Lift out with a slotted spoon and let it drain on paper towel. Cook the second egg the same way."
+   ],
+   "notes": "The fresher the egg, the neater it poaches. Old eggs spread into wispy strands.\nIf the water is boiling hard, the egg breaks apart. Keep it to a gentle simmer.\nDone when: the white is opaque all over, with no clear jelly.",
+   "nutrition": [
+    "Calories: 140",
+    "Protein: 13 g",
+    "Fat: 10 g",
+    "Carbohydrate: 1 g",
+    "Fiber: 0 g",
+    "Sugar: 0 g",
+    "Sodium: 140 mg"
+   ],
+   "servings": 1,
+   "yieldText": "1 servings",
+   "prepMin": 2,
+   "cookMin": 4,
+   "totalMin": 6,
+   "folderId": "starter-learning-to-cook",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-learning-to-cook-omelette",
+   "title": "Omelette",
+   "description": "You'll learn: controlling medium heat and moving food in the pan. You need: a non-stick frying pan (8 inch is ideal), a bowl, a fork and a spatula.",
+   "ingredients": [
+    "3 large eggs",
+    "1 tsp butter",
+    "1 pinch of salt",
+    "¼ cup grated cheese"
+   ],
+   "steps": [
+    "Beat the eggs and salt in a bowl with a fork until smooth.",
+    "Put a non-stick pan over MEDIUM heat. Add the butter and swirl it around until it stops foaming, about 1 minute.",
+    "Pour in the eggs. Leave them for 20 seconds.",
+    "With a spatula, pull the set edges into the middle and tilt the pan so runny egg flows into the gaps. Repeat around the pan for 1 minute.",
+    "When the top is nearly set but still glossy, scatter the cheese over one half.",
+    "Slide the spatula under the empty half and fold it over the cheese.",
+    "Tilt the pan and slide the omelette onto a plate."
+   ],
+   "notes": "Done when: the outside is pale yellow, not brown, and the middle is just set.\nOther fillings: chopped ham, cooked mushrooms, spinach, herbs. Have them ready and warm before you start: the omelette won't wait.\nIt tore when folding? It's still breakfast. Fold it on the plate.",
+   "nutrition": [
+    "Calories: 360",
+    "Protein: 26 g",
+    "Fat: 27 g",
+    "Carbohydrate: 1 g",
+    "Fiber: 0 g",
+    "Sugar: 1 g",
+    "Sodium: 560 mg"
+   ],
+   "servings": 1,
+   "yieldText": "1 servings",
+   "prepMin": 2,
+   "cookMin": 3,
+   "totalMin": 5,
+   "folderId": "starter-learning-to-cook",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-learning-to-cook-grilled-cheese-sandwich",
+   "title": "Grilled Cheese Sandwich",
+   "description": "You'll learn: medium-low heat, which browns the outside while the inside heats through. You need: a frying pan and a spatula.",
+   "ingredients": [
+    "2 slices bread",
+    "2 slices cheese",
+    "1 tbsp butter, softened"
+   ],
+   "steps": [
+    "Spread the butter thinly on one side of each slice of bread, right to the edges.",
+    "Put one slice butter-side down on a board. Lay the cheese on top, then the other slice butter-side up.",
+    "Put a frying pan over MEDIUM-LOW heat. Heat for 1 minute.",
+    "Put the sandwich in the pan. Cook for 3 minutes, pressing gently with a spatula, until the underside is golden brown.",
+    "Flip it and cook the other side for 3 minutes, until golden and the cheese has melted.",
+    "Lift onto a board, wait 1 minute and cut in half."
+   ],
+   "notes": "Bread browning but cheese still hard? The heat is too high. Turn it down and put a lid on the pan for 1 minute.\nSoft butter spreads without tearing the bread. Leave it out for 30 minutes, or use mayonnaise instead: it browns beautifully.",
+   "nutrition": [
+    "Calories: 430",
+    "Protein: 16 g",
+    "Fat: 27 g",
+    "Carbohydrate: 30 g",
+    "Fiber: 2 g",
+    "Sugar: 3 g",
+    "Sodium: 600 mg"
+   ],
+   "servings": 1,
+   "yieldText": "1 servings",
+   "prepMin": 2,
+   "cookMin": 6,
+   "totalMin": 8,
+   "folderId": "starter-learning-to-cook",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-learning-to-cook-porridge",
+   "title": "Porridge",
+   "description": "You'll learn: simmering and stirring so food doesn't catch. You need: a small pan and a wooden spoon.",
+   "ingredients": [
+    "½ cup rolled oats",
+    "1 cup milk or water",
+    "1 pinch of salt",
+    "honey or fruit, to serve"
+   ],
+   "steps": [
+    "Put the oats, milk and salt in a small pan.",
+    "Heat over MEDIUM, stirring, until small bubbles appear at the edge, about 2 minutes.",
+    "Turn the heat to LOW. Cook for 5 minutes, stirring every 30 seconds so it doesn't stick and burn on the bottom.",
+    "It's ready when it's thick and creamy and the oats are soft. Add a splash more milk if it's too thick.",
+    "Spoon into a bowl and top with the honey or fruit."
+   ],
+   "notes": "Milk boils over fast. Never leave the pan, and keep the heat low once it bubbles.\nBurnt bits on the bottom? Don't scrape them in. Pour off the top into a bowl.\nSoak the pan in water straight away; dried porridge sets like cement.",
+   "nutrition": [
+    "Calories: 170",
+    "Protein: 6 g",
+    "Fat: 3 g",
+    "Carbohydrate: 31 g",
+    "Fiber: 4 g",
+    "Sugar: 0 g",
+    "Sodium: 160 mg"
+   ],
+   "servings": 1,
+   "yieldText": "1 servings",
+   "prepMin": 1,
+   "cookMin": 5,
+   "totalMin": 6,
+   "folderId": "starter-learning-to-cook",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-learning-to-cook-white-rice-in-a-pan",
+   "title": "White Rice in a Pan",
+   "description": "You'll learn: the absorption method, where rice drinks up exactly the right amount of water. You need: a sieve and a pan with a lid.",
+   "ingredients": [
+    "1 cup long-grain white rice",
+    "1½ cups water",
+    "½ tsp salt"
+   ],
+   "steps": [
+    "Put the rice in a sieve and rinse under the cold tap, rubbing with your fingers, until the water runs nearly clear. This stops it turning sticky.",
+    "Put the rice, water and salt in a pan with a tight lid.",
+    "Bring to a boil over HIGH heat, uncovered.",
+    "As soon as it boils, turn the heat to the LOWEST setting and put the lid on.",
+    "Cook for 15 minutes. Don't lift the lid: the steam is doing the cooking.",
+    "Take the pan off the heat and leave it covered for 5 minutes more.",
+    "Fluff the rice with a fork to separate the grains."
+   ],
+   "notes": "The ratio: 1 cup of white rice to 1½ cups of water. Brown rice needs 2 cups of water and 40 minutes.\nStill crunchy? Sprinkle in 2 tbsp water, cover and cook on low 5 minutes more.\nMushy? Too much water or the lid came off. Spread it on a tray to dry and use it for fried rice.\nLeftover rice: cool it within 1 hour, keep it in the fridge and eat within 1 day. Reheat until steaming hot.",
+   "nutrition": [
+    "Calories: 230",
+    "Protein: 4 g",
+    "Fat: 0 g",
+    "Carbohydrate: 49 g",
+    "Fiber: 1 g",
+    "Sugar: 0 g",
+    "Sodium: 390 mg"
+   ],
+   "servings": 3,
+   "yieldText": "3 servings",
+   "prepMin": 2,
+   "cookMin": 20,
+   "totalMin": 22,
+   "folderId": "starter-learning-to-cook",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-learning-to-cook-plain-pasta",
+   "title": "Plain Pasta",
+   "description": "You'll learn: a rolling boil, salting water, and testing by taste. You need: a large pot, a colander, a mug and tongs or a spoon.",
+   "ingredients": [
+    "8 oz dried pasta",
+    "1 tbsp salt",
+    "water"
+   ],
+   "steps": [
+    "Fill a large pot three-quarters full of water. Cover and bring to a boil over HIGH heat.",
+    "Add the salt. The water should taste like the sea: this is the only chance to season the pasta itself.",
+    "Add the pasta and stir straight away so the pieces don't stick together.",
+    "Boil uncovered, stirring now and then, for the time on the packet, usually 10 minutes.",
+    "Two minutes before the end, fish out a piece and bite it. It's done when it's tender but still a little firm in the middle (al dente).",
+    "Scoop out 1 cup of the cooking water with a mug, then drain the pasta in a colander in the sink.",
+    "Toss the pasta with your sauce straight away, adding splashes of the cooking water until it's glossy."
+   ],
+   "notes": "Use a big pot: crowded pasta sticks.\nDon't add oil to the water. It makes sauce slide off.\nPour the hot water away from you; the steam burns.\nAbout 4 oz of dried pasta per person for a main meal.",
+   "nutrition": [
+    "Calories: 420",
+    "Protein: 15 g",
+    "Fat: 2 g",
+    "Carbohydrate: 85 g",
+    "Fiber: 4 g",
+    "Sugar: 3 g",
+    "Sodium: 3500 mg"
+   ],
+   "servings": 2,
+   "yieldText": "2 servings",
+   "prepMin": 2,
+   "cookMin": 12,
+   "totalMin": 14,
+   "folderId": "starter-learning-to-cook",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-learning-to-cook-baked-potato",
+   "title": "Baked Potato",
+   "description": "You'll learn: preheating the oven, and testing doneness with a knife. You need: an oven, a fork, a knife and oven gloves.",
+   "ingredients": [
+    "1 large baking potato (russet)",
+    "1 tsp oil",
+    "1 pinch of salt",
+    "butter, to serve"
+   ],
+   "steps": [
+    "Heat the oven to 400°F. Give it 15 minutes to get properly hot.",
+    "Scrub the potato under running water and dry it.",
+    "Prick it 6 or 7 times all over with a fork, so steam can escape.",
+    "Rub with the oil and salt.",
+    "Put it straight on the middle oven rack and bake for 60 minutes.",
+    "Squeeze it gently with an oven glove. It's done when it gives easily and a knife slides into the middle with no resistance.",
+    "Cut a cross in the top, squeeze the sides to open it and add the butter."
+   ],
+   "notes": "Bigger potatoes need longer, up to 75 minutes. Small ones may be done in 45.\nFor crispy skin, don't wrap it in foil.\nAlways use oven gloves: the rack and the potato will both be very hot.",
+   "nutrition": [
+    "Calories: 330",
+    "Protein: 7 g",
+    "Fat: 5 g",
+    "Carbohydrate: 63 g",
+    "Fiber: 8 g",
+    "Sugar: 3 g",
+    "Sodium: 180 mg"
+   ],
+   "servings": 1,
+   "yieldText": "1 servings",
+   "prepMin": 2,
+   "cookMin": 60,
+   "totalMin": 62,
+   "folderId": "starter-learning-to-cook",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-learning-to-cook-steamed-broccoli",
+   "title": "Steamed Broccoli",
+   "description": "You'll learn: steaming, and cooking vegetables until just tender. You need: a knife, a chopping board, a pan with a lid and a colander.",
+   "ingredients": [
+    "1 head broccoli",
+    "water",
+    "1 pinch of salt",
+    "1 tsp butter"
+   ],
+   "steps": [
+    "Cut the broccoli into bite-size florets (the little trees). Peel and slice the stalk too; it's good to eat.",
+    "Put 1 inch of water in a pan with a lid. Bring to a boil over HIGH heat.",
+    "Add the broccoli and put the lid on.",
+    "Steam for 5 minutes, until bright green and a knife slides into a stalk with a little resistance.",
+    "Drain in a colander. Toss with the salt and butter."
+   ],
+   "notes": "Done when: bright green and just tender. Olive-green and soft means overcooked.\nWorks the same for green beans (6 minutes), carrot slices (8 minutes) and cauliflower (6 minutes).",
+   "nutrition": [
+    "Calories: 80",
+    "Protein: 5 g",
+    "Fat: 3 g",
+    "Carbohydrate: 12 g",
+    "Fiber: 5 g",
+    "Sugar: 3 g",
+    "Sodium: 140 mg"
+   ],
+   "servings": 2,
+   "yieldText": "2 servings",
+   "prepMin": 3,
+   "cookMin": 5,
+   "totalMin": 8,
+   "folderId": "starter-learning-to-cook",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-learning-to-cook-simple-green-salad",
+   "title": "Simple Green Salad",
+   "description": "You'll learn: washing and drying leaves, and making a basic dressing (3 parts oil to 1 part acid). You need: a big bowl, a knife, a board and a jar with a lid.",
+   "ingredients": [
+    "1 head lettuce",
+    "½ cucumber",
+    "1 tomato",
+    "## Dressing",
+    "3 tbsp olive oil",
+    "1 tbsp vinegar or lemon juice",
+    "1 tsp mustard",
+    "1 pinch of salt"
+   ],
+   "steps": [
+    "Pull the lettuce leaves apart. Wash them in a bowl of cold water and lift them out so grit stays behind.",
+    "Dry the leaves completely, in a salad spinner or rolled in a clean towel. Wet leaves make dressing slide off.",
+    "Tear the lettuce into bite-size pieces into a big bowl.",
+    "Slice the cucumber into thin rounds and cut the tomato into wedges. Add them to the bowl.",
+    "Put the olive oil, vinegar, mustard and salt in a jar. Close the lid and shake hard until it looks creamy.",
+    "Just before eating, pour the dressing over the salad and toss with your hands or two spoons until every leaf is coated."
+   ],
+   "notes": "Dress the salad only when you're about to eat it, or it goes limp.\nThe dressing keeps in the jar in the fridge for a week. Shake again before using.",
+   "nutrition": [
+    "Calories: 240",
+    "Protein: 5 g",
+    "Fat: 21 g",
+    "Carbohydrate: 13 g",
+    "Fiber: 4 g",
+    "Sugar: 5 g",
+    "Sodium: 180 mg"
+   ],
+   "servings": 2,
+   "yieldText": "2 servings",
+   "prepMin": 10,
+   "cookMin": null,
+   "totalMin": 10,
+   "folderId": "starter-learning-to-cook",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-learning-to-cook-pan-fried-chicken-breast",
+   "title": "Pan-Fried Chicken Breast",
+   "description": "You'll learn: searing, and checking that chicken is safely cooked. You need: a frying pan, tongs, paper towel and ideally a meat thermometer.",
+   "ingredients": [
+    "2 boneless, skinless chicken breasts",
+    "1 tbsp oil",
+    "½ tsp salt",
+    "¼ tsp black pepper"
+   ],
+   "steps": [
+    "Pat the chicken dry all over with paper towel. Dry chicken browns; wet chicken steams.",
+    "Season both sides with the salt and pepper. Wash your hands with soap now.",
+    "Put a frying pan over MEDIUM-HIGH heat with the oil. Heat for 2 minutes, until the oil shimmers.",
+    "Lay the chicken in the pan, away from you so the oil doesn't splash you. Cook for 6 minutes without moving it, until the underside is golden.",
+    "Flip with tongs. Turn the heat to MEDIUM and cook 6 minutes more.",
+    "Check the thickest part with a meat thermometer: it must read 165°F. No thermometer? Cut into the thickest part: no pink, and the juices run clear.",
+    "Move it to a board and rest for 5 minutes before slicing, so the juices stay in."
+   ],
+   "notes": "Safe temperature: 165°F (74°C) in the thickest part. A thermometer is the surest way, and they're cheap.\nRaw chicken: use a separate board, don't rinse it (that spreads germs), and wash hands, board and knife with hot soapy water after.\nThick breasts cook unevenly. Put them between baking paper and flatten to an even thickness with a rolling pin first.\nLeftovers: fridge within 2 hours, eat within 3 days.",
+   "nutrition": [
+    "Calories: 300",
+    "Protein: 45 g",
+    "Fat: 12 g",
+    "Carbohydrate: 0 g",
+    "Fiber: 0 g",
+    "Sugar: 0 g",
+    "Sodium: 670 mg"
+   ],
+   "servings": 2,
+   "yieldText": "2 servings",
+   "prepMin": 5,
+   "cookMin": 12,
+   "totalMin": 17,
+   "folderId": "starter-learning-to-cook",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-learning-to-cook-oven-chicken-thighs",
+   "title": "Oven Chicken Thighs",
+   "description": "You'll learn: roasting, and how forgiving chicken thighs are for beginners. You need: an oven, a baking tray, a small bowl and oven gloves.",
+   "ingredients": [
+    "8 bone-in, skin-on chicken thighs",
+    "1 tbsp oil",
+    "1 tsp salt",
+    "1 tsp paprika",
+    "½ tsp garlic powder"
+   ],
+   "steps": [
+    "Heat the oven to 425°F. Give it 15 minutes to get properly hot.",
+    "Pat the chicken thighs dry with paper towel.",
+    "Mix the salt, paprika and garlic powder in a small bowl.",
+    "Rub the chicken all over with the oil, then the spice mix. Wash your hands with soap.",
+    "Lay the thighs skin-side up on a baking tray, not touching each other.",
+    "Roast for 40 minutes, until the skin is crisp and deep golden.",
+    "Check the thickest thigh near the bone with a meat thermometer: at least 165°F. No thermometer? Pierce it: the juices must run clear, not pink."
+   ],
+   "notes": "Safe temperature: 165°F (74°C). Thighs are juiciest at 175–185°F (80–85°C), so a little extra time won't hurt them.\nCrowded thighs steam instead of crisping. Use two trays if needed.\nLeftovers: fridge within 2 hours, eat within 3 days.",
+   "nutrition": [
+    "Calories: 580",
+    "Protein: 41 g",
+    "Fat: 46 g",
+    "Carbohydrate: 0 g",
+    "Fiber: 0 g",
+    "Sugar: 0 g",
+    "Sodium: 780 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 5,
+   "cookMin": 40,
+   "totalMin": 45,
+   "folderId": "starter-learning-to-cook",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-learning-to-cook-baked-salmon",
+   "title": "Baked Salmon",
+   "description": "You'll learn: baking fish and checking it flakes. You need: an oven, a baking tray, baking paper and a fork.",
+   "ingredients": [
+    "2 salmon fillets",
+    "1 tbsp olive oil",
+    "¼ tsp salt",
+    "1 pinch of black pepper",
+    "1 lemon"
+   ],
+   "steps": [
+    "Heat the oven to 400°F. Line a baking tray with baking paper.",
+    "Pat the salmon dry and put it skin-side down on the tray.",
+    "Rub the tops with the olive oil and sprinkle with the salt and pepper.",
+    "Bake for 12 minutes.",
+    "Press the thickest part with a fork. It's done when it flakes apart easily and has turned from shiny dark pink to pale opaque pink all the way through.",
+    "Cut the lemon in half and squeeze it over the salmon."
+   ],
+   "notes": "Safe temperature: 145°F (63°C) in the thickest part.\nThin fillets cook in 8–10 minutes; very thick ones may need 15. Check early: dry salmon can't be undone.\nThe skin slides off easily after baking if you don't want to eat it.",
+   "nutrition": [
+    "Calories: 420",
+    "Protein: 34 g",
+    "Fat: 29 g",
+    "Carbohydrate: 2 g",
+    "Fiber: 1 g",
+    "Sugar: 1 g",
+    "Sodium: 390 mg"
+   ],
+   "servings": 2,
+   "yieldText": "2 servings",
+   "prepMin": 5,
+   "cookMin": 12,
+   "totalMin": 17,
+   "folderId": "starter-learning-to-cook",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  }
+ ]
+}

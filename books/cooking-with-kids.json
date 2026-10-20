@@ -1,0 +1,307 @@
+{
+ "format": "recipebox",
+ "version": 2,
+ "about": "Easy, mostly no-knife recipes to make together.",
+ "folders": [
+  {
+   "id": "starter-cooking-with-kids",
+   "name": "Cooking with Kids"
+  }
+ ],
+ "recipes": [
+  {
+   "id": "starter-cooking-with-kids-ants-on-a-log",
+   "title": "Ants on a Log",
+   "description": "",
+   "ingredients": [
+    "4 celery sticks",
+    "¼ cup peanut butter (or sunflower butter)",
+    "2 tbsp raisins"
+   ],
+   "steps": [
+    "Wash the celery and cut each stick in half. (A grown-up can help with the knife.)",
+    "Spread peanut butter into the groove of each piece with a butter knife.",
+    "Line up raisins on top: those are the ants."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 110",
+    "Protein: 4 g",
+    "Fat: 8 g",
+    "Carbohydrate: 8 g",
+    "Fiber: 2 g",
+    "Sugar: 5 g",
+    "Sodium: 100 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 10,
+   "cookMin": null,
+   "totalMin": 10,
+   "folderId": "starter-cooking-with-kids",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-cooking-with-kids-mini-pizzas",
+   "title": "Mini Pizzas",
+   "description": "",
+   "ingredients": [
+    "4 English muffins, split",
+    "½ cup pizza sauce",
+    "1 cup shredded mozzarella",
+    "toppings: pepperoni, peppers, olives"
+   ],
+   "steps": [
+    "Heat the oven to 425°F. Put the muffin halves on a baking sheet.",
+    "Spoon sauce on each half and spread it out.",
+    "Sprinkle on the cheese and add your toppings.",
+    "A grown-up puts them in the oven. Bake for 10 minutes, until the cheese bubbles."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 230",
+    "Protein: 12 g",
+    "Fat: 8 g",
+    "Carbohydrate: 28 g",
+    "Fiber: 3 g",
+    "Sugar: 4 g",
+    "Sodium: 580 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 10,
+   "cookMin": 10,
+   "totalMin": 20,
+   "folderId": "starter-cooking-with-kids",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-cooking-with-kids-fruit-kebabs",
+   "title": "Fruit Kebabs",
+   "description": "",
+   "ingredients": [
+    "1 cup strawberries",
+    "1 cup grapes",
+    "1 banana",
+    "1 cup melon chunks",
+    "½ cup vanilla yogurt, for dipping"
+   ],
+   "steps": [
+    "Wash the fruit. Peel the banana and cut it into thick slices with a butter knife.",
+    "Thread the fruit onto skewers in a pattern.",
+    "Serve with yogurt to dip."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 100",
+    "Protein: 3 g",
+    "Fat: 1 g",
+    "Carbohydrate: 24 g",
+    "Fiber: 2 g",
+    "Sugar: 18 g",
+    "Sodium: 30 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 15,
+   "cookMin": null,
+   "totalMin": 15,
+   "folderId": "starter-cooking-with-kids",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-cooking-with-kids-rice-krispie-treats",
+   "title": "Rice Krispie Treats",
+   "description": "",
+   "ingredients": [
+    "3 tbsp butter",
+    "1 bag (10 oz) marshmallows",
+    "6 cups crispy rice cereal"
+   ],
+   "steps": [
+    "Butter a 9×13 pan.",
+    "A grown-up melts the butter in a big pot over low heat, then stirs in the marshmallows until smooth, about 3 minutes.",
+    "Take off the heat. Stir in the cereal until coated.",
+    "Press into the pan with buttered hands or a spatula. Cool, then cut into squares."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 120",
+    "Protein: 1 g",
+    "Fat: 2 g",
+    "Carbohydrate: 23 g",
+    "Fiber: 0 g",
+    "Sugar: 11 g",
+    "Sodium: 100 mg"
+   ],
+   "servings": 16,
+   "yieldText": "16 squares",
+   "prepMin": 10,
+   "cookMin": 5,
+   "totalMin": 15,
+   "folderId": "starter-cooking-with-kids",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-cooking-with-kids-banana-pancakes",
+   "title": "Banana Pancakes",
+   "description": "",
+   "ingredients": [
+    "1 ripe banana",
+    "2 eggs",
+    "¼ cup flour",
+    "½ tsp baking powder",
+    "a pinch of cinnamon",
+    "butter, for the pan"
+   ],
+   "steps": [
+    "Mash the banana in a bowl with a fork until smooth.",
+    "Crack in the eggs and whisk. Stir in the flour, baking powder and cinnamon.",
+    "A grown-up heats a buttered pan over medium heat. Pour in small circles of batter.",
+    "Cook for 2 minutes, flip, and cook 1 minute more."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 180",
+    "Protein: 9 g",
+    "Fat: 5 g",
+    "Carbohydrate: 26 g",
+    "Fiber: 2 g",
+    "Sugar: 7 g",
+    "Sodium: 190 mg"
+   ],
+   "servings": 2,
+   "yieldText": "2 servings",
+   "prepMin": 5,
+   "cookMin": 10,
+   "totalMin": 15,
+   "folderId": "starter-cooking-with-kids",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-cooking-with-kids-cheesy-quesadillas",
+   "title": "Cheesy Quesadillas",
+   "description": "",
+   "ingredients": [
+    "2 flour tortillas",
+    "1 cup shredded cheddar",
+    "¼ cup canned black beans, rinsed",
+    "salsa and sour cream, to serve"
+   ],
+   "steps": [
+    "Sprinkle half of each tortilla with cheese and beans. Fold over.",
+    "A grown-up cooks them in a dry pan over medium heat for 3 minutes per side, until the cheese melts.",
+    "Cut into triangles. Serve with salsa and sour cream."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 390",
+    "Protein: 19 g",
+    "Fat: 22 g",
+    "Carbohydrate: 28 g",
+    "Fiber: 3 g",
+    "Sugar: 1 g",
+    "Sodium: 720 mg"
+   ],
+   "servings": 2,
+   "yieldText": "2 servings",
+   "prepMin": 5,
+   "cookMin": 6,
+   "totalMin": 11,
+   "folderId": "starter-cooking-with-kids",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-cooking-with-kids-yogurt-parfaits",
+   "title": "Yogurt Parfaits",
+   "description": "",
+   "ingredients": [
+    "1 cup vanilla yogurt",
+    "1 cup berries",
+    "½ cup granola",
+    "1 tsp honey"
+   ],
+   "steps": [
+    "Spoon some yogurt into the bottom of two glasses.",
+    "Add a layer of berries, then granola. Repeat.",
+    "Drizzle the honey on top."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 290",
+    "Protein: 10 g",
+    "Fat: 8 g",
+    "Carbohydrate: 48 g",
+    "Fiber: 3 g",
+    "Sugar: 31 g",
+    "Sodium: 90 mg"
+   ],
+   "servings": 2,
+   "yieldText": "2 servings",
+   "prepMin": 5,
+   "cookMin": null,
+   "totalMin": 5,
+   "folderId": "starter-cooking-with-kids",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-cooking-with-kids-no-bake-energy-bites",
+   "title": "No-Bake Energy Bites",
+   "description": "",
+   "ingredients": [
+    "1 cup rolled oats",
+    "½ cup peanut butter",
+    "⅓ cup honey",
+    "½ cup mini chocolate chips",
+    "2 tbsp ground flaxseed",
+    "1 tsp vanilla"
+   ],
+   "steps": [
+    "Stir everything together in a bowl.",
+    "Chill for 30 minutes so it's easier to shape.",
+    "Roll into balls about the size of a walnut. Keep them in the fridge."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 160",
+    "Protein: 4 g",
+    "Fat: 8 g",
+    "Carbohydrate: 20 g",
+    "Fiber: 2 g",
+    "Sugar: 13 g",
+    "Sodium: 50 mg"
+   ],
+   "servings": 12,
+   "yieldText": "about 18 bites",
+   "prepMin": 15,
+   "cookMin": null,
+   "totalMin": 15,
+   "folderId": "starter-cooking-with-kids",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  }
+ ]
+}

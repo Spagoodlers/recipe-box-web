@@ -1,0 +1,346 @@
+{
+ "format": "recipebox",
+ "version": 2,
+ "about": "One pot, lots of bowls.",
+ "folders": [
+  {
+   "id": "starter-soups-and-stews",
+   "name": "Soups & Stews"
+  }
+ ],
+ "recipes": [
+  {
+   "id": "starter-soups-and-stews-lentil-soup",
+   "title": "Lentil Soup",
+   "description": "",
+   "ingredients": [
+    "2 tbsp olive oil",
+    "1 onion, chopped",
+    "2 carrots, chopped",
+    "2 celery sticks, chopped",
+    "2 cloves garlic",
+    "1 tsp ground cumin",
+    "1½ cups dried lentils, rinsed",
+    "1 can (14 oz) chopped tomatoes",
+    "6 cups stock",
+    "salt",
+    "1 lemon"
+   ],
+   "steps": [
+    "Soften the onion, carrots and celery in the oil for 5 minutes.",
+    "Add the garlic and cumin for 1 minute.",
+    "Add the lentils, tomatoes and stock. Simmer for 30 minutes, until the lentils are soft.",
+    "Season and squeeze in the lemon."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 270",
+    "Protein: 15 g",
+    "Fat: 6 g",
+    "Carbohydrate: 42 g",
+    "Fiber: 8 g",
+    "Sugar: 7 g",
+    "Sodium: 960 mg"
+   ],
+   "servings": 6,
+   "yieldText": "6 servings",
+   "prepMin": 10,
+   "cookMin": 40,
+   "totalMin": 50,
+   "folderId": "starter-soups-and-stews",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-soups-and-stews-minestrone",
+   "title": "Minestrone",
+   "description": "",
+   "ingredients": [
+    "2 tbsp olive oil",
+    "1 onion, chopped",
+    "2 carrots, chopped",
+    "2 celery sticks, chopped",
+    "2 cloves garlic",
+    "1 zucchini, diced",
+    "1 can (14 oz) chopped tomatoes",
+    "6 cups stock",
+    "1 can (14 oz) white beans, drained",
+    "1 cup small pasta",
+    "a handful of spinach",
+    "parmesan, to serve"
+   ],
+   "steps": [
+    "Soften the onion, carrots and celery in the oil for 5 minutes.",
+    "Add the garlic and zucchini for 2 minutes.",
+    "Add the tomatoes and stock. Simmer for 15 minutes.",
+    "Add the beans and pasta. Cook for 10 minutes.",
+    "Stir in the spinach. Serve with parmesan."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 210",
+    "Protein: 9 g",
+    "Fat: 6 g",
+    "Carbohydrate: 33 g",
+    "Fiber: 6 g",
+    "Sugar: 7 g",
+    "Sodium: 1070 mg"
+   ],
+   "servings": 6,
+   "yieldText": "6 servings",
+   "prepMin": 15,
+   "cookMin": 35,
+   "totalMin": 50,
+   "folderId": "starter-soups-and-stews",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-soups-and-stews-potato-leek-soup",
+   "title": "Potato Leek Soup",
+   "description": "",
+   "ingredients": [
+    "2 tbsp butter",
+    "3 leeks, sliced and washed",
+    "1½ lb potatoes, diced",
+    "4 cups stock",
+    "½ cup cream",
+    "salt and pepper"
+   ],
+   "steps": [
+    "Soften the leeks in the butter for 8 minutes without browning.",
+    "Add the potatoes and stock. Simmer for 20 minutes.",
+    "Blend until smooth. Stir in the cream and season."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 340",
+    "Protein: 7 g",
+    "Fat: 17 g",
+    "Carbohydrate: 40 g",
+    "Fiber: 5 g",
+    "Sugar: 6 g",
+    "Sodium: 870 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 10,
+   "cookMin": 30,
+   "totalMin": 40,
+   "folderId": "starter-soups-and-stews",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-soups-and-stews-butternut-squash-soup",
+   "title": "Butternut Squash Soup",
+   "description": "",
+   "ingredients": [
+    "2 tbsp butter",
+    "1 onion, chopped",
+    "1 butternut squash, peeled and cubed",
+    "4 cups stock",
+    "½ tsp nutmeg",
+    "½ cup cream",
+    "salt"
+   ],
+   "steps": [
+    "Soften the onion in the butter for 5 minutes.",
+    "Add the squash and stock. Simmer for 25 minutes, until tender.",
+    "Blend until smooth. Stir in the nutmeg and cream. Season."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 280",
+    "Protein: 5 g",
+    "Fat: 17 g",
+    "Carbohydrate: 33 g",
+    "Fiber: 5 g",
+    "Sugar: 8 g",
+    "Sodium: 860 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 15,
+   "cookMin": 35,
+   "totalMin": 50,
+   "folderId": "starter-soups-and-stews",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-soups-and-stews-french-onion-soup",
+   "title": "French Onion Soup",
+   "description": "",
+   "ingredients": [
+    "4 tbsp butter",
+    "4 large onions, thinly sliced",
+    "1 tsp sugar",
+    "2 tbsp flour",
+    "6 cups beef stock",
+    "1 bay leaf",
+    "4 slices baguette",
+    "1 cup grated Gruyère"
+   ],
+   "steps": [
+    "Cook the onions in the butter over medium-low heat for 40 minutes, stirring often, until deep brown. Add the sugar halfway.",
+    "Stir in the flour for 1 minute.",
+    "Add the stock and bay leaf. Simmer for 15 minutes.",
+    "Ladle into ovenproof bowls. Top with the bread and cheese.",
+    "Broil for 3 minutes, until bubbling."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 420",
+    "Protein: 16 g",
+    "Fat: 22 g",
+    "Carbohydrate: 43 g",
+    "Fiber: 5 g",
+    "Sugar: 14 g",
+    "Sodium: 1520 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 10,
+   "cookMin": 60,
+   "totalMin": 70,
+   "folderId": "starter-soups-and-stews",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-soups-and-stews-chicken-tortilla-soup",
+   "title": "Chicken Tortilla Soup",
+   "description": "",
+   "ingredients": [
+    "1 tbsp oil",
+    "1 onion, chopped",
+    "2 cloves garlic",
+    "1 tsp ground cumin",
+    "1 tsp chili powder",
+    "1 can (14 oz) chopped tomatoes",
+    "6 cups chicken stock",
+    "2 cups cooked shredded chicken",
+    "1 can (14 oz) black beans, drained",
+    "1 cup corn",
+    "tortilla chips, lime and avocado, to serve"
+   ],
+   "steps": [
+    "Soften the onion in the oil for 5 minutes.",
+    "Add the garlic and spices for 1 minute.",
+    "Add the tomatoes and stock. Simmer for 15 minutes.",
+    "Add the chicken, beans and corn. Simmer 5 minutes more.",
+    "Serve with chips, lime and avocado."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 220",
+    "Protein: 20 g",
+    "Fat: 7 g",
+    "Carbohydrate: 22 g",
+    "Fiber: 5 g",
+    "Sugar: 6 g",
+    "Sodium: 1080 mg"
+   ],
+   "servings": 6,
+   "yieldText": "6 servings",
+   "prepMin": 10,
+   "cookMin": 30,
+   "totalMin": 40,
+   "folderId": "starter-soups-and-stews",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-soups-and-stews-irish-stew",
+   "title": "Irish Stew",
+   "description": "",
+   "ingredients": [
+    "2 lb lamb shoulder, in chunks",
+    "2 onions, sliced",
+    "3 carrots, in chunks",
+    "4 cups stock",
+    "1 tsp dried thyme",
+    "2 lb potatoes, in chunks",
+    "salt and pepper"
+   ],
+   "steps": [
+    "Put the lamb, onions, carrots, stock and thyme in a heavy pot. Season.",
+    "Bring to a boil, then cover and simmer gently for 60 minutes.",
+    "Add the potatoes. Simmer 45 minutes more, until the lamb is tender."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 550",
+    "Protein: 31 g",
+    "Fat: 32 g",
+    "Carbohydrate: 34 g",
+    "Fiber: 5 g",
+    "Sugar: 5 g",
+    "Sodium: 670 mg"
+   ],
+   "servings": 6,
+   "yieldText": "6 servings",
+   "prepMin": 15,
+   "cookMin": 105,
+   "totalMin": 120,
+   "folderId": "starter-soups-and-stews",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-soups-and-stews-split-pea-soup",
+   "title": "Split Pea Soup",
+   "description": "",
+   "ingredients": [
+    "2 cups dried split peas, rinsed",
+    "1 ham hock or 1 cup diced ham",
+    "1 onion, chopped",
+    "2 carrots, chopped",
+    "2 celery sticks, chopped",
+    "8 cups water",
+    "1 bay leaf",
+    "salt and pepper"
+   ],
+   "steps": [
+    "Put everything in a large pot. Bring to a boil.",
+    "Simmer, partly covered, for 90 minutes, until the peas break down.",
+    "Lift out the ham hock, shred the meat and stir it back in. Season."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 270",
+    "Protein: 21 g",
+    "Fat: 2 g",
+    "Carbohydrate: 44 g",
+    "Fiber: 18 g",
+    "Sugar: 7 g",
+    "Sodium: 280 mg"
+   ],
+   "servings": 6,
+   "yieldText": "6 servings",
+   "prepMin": 10,
+   "cookMin": 90,
+   "totalMin": 100,
+   "folderId": "starter-soups-and-stews",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  }
+ ]
+}

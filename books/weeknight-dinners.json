@@ -1,0 +1,504 @@
+{
+ "format": "recipebox",
+ "version": 2,
+ "about": "Dinner in about half an hour.",
+ "folders": [
+  {
+   "id": "starter-weeknight-dinners",
+   "name": "Weeknight Dinners"
+  }
+ ],
+ "recipes": [
+  {
+   "id": "starter-weeknight-dinners-spaghetti-aglio-e-olio",
+   "title": "Spaghetti Aglio e Olio",
+   "description": "",
+   "ingredients": [
+    "8 oz spaghetti",
+    "⅓ cup olive oil",
+    "4 cloves garlic, thinly sliced",
+    "½ tsp chili flakes",
+    "a handful of parsley, chopped",
+    "salt",
+    "parmesan, to serve"
+   ],
+   "steps": [
+    "Cook the spaghetti in well-salted boiling water. Save a cup of the water before draining.",
+    "Meanwhile, warm the oil and garlic over low heat for 5 minutes, until the garlic is pale gold.",
+    "Stir in the chili flakes.",
+    "Toss the drained pasta in the pan with a splash of pasta water and the parsley.",
+    "Season and serve with parmesan."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 760",
+    "Protein: 16 g",
+    "Fat: 38 g",
+    "Carbohydrate: 88 g",
+    "Fiber: 4 g",
+    "Sugar: 3 g",
+    "Sodium: 10 mg"
+   ],
+   "servings": 2,
+   "yieldText": "2 servings",
+   "prepMin": 5,
+   "cookMin": 12,
+   "totalMin": 17,
+   "folderId": "starter-weeknight-dinners",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-weeknight-dinners-pesto-pasta",
+   "title": "Pesto Pasta",
+   "description": "",
+   "ingredients": [
+    "8 oz pasta",
+    "½ cup pesto",
+    "1 cup cherry tomatoes, halved (optional)",
+    "parmesan, to serve"
+   ],
+   "steps": [
+    "Cook the pasta in salted boiling water. Save a cup of the water, then drain.",
+    "Toss the pasta with the pesto, tomatoes and a splash of the water.",
+    "Serve with parmesan."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 700",
+    "Protein: 18 g",
+    "Fat: 30 g",
+    "Carbohydrate: 89 g",
+    "Fiber: 5 g",
+    "Sugar: 4 g",
+    "Sodium: 510 mg"
+   ],
+   "servings": 2,
+   "yieldText": "2 servings",
+   "prepMin": 3,
+   "cookMin": 12,
+   "totalMin": 15,
+   "folderId": "starter-weeknight-dinners",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-weeknight-dinners-chicken-stir-fry",
+   "title": "Chicken Stir-Fry",
+   "description": "",
+   "ingredients": [
+    "2 chicken breasts, thinly sliced",
+    "1 tbsp oil",
+    "1 bell pepper, sliced",
+    "1 cup broccoli florets",
+    "2 cloves garlic, minced",
+    "1 tbsp grated ginger",
+    "3 tbsp soy sauce",
+    "1 tbsp honey",
+    "1 tsp cornstarch mixed with 2 tbsp water",
+    "rice, to serve"
+   ],
+   "steps": [
+    "Heat the oil in a large pan over high heat.",
+    "Cook the chicken for 5 minutes, until browned and cooked through. Lift it out.",
+    "Stir-fry the pepper and broccoli for 3 minutes.",
+    "Add the garlic and ginger for 30 seconds.",
+    "Return the chicken. Add the soy sauce, honey and cornstarch mix. Toss for 1 minute until glossy.",
+    "Serve over rice."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 380",
+    "Protein: 49 g",
+    "Fat: 12 g",
+    "Carbohydrate: 17 g",
+    "Fiber: 2 g",
+    "Sugar: 12 g",
+    "Sodium: 1420 mg"
+   ],
+   "servings": 2,
+   "yieldText": "2 servings",
+   "prepMin": 10,
+   "cookMin": 10,
+   "totalMin": 20,
+   "folderId": "starter-weeknight-dinners",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-weeknight-dinners-egg-fried-rice",
+   "title": "Egg Fried Rice",
+   "description": "",
+   "ingredients": [
+    "2 cups cold cooked rice",
+    "2 eggs, beaten",
+    "1 tbsp oil",
+    "1 cup frozen peas and carrots",
+    "2 spring onions, sliced",
+    "2 tbsp soy sauce",
+    "1 tsp sesame oil"
+   ],
+   "steps": [
+    "Heat the oil in a large pan over high heat.",
+    "Fry the peas and carrots for 2 minutes.",
+    "Push them aside and scramble the eggs in the space.",
+    "Add the rice and stir-fry for 4 minutes, until hot.",
+    "Add the soy sauce, sesame oil and spring onions."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 400",
+    "Protein: 13 g",
+    "Fat: 15 g",
+    "Carbohydrate: 53 g",
+    "Fiber: 3 g",
+    "Sugar: 4 g",
+    "Sodium: 1000 mg"
+   ],
+   "servings": 2,
+   "yieldText": "2 servings",
+   "prepMin": 5,
+   "cookMin": 10,
+   "totalMin": 15,
+   "folderId": "starter-weeknight-dinners",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-weeknight-dinners-teriyaki-salmon",
+   "title": "Teriyaki Salmon",
+   "description": "",
+   "ingredients": [
+    "2 salmon fillets",
+    "1 tsp oil",
+    "3 tbsp soy sauce",
+    "1 tbsp honey",
+    "1 tsp grated ginger",
+    "1 clove garlic, minced",
+    "rice, to serve"
+   ],
+   "steps": [
+    "Mix the soy sauce, honey, ginger and garlic.",
+    "Cook the salmon skin-side down in the oil over medium-high heat for 4 minutes.",
+    "Flip and cook 3 minutes more.",
+    "Pour in the sauce and let it bubble for 1 minute, spooning it over until glossy.",
+    "Serve with rice."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 420",
+    "Protein: 36 g",
+    "Fat: 25 g",
+    "Carbohydrate: 10 g",
+    "Fiber: 0 g",
+    "Sugar: 9 g",
+    "Sodium: 1420 mg"
+   ],
+   "servings": 2,
+   "yieldText": "2 servings",
+   "prepMin": 5,
+   "cookMin": 12,
+   "totalMin": 17,
+   "folderId": "starter-weeknight-dinners",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-weeknight-dinners-sheet-pan-sausages-and-vegetables",
+   "title": "Sheet-Pan Sausages and Vegetables",
+   "description": "",
+   "ingredients": [
+    "6 sausages",
+    "1 lb baby potatoes, halved",
+    "1 red onion, in wedges",
+    "2 bell peppers, in chunks",
+    "2 tbsp olive oil",
+    "1 tsp paprika",
+    "salt and pepper"
+   ],
+   "steps": [
+    "Heat the oven to 425°F.",
+    "Toss the potatoes with half the oil on a sheet pan. Roast for 15 minutes.",
+    "Add the sausages, onion, peppers, the rest of the oil and the paprika. Season.",
+    "Roast 25 minutes more, turning once, until the sausages are cooked through."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 560",
+    "Protein: 21 g",
+    "Fat: 40 g",
+    "Carbohydrate: 29 g",
+    "Fiber: 4 g",
+    "Sugar: 6 g",
+    "Sodium: 1030 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 10,
+   "cookMin": 40,
+   "totalMin": 50,
+   "folderId": "starter-weeknight-dinners",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-weeknight-dinners-beef-chili",
+   "title": "Beef Chili",
+   "description": "",
+   "ingredients": [
+    "1 lb ground beef",
+    "1 onion, chopped",
+    "2 cloves garlic, minced",
+    "1 tbsp chili powder",
+    "1 tsp ground cumin",
+    "1 can (14 oz) chopped tomatoes",
+    "1 can (14 oz) kidney beans, drained",
+    "1 cup beef stock",
+    "salt"
+   ],
+   "steps": [
+    "Brown the beef in a large pot for 5 minutes, until no pink remains. Spoon off excess fat.",
+    "Add the onion and garlic and cook for 5 minutes.",
+    "Stir in the chili powder and cumin for 1 minute.",
+    "Add the tomatoes, beans and stock.",
+    "Simmer for 30 minutes, stirring now and then. Season. Serve with rice, sour cream or cheese."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 410",
+    "Protein: 26 g",
+    "Fat: 23 g",
+    "Carbohydrate: 24 g",
+    "Fiber: 6 g",
+    "Sugar: 6 g",
+    "Sodium: 610 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 10,
+   "cookMin": 45,
+   "totalMin": 55,
+   "folderId": "starter-weeknight-dinners",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-weeknight-dinners-fish-tacos",
+   "title": "Fish Tacos",
+   "description": "",
+   "ingredients": [
+    "1 lb white fish fillets",
+    "1 tsp chili powder",
+    "½ tsp ground cumin",
+    "½ tsp salt",
+    "1 tbsp oil",
+    "8 small tortillas",
+    "2 cups shredded cabbage",
+    "½ cup sour cream",
+    "1 lime, in wedges"
+   ],
+   "steps": [
+    "Season the fish with the chili powder, cumin and salt.",
+    "Cook in the oil over medium-high heat for 3 minutes per side, until it flakes.",
+    "Warm the tortillas.",
+    "Flake the fish into the tortillas. Top with cabbage, sour cream and a squeeze of lime."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 520",
+    "Protein: 30 g",
+    "Fat: 23 g",
+    "Carbohydrate: 49 g",
+    "Fiber: 4 g",
+    "Sugar: 4 g",
+    "Sodium: 1010 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 15,
+   "cookMin": 10,
+   "totalMin": 25,
+   "folderId": "starter-weeknight-dinners",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-weeknight-dinners-black-bean-tacos",
+   "title": "Black Bean Tacos",
+   "description": "",
+   "ingredients": [
+    "2 cans black beans, drained",
+    "1 tsp ground cumin",
+    "1 tsp chili powder",
+    "½ cup water",
+    "8 tortillas",
+    "1 avocado, sliced",
+    "salsa",
+    "grated cheese"
+   ],
+   "steps": [
+    "Simmer the beans, spices and water for 5 minutes. Mash lightly.",
+    "Warm the tortillas.",
+    "Fill with the beans and top with avocado, salsa and cheese."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 480",
+    "Protein: 18 g",
+    "Fat: 13 g",
+    "Carbohydrate: 76 g",
+    "Fiber: 14 g",
+    "Sugar: 2 g",
+    "Sodium: 950 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 5,
+   "cookMin": 10,
+   "totalMin": 15,
+   "folderId": "starter-weeknight-dinners",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-weeknight-dinners-quesadillas",
+   "title": "Quesadillas",
+   "description": "",
+   "ingredients": [
+    "4 flour tortillas",
+    "2 cups grated cheese",
+    "1 cup cooked chicken or beans (optional)",
+    "salsa, to serve"
+   ],
+   "steps": [
+    "Heat a dry frying pan over medium heat.",
+    "Lay in a tortilla. Cover half with cheese and filling, then fold it over.",
+    "Cook for 2 minutes per side, until crisp and melted.",
+    "Cut into wedges. Serve with salsa."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 730",
+    "Protein: 35 g",
+    "Fat: 44 g",
+    "Carbohydrate: 46 g",
+    "Fiber: 3 g",
+    "Sugar: 2 g",
+    "Sodium: 1330 mg"
+   ],
+   "servings": 2,
+   "yieldText": "2 servings",
+   "prepMin": 5,
+   "cookMin": 8,
+   "totalMin": 13,
+   "folderId": "starter-weeknight-dinners",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-weeknight-dinners-shakshuka",
+   "title": "Shakshuka",
+   "description": "",
+   "ingredients": [
+    "1 tbsp olive oil",
+    "1 onion, sliced",
+    "1 red bell pepper, sliced",
+    "2 cloves garlic",
+    "1 tsp ground cumin",
+    "1 tsp paprika",
+    "1 can (14 oz) chopped tomatoes",
+    "4 eggs",
+    "salt",
+    "bread, to serve"
+   ],
+   "steps": [
+    "Soften the onion and pepper in the oil for 5 minutes.",
+    "Add the garlic and spices for 1 minute.",
+    "Add the tomatoes and simmer for 10 minutes. Season.",
+    "Make 4 wells and crack an egg into each.",
+    "Cover and cook for 6 minutes, until the whites are set. Serve with bread."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 320",
+    "Protein: 17 g",
+    "Fat: 17 g",
+    "Carbohydrate: 26 g",
+    "Fiber: 6 g",
+    "Sugar: 14 g",
+    "Sodium: 510 mg"
+   ],
+   "servings": 2,
+   "yieldText": "2 servings",
+   "prepMin": 5,
+   "cookMin": 20,
+   "totalMin": 25,
+   "folderId": "starter-weeknight-dinners",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-weeknight-dinners-tomato-soup",
+   "title": "Tomato Soup",
+   "description": "",
+   "ingredients": [
+    "2 tbsp butter",
+    "1 onion, chopped",
+    "2 cloves garlic",
+    "1 can (28 oz) whole tomatoes",
+    "2 cups stock",
+    "1 tsp sugar",
+    "½ cup cream (optional)",
+    "salt and pepper"
+   ],
+   "steps": [
+    "Melt the butter and soften the onion for 5 minutes. Add the garlic for 1 minute.",
+    "Add the tomatoes, stock and sugar. Simmer for 20 minutes.",
+    "Blend until smooth.",
+    "Stir in the cream and season."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 140",
+    "Protein: 4 g",
+    "Fat: 7 g",
+    "Carbohydrate: 20 g",
+    "Fiber: 4 g",
+    "Sugar: 11 g",
+    "Sodium: 790 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 10,
+   "cookMin": 30,
+   "totalMin": 40,
+   "folderId": "starter-weeknight-dinners",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  }
+ ]
+}

@@ -1,0 +1,321 @@
+{
+ "format": "recipebox",
+ "version": 2,
+ "about": "Dips, bites and a bowl of punch.",
+ "folders": [
+  {
+   "id": "starter-party-food",
+   "name": "Party Food"
+  }
+ ],
+ "recipes": [
+  {
+   "id": "starter-party-food-guacamole",
+   "title": "Guacamole",
+   "description": "",
+   "ingredients": [
+    "3 ripe avocados",
+    "1 lime",
+    "½ small onion, finely chopped",
+    "1 jalapeño, finely chopped",
+    "a handful of cilantro, chopped",
+    "½ tsp salt",
+    "1 tomato, diced"
+   ],
+   "steps": [
+    "Mash the avocados with the lime juice, leaving some chunks.",
+    "Stir in the onion, jalapeño, cilantro, salt and tomato. Taste and add more salt or lime."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 130",
+    "Protein: 2 g",
+    "Fat: 11 g",
+    "Carbohydrate: 9 g",
+    "Fiber: 6 g",
+    "Sugar: 2 g",
+    "Sodium: 200 mg"
+   ],
+   "servings": 6,
+   "yieldText": "6 servings",
+   "prepMin": 10,
+   "cookMin": null,
+   "totalMin": 10,
+   "folderId": "starter-party-food",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-party-food-seven-layer-dip",
+   "title": "Seven-Layer Dip",
+   "description": "",
+   "ingredients": [
+    "1 can (16 oz) refried beans",
+    "1 tbsp taco seasoning",
+    "1 cup sour cream",
+    "1 cup guacamole",
+    "1 cup salsa",
+    "1½ cups shredded cheddar",
+    "2 tomatoes, diced",
+    "3 green onions, sliced",
+    "¼ cup sliced black olives"
+   ],
+   "steps": [
+    "Stir the taco seasoning into the beans and spread in a shallow dish.",
+    "Layer on the sour cream, guacamole, salsa and cheddar.",
+    "Top with the tomatoes, green onions and olives. Chill until serving."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 250",
+    "Protein: 8 g",
+    "Fat: 19 g",
+    "Carbohydrate: 13 g",
+    "Fiber: 5 g",
+    "Sugar: 3 g",
+    "Sodium: 520 mg"
+   ],
+   "servings": 10,
+   "yieldText": "10 servings",
+   "prepMin": 20,
+   "cookMin": null,
+   "totalMin": 20,
+   "folderId": "starter-party-food",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-party-food-deviled-eggs",
+   "title": "Deviled Eggs",
+   "description": "",
+   "ingredients": [
+    "6 eggs",
+    "¼ cup mayonnaise",
+    "1 tsp Dijon mustard",
+    "1 tsp vinegar",
+    "a pinch of salt",
+    "paprika, to sprinkle"
+   ],
+   "steps": [
+    "Cover the eggs with cold water, bring to a boil, then cover, turn off the heat and leave 12 minutes.",
+    "Cool in ice water, peel and halve lengthwise.",
+    "Mash the yolks with the mayonnaise, mustard, vinegar and salt until smooth.",
+    "Spoon or pipe back into the whites. Sprinkle with paprika."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 70",
+    "Protein: 3 g",
+    "Fat: 6 g",
+    "Carbohydrate: 0 g",
+    "Fiber: 0 g",
+    "Sugar: 0 g",
+    "Sodium: 80 mg"
+   ],
+   "servings": 12,
+   "yieldText": "12 halves",
+   "prepMin": 15,
+   "cookMin": 12,
+   "totalMin": 27,
+   "folderId": "starter-party-food",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-party-food-buffalo-wings",
+   "title": "Buffalo Wings",
+   "description": "",
+   "ingredients": [
+    "2 lb chicken wings",
+    "1 tbsp baking powder",
+    "1 tsp salt",
+    "½ cup hot sauce",
+    "4 tbsp butter",
+    "blue cheese dressing and celery, to serve"
+   ],
+   "steps": [
+    "Heat the oven to 425°F. Pat the wings very dry and toss with the baking powder and salt.",
+    "Spread on a rack over a baking sheet. Bake for 45 minutes, turning halfway, until crisp.",
+    "Melt the butter with the hot sauce. Toss the wings in it. Serve with dressing and celery."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 380",
+    "Protein: 25 g",
+    "Fat: 31 g",
+    "Carbohydrate: 1 g",
+    "Fiber: 0 g",
+    "Sugar: 0 g",
+    "Sodium: 1880 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 10,
+   "cookMin": 45,
+   "totalMin": 55,
+   "folderId": "starter-party-food",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-party-food-spinach-artichoke-dip",
+   "title": "Spinach Artichoke Dip",
+   "description": "",
+   "ingredients": [
+    "8 oz cream cheese, softened",
+    "½ cup sour cream",
+    "¼ cup mayonnaise",
+    "1 cup grated parmesan",
+    "1 cup shredded mozzarella",
+    "10 oz frozen spinach, thawed and squeezed dry",
+    "1 can (14 oz) artichoke hearts, drained and chopped",
+    "1 clove garlic, grated"
+   ],
+   "steps": [
+    "Heat the oven to 375°F.",
+    "Mix everything except half the mozzarella. Spread in a small baking dish and top with the rest.",
+    "Bake for 25 minutes, until bubbling and golden. Serve with chips or bread."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 310",
+    "Protein: 12 g",
+    "Fat: 27 g",
+    "Carbohydrate: 7 g",
+    "Fiber: 2 g",
+    "Sugar: 2 g",
+    "Sodium: 530 mg"
+   ],
+   "servings": 8,
+   "yieldText": "8 servings",
+   "prepMin": 10,
+   "cookMin": 25,
+   "totalMin": 35,
+   "folderId": "starter-party-food",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-party-food-pigs-in-a-blanket",
+   "title": "Pigs in a Blanket",
+   "description": "",
+   "ingredients": [
+    "1 tube (8 oz) crescent roll dough",
+    "24 cocktail sausages",
+    "1 egg, beaten",
+    "1 tsp sesame seeds",
+    "mustard, to serve"
+   ],
+   "steps": [
+    "Heat the oven to 375°F. Unroll the dough and cut each triangle into 3 thin strips.",
+    "Roll a sausage up in each strip. Place seam-side down on a lined baking sheet.",
+    "Brush with egg and sprinkle with sesame seeds. Bake for 15 minutes, until golden."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 190",
+    "Protein: 6 g",
+    "Fat: 14 g",
+    "Carbohydrate: 12 g",
+    "Fiber: 0 g",
+    "Sugar: 2 g",
+    "Sodium: 510 mg"
+   ],
+   "servings": 8,
+   "yieldText": "24 pieces",
+   "prepMin": 15,
+   "cookMin": 15,
+   "totalMin": 30,
+   "folderId": "starter-party-food",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-party-food-caprese-skewers",
+   "title": "Caprese Skewers",
+   "description": "",
+   "ingredients": [
+    "24 cherry tomatoes",
+    "24 small mozzarella balls",
+    "24 basil leaves",
+    "2 tbsp olive oil",
+    "2 tbsp balsamic glaze",
+    "salt and pepper"
+   ],
+   "steps": [
+    "Thread a tomato, a basil leaf and a mozzarella ball onto each small skewer or toothpick.",
+    "Arrange on a platter. Drizzle with the oil and balsamic glaze, and season."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 120",
+    "Protein: 6 g",
+    "Fat: 9 g",
+    "Carbohydrate: 5 g",
+    "Fiber: 1 g",
+    "Sugar: 4 g",
+    "Sodium: 160 mg"
+   ],
+   "servings": 8,
+   "yieldText": "24 skewers",
+   "prepMin": 15,
+   "cookMin": null,
+   "totalMin": 15,
+   "folderId": "starter-party-food",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-party-food-party-punch",
+   "title": "Party Punch",
+   "description": "",
+   "ingredients": [
+    "4 cups cranberry juice",
+    "4 cups pineapple juice",
+    "2 cups orange juice",
+    "4 cups ginger ale, chilled",
+    "1 orange, sliced",
+    "1 lime, sliced",
+    "ice"
+   ],
+   "steps": [
+    "Stir the juices together in a large bowl and chill.",
+    "Just before serving, add the ginger ale, fruit slices and ice."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 140",
+    "Protein: 1 g",
+    "Fat: 0 g",
+    "Carbohydrate: 35 g",
+    "Fiber: 1 g",
+    "Sugar: 30 g",
+    "Sodium: 10 mg"
+   ],
+   "servings": 12,
+   "yieldText": "about 14 cups",
+   "prepMin": 10,
+   "cookMin": null,
+   "totalMin": 10,
+   "folderId": "starter-party-food",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  }
+ ]
+}

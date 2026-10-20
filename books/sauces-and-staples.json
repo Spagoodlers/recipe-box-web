@@ -1,0 +1,508 @@
+{
+ "format": "recipebox",
+ "version": 2,
+ "about": "Dressings, sauces, dips, doughs and stock.",
+ "folders": [
+  {
+   "id": "starter-sauces-and-staples",
+   "name": "Sauces & Staples"
+  }
+ ],
+ "recipes": [
+  {
+   "id": "starter-sauces-and-staples-simple-vinaigrette",
+   "title": "Simple Vinaigrette",
+   "description": "",
+   "ingredients": [
+    "3 tbsp olive oil",
+    "1 tbsp vinegar or lemon juice",
+    "1 tsp mustard",
+    "pinch of salt",
+    "pinch of sugar"
+   ],
+   "steps": [
+    "Shake everything together in a jar.",
+    "Taste and adjust. Keeps a week in the fridge."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 90",
+    "Protein: 0 g",
+    "Fat: 10 g",
+    "Carbohydrate: 0 g",
+    "Fiber: 0 g",
+    "Sugar: 0 g",
+    "Sodium: 50 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 3,
+   "cookMin": null,
+   "totalMin": 3,
+   "folderId": "starter-sauces-and-staples",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-sauces-and-staples-basic-tomato-sauce",
+   "title": "Basic Tomato Sauce",
+   "description": "",
+   "ingredients": [
+    "2 tbsp olive oil",
+    "1 onion, finely chopped",
+    "2 cloves garlic, minced",
+    "1 can (28 oz) crushed tomatoes",
+    "1 tsp dried oregano",
+    "½ tsp salt",
+    "½ tsp sugar"
+   ],
+   "steps": [
+    "Soften the onion in the oil for 5 minutes. Add the garlic for 1 minute.",
+    "Add the tomatoes, oregano, salt and sugar.",
+    "Simmer for 20 minutes, stirring now and then."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 140",
+    "Protein: 4 g",
+    "Fat: 7 g",
+    "Carbohydrate: 18 g",
+    "Fiber: 4 g",
+    "Sugar: 10 g",
+    "Sodium: 650 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 5,
+   "cookMin": 30,
+   "totalMin": 35,
+   "folderId": "starter-sauces-and-staples",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-sauces-and-staples-cheese-sauce",
+   "title": "Cheese Sauce",
+   "description": "",
+   "ingredients": [
+    "2 tbsp butter",
+    "2 tbsp flour",
+    "1½ cups milk",
+    "1 cup grated cheddar",
+    "½ tsp mustard",
+    "salt"
+   ],
+   "steps": [
+    "Melt the butter in a pan. Stir in the flour and cook for 1 minute.",
+    "Slowly whisk in the milk. Simmer for 3 minutes, until thick.",
+    "Off the heat, stir in the cheese and mustard. Season."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 240",
+    "Protein: 10 g",
+    "Fat: 18 g",
+    "Carbohydrate: 8 g",
+    "Fiber: 0 g",
+    "Sugar: 5 g",
+    "Sodium: 240 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 2,
+   "cookMin": 8,
+   "totalMin": 10,
+   "folderId": "starter-sauces-and-staples",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-sauces-and-staples-basil-pesto",
+   "title": "Basil Pesto",
+   "description": "",
+   "ingredients": [
+    "2 cups basil leaves",
+    "⅓ cup pine nuts",
+    "½ cup grated parmesan",
+    "1 clove garlic",
+    "½ cup olive oil",
+    "pinch of salt"
+   ],
+   "steps": [
+    "Blend the basil, pine nuts, parmesan and garlic.",
+    "With the blender running, pour in the oil.",
+    "Season. Keeps 4 days in the fridge with a little oil on top."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 370",
+    "Protein: 7 g",
+    "Fat: 39 g",
+    "Carbohydrate: 3 g",
+    "Fiber: 1 g",
+    "Sugar: 1 g",
+    "Sodium: 230 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 10,
+   "cookMin": null,
+   "totalMin": 10,
+   "folderId": "starter-sauces-and-staples",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-sauces-and-staples-garlic-butter",
+   "title": "Garlic Butter",
+   "description": "",
+   "ingredients": [
+    "½ cup butter, softened",
+    "3 cloves garlic, minced",
+    "2 tbsp chopped parsley",
+    "pinch of salt"
+   ],
+   "steps": [
+    "Mash everything together with a fork.",
+    "Keeps a week in the fridge. Melt over bread, steak or vegetables."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 100",
+    "Protein: 0 g",
+    "Fat: 12 g",
+    "Carbohydrate: 0 g",
+    "Fiber: 0 g",
+    "Sugar: 0 g",
+    "Sodium: 60 mg"
+   ],
+   "servings": 8,
+   "yieldText": "8 servings",
+   "prepMin": 5,
+   "cookMin": null,
+   "totalMin": 5,
+   "folderId": "starter-sauces-and-staples",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-sauces-and-staples-hummus",
+   "title": "Hummus",
+   "description": "",
+   "ingredients": [
+    "1 can (14 oz) chickpeas, drained (save the liquid)",
+    "¼ cup tahini",
+    "1 lemon, juiced",
+    "1 clove garlic",
+    "½ tsp salt",
+    "2 tbsp olive oil",
+    "3 tbsp chickpea liquid"
+   ],
+   "steps": [
+    "Blend everything for 2 minutes, until smooth.",
+    "Add more chickpea liquid if it's too thick. Taste and adjust."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 150",
+    "Protein: 5 g",
+    "Fat: 10 g",
+    "Carbohydrate: 12 g",
+    "Fiber: 4 g",
+    "Sugar: 0 g",
+    "Sodium: 310 mg"
+   ],
+   "servings": 6,
+   "yieldText": "6 servings",
+   "prepMin": 10,
+   "cookMin": null,
+   "totalMin": 10,
+   "folderId": "starter-sauces-and-staples",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-sauces-and-staples-guacamole",
+   "title": "Guacamole",
+   "description": "",
+   "ingredients": [
+    "3 ripe avocados",
+    "1 lime, juiced",
+    "½ small onion, finely chopped",
+    "1 tomato, chopped",
+    "a handful of cilantro, chopped",
+    "½ tsp salt"
+   ],
+   "steps": [
+    "Mash the avocados with the lime juice and salt.",
+    "Stir in the onion, tomato and cilantro."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 190",
+    "Protein: 3 g",
+    "Fat: 17 g",
+    "Carbohydrate: 13 g",
+    "Fiber: 9 g",
+    "Sugar: 2 g",
+    "Sodium: 300 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 10,
+   "cookMin": null,
+   "totalMin": 10,
+   "folderId": "starter-sauces-and-staples",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-sauces-and-staples-fresh-salsa",
+   "title": "Fresh Salsa",
+   "description": "",
+   "ingredients": [
+    "4 tomatoes, chopped",
+    "½ onion, finely chopped",
+    "1 jalapeño, finely chopped",
+    "a handful of cilantro, chopped",
+    "1 lime, juiced",
+    "½ tsp salt"
+   ],
+   "steps": [
+    "Mix everything together.",
+    "Leave for 10 minutes so the flavors come together."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 40",
+    "Protein: 2 g",
+    "Fat: 0 g",
+    "Carbohydrate: 8 g",
+    "Fiber: 2 g",
+    "Sugar: 4 g",
+    "Sodium: 300 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 10,
+   "cookMin": null,
+   "totalMin": 10,
+   "folderId": "starter-sauces-and-staples",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-sauces-and-staples-pancakes",
+   "title": "Pancakes",
+   "description": "",
+   "ingredients": [
+    "1 cup flour",
+    "1 tbsp sugar",
+    "2 tsp baking powder",
+    "¼ tsp salt",
+    "1 cup milk",
+    "1 egg",
+    "2 tbsp melted butter"
+   ],
+   "steps": [
+    "Whisk the flour, sugar, baking powder and salt in a bowl.",
+    "Whisk the milk, egg and butter in another.",
+    "Pour the wet into the dry and stir just until mixed. Lumps are fine.",
+    "Heat a lightly oiled pan over medium heat. Pour in ¼ cup of batter per pancake.",
+    "Cook until bubbles pop on top, about 2 minutes. Flip and cook 1 minute more."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 120",
+    "Protein: 3 g",
+    "Fat: 5 g",
+    "Carbohydrate: 15 g",
+    "Fiber: 0 g",
+    "Sugar: 3 g",
+    "Sodium: 230 mg"
+   ],
+   "servings": 8,
+   "yieldText": "8 pancakes",
+   "prepMin": 5,
+   "cookMin": 15,
+   "totalMin": 20,
+   "folderId": "starter-sauces-and-staples",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-sauces-and-staples-pizza-dough",
+   "title": "Pizza Dough",
+   "description": "",
+   "ingredients": [
+    "3 cups flour",
+    "1 tsp instant yeast",
+    "1 tsp salt",
+    "1 cup warm water",
+    "2 tbsp olive oil"
+   ],
+   "steps": [
+    "Mix everything into a dough. Knead for 8 minutes, until smooth.",
+    "Put in an oiled bowl, cover and leave to rise for 60 minutes, until doubled.",
+    "Heat the oven to 475°F. Split the dough in two and stretch each piece thin.",
+    "Add toppings and bake for 12 minutes, until the edges are brown."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 800",
+    "Protein: 19 g",
+    "Fat: 16 g",
+    "Carbohydrate: 142 g",
+    "Fiber: 5 g",
+    "Sugar: 1 g",
+    "Sodium: 1170 mg"
+   ],
+   "servings": 2,
+   "yieldText": "2 pizzas",
+   "prepMin": 20,
+   "cookMin": 12,
+   "totalMin": 32,
+   "folderId": "starter-sauces-and-staples",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-sauces-and-staples-yogurt-flatbread",
+   "title": "Yogurt Flatbread",
+   "description": "",
+   "ingredients": [
+    "2 cups flour",
+    "1 tsp baking powder",
+    "½ tsp salt",
+    "¾ cup plain yogurt"
+   ],
+   "steps": [
+    "Mix everything into a soft dough. Knead for 1 minute.",
+    "Split into 6 pieces and roll each one thin.",
+    "Cook in a hot dry pan for 2 minutes per side, until puffed and spotted brown."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 170",
+    "Protein: 5 g",
+    "Fat: 1 g",
+    "Carbohydrate: 33 g",
+    "Fiber: 1 g",
+    "Sugar: 2 g",
+    "Sodium: 290 mg"
+   ],
+   "servings": 6,
+   "yieldText": "6 flatbreads",
+   "prepMin": 10,
+   "cookMin": 15,
+   "totalMin": 25,
+   "folderId": "starter-sauces-and-staples",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-sauces-and-staples-banana-bread",
+   "title": "Banana Bread",
+   "description": "",
+   "ingredients": [
+    "3 ripe bananas, mashed",
+    "⅓ cup melted butter",
+    "¾ cup sugar",
+    "1 egg, beaten",
+    "1 tsp vanilla",
+    "1 tsp baking soda",
+    "pinch of salt",
+    "1½ cups flour"
+   ],
+   "steps": [
+    "Heat the oven to 350°F. Grease a loaf pan.",
+    "Mix the bananas and butter.",
+    "Stir in the sugar, egg and vanilla.",
+    "Sprinkle in the baking soda and salt, then stir in the flour.",
+    "Pour into the pan. Bake for 60 minutes, until a skewer comes out clean.",
+    "Cool in the pan for 10 minutes."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 220",
+    "Protein: 3 g",
+    "Fat: 7 g",
+    "Carbohydrate: 37 g",
+    "Fiber: 1 g",
+    "Sugar: 19 g",
+    "Sodium: 170 mg"
+   ],
+   "servings": 10,
+   "yieldText": "1 loaf",
+   "prepMin": 10,
+   "cookMin": 60,
+   "totalMin": 70,
+   "folderId": "starter-sauces-and-staples",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-sauces-and-staples-chicken-stock",
+   "title": "Chicken Stock",
+   "description": "",
+   "ingredients": [
+    "1 roast chicken carcass",
+    "1 onion, halved",
+    "2 carrots",
+    "2 celery sticks",
+    "1 bay leaf",
+    "10 peppercorns",
+    "10 cups water"
+   ],
+   "steps": [
+    "Put everything in a big pot. Bring to a boil.",
+    "Turn down and simmer gently for 3 hours, skimming off any foam.",
+    "Strain and cool. Keeps 4 days in the fridge or months in the freezer."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 10",
+    "Protein: 0 g",
+    "Fat: 0 g",
+    "Carbohydrate: 3 g",
+    "Fiber: 1 g",
+    "Sugar: 1 g",
+    "Sodium: 20 mg"
+   ],
+   "servings": 10,
+   "yieldText": "about 8 cups",
+   "prepMin": 10,
+   "cookMin": 180,
+   "totalMin": 190,
+   "folderId": "starter-sauces-and-staples",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  }
+ ]
+}

@@ -1,0 +1,330 @@
+{
+ "format": "recipebox",
+ "version": 2,
+ "about": "Burgers, ribs, skewers and smoky vegetables.",
+ "folders": [
+  {
+   "id": "starter-grilling",
+   "name": "Grilling"
+  }
+ ],
+ "recipes": [
+  {
+   "id": "starter-grilling-classic-burgers",
+   "title": "Classic Burgers",
+   "description": "",
+   "ingredients": [
+    "1½ lb ground beef (80/20)",
+    "1 tsp salt",
+    "½ tsp black pepper",
+    "4 slices cheddar",
+    "4 burger buns",
+    "lettuce, tomato and onion, to serve"
+   ],
+   "steps": [
+    "Heat the grill to high. Shape the beef into 4 patties a little wider than the buns. Press a dent in the middle of each.",
+    "Season both sides with the salt and pepper.",
+    "Grill for 4 minutes, flip, add the cheddar and grill 4 minutes more, until the middle reads 160°F. Ground beef should always be cooked through.",
+    "Toast the buns on the grill for the last minute. Build the burgers with the lettuce, tomato and onion."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 660",
+    "Protein: 39 g",
+    "Fat: 43 g",
+    "Carbohydrate: 26 g",
+    "Fiber: 1 g",
+    "Sugar: 3 g",
+    "Sodium: 1070 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 10,
+   "cookMin": 10,
+   "totalMin": 20,
+   "folderId": "starter-grilling",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-grilling-grilled-chicken-thighs",
+   "title": "Grilled Chicken Thighs",
+   "description": "",
+   "ingredients": [
+    "2 lb boneless chicken thighs",
+    "3 tbsp olive oil",
+    "2 cloves garlic, grated",
+    "1 tsp smoked paprika",
+    "1 tsp salt",
+    "½ tsp black pepper",
+    "1 lemon"
+   ],
+   "steps": [
+    "Mix the oil, garlic, paprika, salt, pepper and the lemon's zest and juice. Coat the chicken and leave 20 minutes.",
+    "Heat the grill to medium-high. Grill the thighs for 6 minutes per side, until they read 175°F.",
+    "Rest for 5 minutes before serving."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 500",
+    "Protein: 43 g",
+    "Fat: 35 g",
+    "Carbohydrate: 2 g",
+    "Fiber: 0 g",
+    "Sugar: 0 g",
+    "Sodium: 770 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 10,
+   "cookMin": 15,
+   "totalMin": 25,
+   "folderId": "starter-grilling",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-grilling-barbecue-ribs",
+   "title": "Barbecue Ribs",
+   "description": "",
+   "ingredients": [
+    "2 racks baby back ribs",
+    "2 tbsp brown sugar",
+    "1 tbsp smoked paprika",
+    "1 tsp garlic powder",
+    "1 tsp salt",
+    "½ tsp black pepper",
+    "1 cup barbecue sauce"
+   ],
+   "steps": [
+    "Heat the oven to 300°F. Pull the thin skin off the back of the ribs.",
+    "Mix the sugar and spices and rub all over the ribs. Wrap each rack tightly in foil.",
+    "Bake for 2 hours, until tender.",
+    "Unwrap, brush with the sauce and grill over medium heat for 10 minutes, turning and brushing, until sticky."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 950",
+    "Protein: 45 g",
+    "Fat: 66 g",
+    "Carbohydrate: 36 g",
+    "Fiber: 1 g",
+    "Sugar: 30 g",
+    "Sodium: 1500 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 15,
+   "cookMin": 150,
+   "totalMin": 165,
+   "folderId": "starter-grilling",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-grilling-grilled-corn",
+   "title": "Grilled Corn",
+   "description": "",
+   "ingredients": [
+    "4 ears corn, husked",
+    "2 tbsp butter, melted",
+    "½ tsp salt",
+    "1 lime",
+    "a pinch of chili powder"
+   ],
+   "steps": [
+    "Heat the grill to medium-high.",
+    "Brush the corn with butter. Grill for 12 minutes, turning every few minutes, until charred in spots.",
+    "Sprinkle with salt and chili powder. Squeeze the lime over."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 140",
+    "Protein: 3 g",
+    "Fat: 7 g",
+    "Carbohydrate: 20 g",
+    "Fiber: 2 g",
+    "Sugar: 6 g",
+    "Sodium: 330 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 5,
+   "cookMin": 12,
+   "totalMin": 17,
+   "folderId": "starter-grilling",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-grilling-chicken-kebabs",
+   "title": "Chicken Kebabs",
+   "description": "",
+   "ingredients": [
+    "1½ lb chicken breast, in 1-inch cubes",
+    "¼ cup plain yogurt",
+    "2 tbsp olive oil",
+    "2 cloves garlic, grated",
+    "1 tsp cumin",
+    "1 tsp paprika",
+    "1 tsp salt",
+    "1 red pepper, in chunks",
+    "1 red onion, in chunks"
+   ],
+   "steps": [
+    "Mix the yogurt, oil, garlic, spices and salt. Stir in the chicken and leave 30 minutes (or overnight).",
+    "Thread the chicken, pepper and onion onto skewers.",
+    "Grill over medium-high heat for 12 minutes, turning, until the chicken is cooked through."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 300",
+    "Protein: 40 g",
+    "Fat: 12 g",
+    "Carbohydrate: 7 g",
+    "Fiber: 1 g",
+    "Sugar: 4 g",
+    "Sodium: 670 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 20,
+   "cookMin": 12,
+   "totalMin": 32,
+   "folderId": "starter-grilling",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-grilling-grilled-salmon",
+   "title": "Grilled Salmon",
+   "description": "",
+   "ingredients": [
+    "4 salmon fillets, skin on",
+    "1 tbsp olive oil",
+    "½ tsp salt",
+    "¼ tsp black pepper",
+    "1 lemon, in wedges",
+    "2 tbsp butter",
+    "1 clove garlic, grated",
+    "1 tbsp chopped dill"
+   ],
+   "steps": [
+    "Heat the grill to medium-high and oil the grates well.",
+    "Brush the salmon with oil and season. Grill skin-side down for 6 minutes, then flip for 3 minutes.",
+    "Melt the butter with the garlic and dill. Spoon over the salmon. Serve with lemon."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 440",
+    "Protein: 34 g",
+    "Fat: 31 g",
+    "Carbohydrate: 1 g",
+    "Fiber: 0 g",
+    "Sugar: 0 g",
+    "Sodium: 410 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 5,
+   "cookMin": 10,
+   "totalMin": 15,
+   "folderId": "starter-grilling",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-grilling-steak-with-chimichurri",
+   "title": "Steak with Chimichurri",
+   "description": "",
+   "ingredients": [
+    "2 lb flank or skirt steak",
+    "1½ tsp salt",
+    "½ tsp black pepper",
+    "1 cup parsley, finely chopped",
+    "2 cloves garlic, grated",
+    "½ tsp red pepper flakes",
+    "3 tbsp red wine vinegar",
+    "½ cup olive oil"
+   ],
+   "steps": [
+    "Season the steak with 1 tsp of the salt and the pepper.",
+    "Stir the parsley, garlic, pepper flakes, vinegar, oil and the rest of the salt together.",
+    "Grill the steak over high heat for 4 minutes per side, until the thickest part reads 130°F for medium-rare (145°F for medium).",
+    "Rest for 10 minutes, slice thinly across the grain, and spoon the chimichurri over."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 680",
+    "Protein: 46 g",
+    "Fat: 55 g",
+    "Carbohydrate: 1 g",
+    "Fiber: 1 g",
+    "Sugar: 0 g",
+    "Sodium: 1010 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 15,
+   "cookMin": 10,
+   "totalMin": 25,
+   "folderId": "starter-grilling",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-grilling-grilled-vegetables",
+   "title": "Grilled Vegetables",
+   "description": "",
+   "ingredients": [
+    "2 zucchini, in long slices",
+    "1 eggplant, in rounds",
+    "2 peppers, in quarters",
+    "1 red onion, in thick rounds",
+    "¼ cup olive oil",
+    "1 tsp salt",
+    "2 tbsp balsamic vinegar",
+    "a handful of basil"
+   ],
+   "steps": [
+    "Heat the grill to medium-high. Toss the vegetables with the oil and salt.",
+    "Grill for 12 minutes, turning once, until tender and marked.",
+    "Pile onto a platter, drizzle with the vinegar and scatter the basil."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 200",
+    "Protein: 4 g",
+    "Fat: 14 g",
+    "Carbohydrate: 18 g",
+    "Fiber: 6 g",
+    "Sugar: 12 g",
+    "Sodium: 600 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 15,
+   "cookMin": 12,
+   "totalMin": 27,
+   "folderId": "starter-grilling",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  }
+ ]
+}

@@ -1,0 +1,365 @@
+{
+ "format": "recipebox",
+ "version": 2,
+ "about": "Slaw, potatoes, greens and rice to go with anything.",
+ "folders": [
+  {
+   "id": "starter-salads-and-sides",
+   "name": "Salads & Sides"
+  }
+ ],
+ "recipes": [
+  {
+   "id": "starter-salads-and-sides-classic-coleslaw",
+   "title": "Classic Coleslaw",
+   "description": "",
+   "ingredients": [
+    "½ head green cabbage, shredded",
+    "2 carrots, grated",
+    "½ cup mayonnaise",
+    "1 tbsp cider vinegar",
+    "1 tsp sugar",
+    "½ tsp salt",
+    "black pepper"
+   ],
+   "steps": [
+    "Mix the mayonnaise, vinegar, sugar, salt and pepper.",
+    "Toss with the cabbage and carrots.",
+    "Chill for 30 minutes before serving."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 150",
+    "Protein: 1 g",
+    "Fat: 14 g",
+    "Carbohydrate: 7 g",
+    "Fiber: 2 g",
+    "Sugar: 4 g",
+    "Sodium: 340 mg"
+   ],
+   "servings": 6,
+   "yieldText": "6 servings",
+   "prepMin": 15,
+   "cookMin": null,
+   "totalMin": 15,
+   "folderId": "starter-salads-and-sides",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-salads-and-sides-potato-salad",
+   "title": "Potato Salad",
+   "description": "",
+   "ingredients": [
+    "2 lb waxy potatoes, in chunks",
+    "½ cup mayonnaise",
+    "1 tbsp Dijon mustard",
+    "2 celery sticks, diced",
+    "3 green onions, sliced",
+    "2 hard-boiled eggs, chopped",
+    "1 tsp salt",
+    "black pepper"
+   ],
+   "steps": [
+    "Boil the potatoes in salted water for 15 minutes, until just tender. Drain and cool.",
+    "Mix the mayonnaise and mustard.",
+    "Fold in the potatoes, celery, green onions and eggs. Season with salt and pepper."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 270",
+    "Protein: 6 g",
+    "Fat: 16 g",
+    "Carbohydrate: 27 g",
+    "Fiber: 4 g",
+    "Sugar: 2 g",
+    "Sodium: 580 mg"
+   ],
+   "servings": 6,
+   "yieldText": "6 servings",
+   "prepMin": 15,
+   "cookMin": 15,
+   "totalMin": 30,
+   "folderId": "starter-salads-and-sides",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-salads-and-sides-greek-salad",
+   "title": "Greek Salad",
+   "description": "",
+   "ingredients": [
+    "4 tomatoes, in wedges",
+    "1 cucumber, in chunks",
+    "1 green pepper, sliced",
+    "½ red onion, thinly sliced",
+    "½ cup Kalamata olives",
+    "7 oz feta, in a block",
+    "3 tbsp olive oil",
+    "1 tbsp red wine vinegar",
+    "1 tsp dried oregano"
+   ],
+   "steps": [
+    "Put the tomatoes, cucumber, pepper, onion and olives in a bowl.",
+    "Lay the feta on top.",
+    "Drizzle with the oil and vinegar. Sprinkle with oregano."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 300",
+    "Protein: 9 g",
+    "Fat: 24 g",
+    "Carbohydrate: 14 g",
+    "Fiber: 3 g",
+    "Sugar: 9 g",
+    "Sodium: 740 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 15,
+   "cookMin": null,
+   "totalMin": 15,
+   "folderId": "starter-salads-and-sides",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-salads-and-sides-caesar-salad",
+   "title": "Caesar Salad",
+   "description": "",
+   "ingredients": [
+    "1 large romaine lettuce",
+    "2 cups bread cubes",
+    "2 tbsp olive oil",
+    "## Dressing",
+    "1 clove garlic, grated",
+    "2 anchovy fillets, mashed",
+    "1 egg yolk",
+    "1 tbsp lemon juice",
+    "1 tsp Dijon mustard",
+    "⅓ cup olive oil",
+    "½ cup grated Parmesan"
+   ],
+   "steps": [
+    "Heat the oven to 400°F. Toss the bread with the oil and bake for 10 minutes, until crisp.",
+    "Whisk the garlic, anchovies, yolk, lemon and mustard. Whisk in the oil slowly, then half the Parmesan.",
+    "Tear the lettuce. Toss with the dressing, croutons and the rest of the Parmesan."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 360",
+    "Protein: 9 g",
+    "Fat: 31 g",
+    "Carbohydrate: 14 g",
+    "Fiber: 4 g",
+    "Sugar: 3 g",
+    "Sodium: 360 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 20,
+   "cookMin": 10,
+   "totalMin": 30,
+   "folderId": "starter-salads-and-sides",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-salads-and-sides-roast-vegetables",
+   "title": "Roast Vegetables",
+   "description": "",
+   "ingredients": [
+    "2 lb mixed vegetables (carrots, parsnips, squash, onions)",
+    "3 tbsp olive oil",
+    "1 tsp salt",
+    "½ tsp black pepper",
+    "a few sprigs rosemary or thyme"
+   ],
+   "steps": [
+    "Heat the oven to 425°F.",
+    "Cut the vegetables into even chunks. Toss with the oil, salt, pepper and herbs.",
+    "Spread on a tray in one layer.",
+    "Roast for 40 minutes, turning once, until browned at the edges."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 180",
+    "Protein: 2 g",
+    "Fat: 10 g",
+    "Carbohydrate: 21 g",
+    "Fiber: 4 g",
+    "Sugar: 10 g",
+    "Sodium: 590 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 15,
+   "cookMin": 40,
+   "totalMin": 55,
+   "folderId": "starter-salads-and-sides",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-salads-and-sides-mashed-potatoes",
+   "title": "Mashed Potatoes",
+   "description": "",
+   "ingredients": [
+    "3 lb floury potatoes, peeled and in chunks",
+    "½ cup butter",
+    "¾ cup warm milk",
+    "1 tsp salt",
+    "white pepper"
+   ],
+   "steps": [
+    "Put the potatoes in cold salted water. Bring to a boil and cook for 20 minutes, until soft.",
+    "Drain well and let steam dry for 2 minutes.",
+    "Mash with the butter, then beat in the milk. Season with salt and pepper."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 330",
+    "Protein: 6 g",
+    "Fat: 17 g",
+    "Carbohydrate: 40 g",
+    "Fiber: 5 g",
+    "Sugar: 3 g",
+    "Sodium: 470 mg"
+   ],
+   "servings": 6,
+   "yieldText": "6 servings",
+   "prepMin": 10,
+   "cookMin": 20,
+   "totalMin": 30,
+   "folderId": "starter-salads-and-sides",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-salads-and-sides-green-beans-with-garlic",
+   "title": "Green Beans with Garlic",
+   "description": "",
+   "ingredients": [
+    "1 lb green beans, trimmed",
+    "2 tbsp butter",
+    "2 cloves garlic, sliced",
+    "salt",
+    "1 tsp lemon juice"
+   ],
+   "steps": [
+    "Boil the beans in salted water for 4 minutes. Drain.",
+    "Melt the butter in a pan. Cook the garlic for 1 minute.",
+    "Toss in the beans. Season with salt and lemon juice."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 190",
+    "Protein: 9 g",
+    "Fat: 6 g",
+    "Carbohydrate: 26 g",
+    "Fiber: 7 g",
+    "Sugar: 0 g",
+    "Sodium: 310 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 5,
+   "cookMin": 10,
+   "totalMin": 15,
+   "folderId": "starter-salads-and-sides",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-salads-and-sides-cucumber-salad",
+   "title": "Cucumber Salad",
+   "description": "",
+   "ingredients": [
+    "2 cucumbers, thinly sliced",
+    "½ red onion, thinly sliced",
+    "3 tbsp rice vinegar",
+    "1 tsp sugar",
+    "½ tsp salt",
+    "1 tbsp chopped dill"
+   ],
+   "steps": [
+    "Mix the vinegar, sugar and salt until dissolved.",
+    "Toss with the cucumber, onion and dill.",
+    "Leave for 10 minutes before serving."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 40",
+    "Protein: 1 g",
+    "Fat: 0 g",
+    "Carbohydrate: 8 g",
+    "Fiber: 1 g",
+    "Sugar: 4 g",
+    "Sodium: 290 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 10,
+   "cookMin": null,
+   "totalMin": 10,
+   "folderId": "starter-salads-and-sides",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-salads-and-sides-rice-pilaf",
+   "title": "Rice Pilaf",
+   "description": "",
+   "ingredients": [
+    "1 cup long-grain rice",
+    "2 tbsp butter",
+    "1 small onion, finely chopped",
+    "2 cups chicken or vegetable stock",
+    "½ tsp salt",
+    "2 tbsp chopped parsley"
+   ],
+   "steps": [
+    "Melt the butter in a pan. Cook the onion for 3 minutes.",
+    "Add the rice and stir for 2 minutes, until it smells toasty.",
+    "Add the stock and salt. Bring to a boil, cover and cook on low for 18 minutes.",
+    "Rest, covered, for 5 minutes. Fluff with a fork and stir in the parsley."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 230",
+    "Protein: 4 g",
+    "Fat: 6 g",
+    "Carbohydrate: 39 g",
+    "Fiber: 1 g",
+    "Sugar: 1 g",
+    "Sodium: 720 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 5,
+   "cookMin": 25,
+   "totalMin": 30,
+   "folderId": "starter-salads-and-sides",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  }
+ ]
+}

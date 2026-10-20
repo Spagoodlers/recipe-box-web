@@ -1,0 +1,353 @@
+{
+ "format": "recipebox",
+ "version": 2,
+ "about": "Italian classics and quick noodle bowls.",
+ "folders": [
+  {
+   "id": "starter-pasta-and-noodles",
+   "name": "Pasta & Noodles"
+  }
+ ],
+ "recipes": [
+  {
+   "id": "starter-pasta-and-noodles-spaghetti-aglio-e-olio",
+   "title": "Spaghetti Aglio e Olio",
+   "description": "",
+   "ingredients": [
+    "1 lb spaghetti",
+    "½ cup olive oil",
+    "6 cloves garlic, thinly sliced",
+    "½ tsp red pepper flakes",
+    "a handful of parsley, chopped",
+    "salt",
+    "grated parmesan, to serve"
+   ],
+   "steps": [
+    "Cook the spaghetti in well-salted boiling water until just tender. Save 1 cup of the water, then drain.",
+    "Meanwhile, warm the oil and garlic in a large pan over low heat until the garlic is pale gold, about 5 minutes.",
+    "Add the pepper flakes, then the spaghetti and a splash of the pasta water. Toss for 1 minute until glossy.",
+    "Stir in the parsley. Serve with parmesan."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 670",
+    "Protein: 15 g",
+    "Fat: 29 g",
+    "Carbohydrate: 87 g",
+    "Fiber: 4 g",
+    "Sugar: 3 g",
+    "Sodium: 10 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 5,
+   "cookMin": 15,
+   "totalMin": 20,
+   "folderId": "starter-pasta-and-noodles",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-pasta-and-noodles-fettuccine-alfredo",
+   "title": "Fettuccine Alfredo",
+   "description": "",
+   "ingredients": [
+    "1 lb fettuccine",
+    "4 tbsp butter",
+    "1 cup heavy cream",
+    "1½ cups grated parmesan",
+    "½ tsp salt",
+    "black pepper",
+    "a pinch of nutmeg"
+   ],
+   "steps": [
+    "Cook the fettuccine in salted boiling water. Save ½ cup of the water, then drain.",
+    "Melt the butter in a wide pan. Add the cream and simmer for 3 minutes.",
+    "Off the heat, stir in the parmesan until smooth. Season with salt, pepper and nutmeg.",
+    "Toss in the pasta, loosening with pasta water as needed. Serve straight away."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 890",
+    "Protein: 31 g",
+    "Fat: 45 g",
+    "Carbohydrate: 88 g",
+    "Fiber: 4 g",
+    "Sugar: 5 g",
+    "Sodium: 920 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 5,
+   "cookMin": 15,
+   "totalMin": 20,
+   "folderId": "starter-pasta-and-noodles",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-pasta-and-noodles-baked-ziti",
+   "title": "Baked Ziti",
+   "description": "",
+   "ingredients": [
+    "1 lb ziti or penne",
+    "1 lb Italian sausage, casings removed",
+    "1 onion, chopped",
+    "2 cloves garlic",
+    "1 jar (24 oz) marinara sauce",
+    "15 oz ricotta",
+    "2 cups shredded mozzarella",
+    "½ cup grated parmesan"
+   ],
+   "steps": [
+    "Heat the oven to 375°F. Cook the pasta for 2 minutes less than the packet says. Drain.",
+    "Brown the sausage with the onion and garlic, breaking it up, about 8 minutes, until no pink remains. Stir in the marinara.",
+    "Mix the pasta with the sauce. Spread half in a baking dish, dot with the ricotta, then top with the rest.",
+    "Cover with the mozzarella and parmesan. Bake for 25 minutes, until bubbling and browned."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 850",
+    "Protein: 42 g",
+    "Fat: 42 g",
+    "Carbohydrate: 73 g",
+    "Fiber: 5 g",
+    "Sugar: 10 g",
+    "Sodium: 1540 mg"
+   ],
+   "servings": 6,
+   "yieldText": "6 servings",
+   "prepMin": 15,
+   "cookMin": 35,
+   "totalMin": 50,
+   "folderId": "starter-pasta-and-noodles",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-pasta-and-noodles-pesto-pasta",
+   "title": "Pesto Pasta",
+   "description": "",
+   "ingredients": [
+    "1 lb fusilli",
+    "2 cups basil leaves",
+    "⅓ cup pine nuts",
+    "1 clove garlic",
+    "½ cup grated parmesan",
+    "½ cup olive oil",
+    "½ tsp salt",
+    "1 cup cherry tomatoes, halved"
+   ],
+   "steps": [
+    "Cook the pasta in salted boiling water. Save ½ cup of the water, then drain.",
+    "Blend the basil, pine nuts, garlic, parmesan and salt. With the motor running, pour in the oil.",
+    "Toss the pasta with the pesto and a splash of pasta water. Fold in the tomatoes."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 800",
+    "Protein: 22 g",
+    "Fat: 40 g",
+    "Carbohydrate: 89 g",
+    "Fiber: 5 g",
+    "Sugar: 5 g",
+    "Sodium: 490 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 10,
+   "cookMin": 12,
+   "totalMin": 22,
+   "folderId": "starter-pasta-and-noodles",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-pasta-and-noodles-pad-thai",
+   "title": "Pad Thai",
+   "description": "",
+   "ingredients": [
+    "4 oz flat rice noodles",
+    "2 tbsp fish sauce",
+    "2 tbsp tamarind paste",
+    "2 tbsp brown sugar",
+    "2 tbsp oil",
+    "8 oz shrimp or tofu",
+    "2 cloves garlic",
+    "2 eggs",
+    "1 cup bean sprouts",
+    "3 green onions, sliced",
+    "¼ cup roasted peanuts, chopped",
+    "1 lime, in wedges"
+   ],
+   "steps": [
+    "Soak the noodles in hot water for 10 minutes. Drain.",
+    "Stir the fish sauce, tamarind and sugar together.",
+    "Heat the oil in a wok. Cook the shrimp or tofu and garlic for 2 minutes. Push to the side.",
+    "Scramble the eggs in the empty side, then add the noodles and sauce. Toss for 3 minutes.",
+    "Add the sprouts and green onions. Serve topped with peanuts and lime."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 730",
+    "Protein: 41 g",
+    "Fat: 29 g",
+    "Carbohydrate: 82 g",
+    "Fiber: 5 g",
+    "Sugar: 28 g",
+    "Sodium: 1750 mg"
+   ],
+   "servings": 2,
+   "yieldText": "2 servings",
+   "prepMin": 20,
+   "cookMin": 10,
+   "totalMin": 30,
+   "folderId": "starter-pasta-and-noodles",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-pasta-and-noodles-sesame-noodles",
+   "title": "Sesame Noodles",
+   "description": "",
+   "ingredients": [
+    "12 oz spaghetti or egg noodles",
+    "3 tbsp soy sauce",
+    "2 tbsp sesame paste or peanut butter",
+    "1 tbsp rice vinegar",
+    "1 tbsp sesame oil",
+    "1 tbsp honey",
+    "1 clove garlic, grated",
+    "1 cucumber, in matchsticks",
+    "2 green onions, sliced",
+    "1 tbsp sesame seeds"
+   ],
+   "steps": [
+    "Cook the noodles. Rinse under cold water and drain well.",
+    "Whisk the soy sauce, sesame paste, vinegar, sesame oil, honey and garlic with 2 tbsp warm water.",
+    "Toss the noodles with the sauce. Top with cucumber, green onions and sesame seeds. Serve cold."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 450",
+    "Protein: 15 g",
+    "Fat: 12 g",
+    "Carbohydrate: 71 g",
+    "Fiber: 4 g",
+    "Sugar: 8 g",
+    "Sodium: 690 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 10,
+   "cookMin": 8,
+   "totalMin": 18,
+   "folderId": "starter-pasta-and-noodles",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-pasta-and-noodles-lasagna",
+   "title": "Lasagna",
+   "description": "",
+   "ingredients": [
+    "12 lasagna noodles",
+    "1 lb ground beef",
+    "1 onion, chopped",
+    "2 cloves garlic",
+    "1 can (28 oz) crushed tomatoes",
+    "2 tbsp tomato paste",
+    "1 tsp dried oregano",
+    "15 oz ricotta",
+    "1 egg",
+    "3 cups shredded mozzarella",
+    "¾ cup grated parmesan",
+    "salt and pepper"
+   ],
+   "steps": [
+    "Heat the oven to 375°F. Cook the noodles until just tender. Drain and lay flat.",
+    "Brown the beef with the onion and garlic until no pink remains. Add the tomatoes, tomato paste and oregano. Simmer for 15 minutes. Season.",
+    "Mix the ricotta, egg and half the parmesan.",
+    "In a 9×13 dish, layer sauce, noodles, ricotta mix and mozzarella. Repeat twice, ending with sauce, mozzarella and parmesan.",
+    "Cover with foil and bake for 25 minutes. Uncover and bake 20 minutes more.",
+    "Rest for 15 minutes before cutting."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 570",
+    "Protein: 35 g",
+    "Fat: 32 g",
+    "Carbohydrate: 35 g",
+    "Fiber: 3 g",
+    "Sugar: 7 g",
+    "Sodium: 680 mg"
+   ],
+   "servings": 8,
+   "yieldText": "8 servings",
+   "prepMin": 30,
+   "cookMin": 60,
+   "totalMin": 90,
+   "folderId": "starter-pasta-and-noodles",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-pasta-and-noodles-chicken-lo-mein",
+   "title": "Chicken Lo Mein",
+   "description": "",
+   "ingredients": [
+    "8 oz lo mein or egg noodles",
+    "3 tbsp soy sauce",
+    "1 tbsp oyster sauce",
+    "1 tsp sugar",
+    "1 tbsp sesame oil",
+    "2 tbsp oil",
+    "1 lb chicken breast, thinly sliced",
+    "2 cloves garlic",
+    "1 carrot, in matchsticks",
+    "2 cups shredded cabbage",
+    "3 green onions, sliced"
+   ],
+   "steps": [
+    "Cook the noodles. Drain and toss with the sesame oil.",
+    "Stir the soy sauce, oyster sauce and sugar together.",
+    "Stir-fry the chicken in the oil over high heat for 4 minutes, until no pink remains. Add the garlic, carrot and cabbage; cook 2 minutes.",
+    "Add the noodles and sauce. Toss for 2 minutes. Finish with the green onions."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 480",
+    "Protein: 35 g",
+    "Fat: 16 g",
+    "Carbohydrate: 47 g",
+    "Fiber: 4 g",
+    "Sugar: 4 g",
+    "Sodium: 860 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 15,
+   "cookMin": 10,
+   "totalMin": 25,
+   "folderId": "starter-pasta-and-noodles",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  }
+ ]
+}

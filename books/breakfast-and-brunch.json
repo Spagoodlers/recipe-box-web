@@ -1,0 +1,317 @@
+{
+ "format": "recipebox",
+ "version": 2,
+ "about": "Slow weekends and quick weekdays.",
+ "folders": [
+  {
+   "id": "starter-breakfast-and-brunch",
+   "name": "Breakfast & Brunch"
+  }
+ ],
+ "recipes": [
+  {
+   "id": "starter-breakfast-and-brunch-french-toast",
+   "title": "French Toast",
+   "description": "",
+   "ingredients": [
+    "2 eggs",
+    "½ cup milk",
+    "½ tsp cinnamon",
+    "1 tsp vanilla",
+    "4 slices bread",
+    "1 tbsp butter",
+    "maple syrup, to serve"
+   ],
+   "steps": [
+    "Whisk the eggs, milk, cinnamon and vanilla in a shallow dish.",
+    "Dip each slice of bread for a few seconds per side.",
+    "Cook in the butter over medium heat for 3 minutes per side, until golden.",
+    "Serve with maple syrup."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 320",
+    "Protein: 14 g",
+    "Fat: 14 g",
+    "Carbohydrate: 33 g",
+    "Fiber: 2 g",
+    "Sugar: 6 g",
+    "Sodium: 410 mg"
+   ],
+   "servings": 2,
+   "yieldText": "2 servings",
+   "prepMin": 5,
+   "cookMin": 8,
+   "totalMin": 13,
+   "folderId": "starter-breakfast-and-brunch",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-breakfast-and-brunch-waffles",
+   "title": "Waffles",
+   "description": "",
+   "ingredients": [
+    "2 cups flour",
+    "2 tbsp sugar",
+    "1 tbsp baking powder",
+    "½ tsp salt",
+    "1¾ cups milk",
+    "2 eggs",
+    "½ cup melted butter"
+   ],
+   "steps": [
+    "Heat the waffle iron.",
+    "Whisk the dry ingredients. Whisk in the milk, eggs and butter until just smooth.",
+    "Cook in the iron, about 4 minutes each, until crisp."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 560",
+    "Protein: 13 g",
+    "Fat: 30 g",
+    "Carbohydrate: 60 g",
+    "Fiber: 2 g",
+    "Sugar: 12 g",
+    "Sodium: 820 mg"
+   ],
+   "servings": 4,
+   "yieldText": "about 8 waffles",
+   "prepMin": 10,
+   "cookMin": 20,
+   "totalMin": 30,
+   "folderId": "starter-breakfast-and-brunch",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-breakfast-and-brunch-overnight-oats",
+   "title": "Overnight Oats",
+   "description": "",
+   "ingredients": [
+    "½ cup rolled oats",
+    "½ cup milk",
+    "¼ cup yogurt",
+    "1 tsp honey",
+    "berries, to serve"
+   ],
+   "steps": [
+    "Stir the oats, milk, yogurt and honey together in a jar.",
+    "Close and leave in the fridge overnight.",
+    "Top with berries in the morning."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 300",
+    "Protein: 12 g",
+    "Fat: 9 g",
+    "Carbohydrate: 45 g",
+    "Fiber: 5 g",
+    "Sugar: 15 g",
+    "Sodium: 80 mg"
+   ],
+   "servings": 1,
+   "yieldText": "1 servings",
+   "prepMin": 5,
+   "cookMin": null,
+   "totalMin": 5,
+   "folderId": "starter-breakfast-and-brunch",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-breakfast-and-brunch-granola",
+   "title": "Granola",
+   "description": "",
+   "ingredients": [
+    "3 cups rolled oats",
+    "1 cup nuts, chopped",
+    "½ tsp salt",
+    "½ tsp cinnamon",
+    "⅓ cup honey or maple syrup",
+    "⅓ cup oil",
+    "½ cup dried fruit"
+   ],
+   "steps": [
+    "Heat the oven to 325°F.",
+    "Mix everything except the dried fruit. Spread on a lined tray.",
+    "Bake for 25 minutes, stirring halfway, until golden.",
+    "Stir in the fruit. It crisps up as it cools."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 380",
+    "Protein: 8 g",
+    "Fat: 21 g",
+    "Carbohydrate: 45 g",
+    "Fiber: 5 g",
+    "Sugar: 18 g",
+    "Sodium: 150 mg"
+   ],
+   "servings": 8,
+   "yieldText": "8 servings",
+   "prepMin": 10,
+   "cookMin": 25,
+   "totalMin": 35,
+   "folderId": "starter-breakfast-and-brunch",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-breakfast-and-brunch-breakfast-burritos",
+   "title": "Breakfast Burritos",
+   "description": "",
+   "ingredients": [
+    "4 eggs",
+    "pinch of salt",
+    "1 tbsp butter",
+    "½ cup cooked sausage or beans",
+    "½ cup grated cheese",
+    "2 large tortillas",
+    "salsa"
+   ],
+   "steps": [
+    "Scramble the eggs with the salt in the butter.",
+    "Warm the tortillas.",
+    "Fill with the eggs, sausage, cheese and salsa. Roll up."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 440",
+    "Protein: 23 g",
+    "Fat: 28 g",
+    "Carbohydrate: 24 g",
+    "Fiber: 1 g",
+    "Sugar: 1 g",
+    "Sodium: 730 mg"
+   ],
+   "servings": 2,
+   "yieldText": "2 servings",
+   "prepMin": 5,
+   "cookMin": 10,
+   "totalMin": 15,
+   "folderId": "starter-breakfast-and-brunch",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-breakfast-and-brunch-hash-browns",
+   "title": "Hash Browns",
+   "description": "",
+   "ingredients": [
+    "2 large potatoes, peeled and grated",
+    "½ tsp salt",
+    "2 tbsp oil"
+   ],
+   "steps": [
+    "Squeeze the grated potato dry in a clean towel. Mix in the salt.",
+    "Heat the oil in a frying pan over medium-high heat.",
+    "Press the potato into a thin layer. Cook for 6 minutes per side, until golden and crisp."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 350",
+    "Protein: 6 g",
+    "Fat: 14 g",
+    "Carbohydrate: 51 g",
+    "Fiber: 7 g",
+    "Sugar: 2 g",
+    "Sodium: 600 mg"
+   ],
+   "servings": 2,
+   "yieldText": "2 servings",
+   "prepMin": 10,
+   "cookMin": 12,
+   "totalMin": 22,
+   "folderId": "starter-breakfast-and-brunch",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-breakfast-and-brunch-huevos-rancheros",
+   "title": "Huevos Rancheros",
+   "description": "",
+   "ingredients": [
+    "1 tbsp oil",
+    "4 eggs",
+    "4 corn tortillas",
+    "1 cup salsa",
+    "½ cup refried beans",
+    "grated cheese",
+    "1 avocado, sliced"
+   ],
+   "steps": [
+    "Warm the beans and the salsa in separate small pans.",
+    "Fry the eggs in the oil.",
+    "Warm the tortillas.",
+    "Layer beans, eggs, salsa, cheese and avocado on the tortillas."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 700",
+    "Protein: 26 g",
+    "Fat: 36 g",
+    "Carbohydrate: 71 g",
+    "Fiber: 13 g",
+    "Sugar: 8 g",
+    "Sodium: 1620 mg"
+   ],
+   "servings": 2,
+   "yieldText": "2 servings",
+   "prepMin": 5,
+   "cookMin": 12,
+   "totalMin": 17,
+   "folderId": "starter-breakfast-and-brunch",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-breakfast-and-brunch-oven-bacon",
+   "title": "Oven Bacon",
+   "description": "",
+   "ingredients": [
+    "12 oz bacon"
+   ],
+   "steps": [
+    "Heat the oven to 400°F.",
+    "Lay the bacon in one layer on a lined tray.",
+    "Bake for 18 minutes, until crisp.",
+    "Drain on paper towel."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 260",
+    "Protein: 13 g",
+    "Fat: 22 g",
+    "Carbohydrate: 1 g",
+    "Fiber: 0 g",
+    "Sugar: 0 g",
+    "Sodium: 770 mg"
+   ],
+   "servings": 4,
+   "yieldText": "4 servings",
+   "prepMin": 2,
+   "cookMin": 20,
+   "totalMin": 22,
+   "folderId": "starter-breakfast-and-brunch",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  }
+ ]
+}

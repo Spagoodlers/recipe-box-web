@@ -1,0 +1,378 @@
+{
+ "format": "recipebox",
+ "version": 2,
+ "about": "Bread, brownies, cake, muffins, cookies, pastry.",
+ "folders": [
+  {
+   "id": "starter-baking-basics",
+   "name": "Baking Basics"
+  }
+ ],
+ "recipes": [
+  {
+   "id": "starter-baking-basics-sandwich-bread",
+   "title": "Sandwich Bread",
+   "description": "",
+   "ingredients": [
+    "3½ cups flour",
+    "2 tsp instant yeast",
+    "1½ tsp salt",
+    "1 tbsp sugar",
+    "1¼ cups warm milk",
+    "2 tbsp melted butter"
+   ],
+   "steps": [
+    "Mix everything into a dough. Knead for 10 minutes, until smooth and springy.",
+    "Cover and leave to rise for 60 minutes, until doubled.",
+    "Shape into a log and put it in a greased loaf pan. Rise again for 45 minutes.",
+    "Heat the oven to 375°F. Bake for 35 minutes, until it sounds hollow when tapped underneath.",
+    "Cool completely before slicing."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 170",
+    "Protein: 4 g",
+    "Fat: 3 g",
+    "Carbohydrate: 30 g",
+    "Fiber: 1 g",
+    "Sugar: 2 g",
+    "Sodium: 310 mg"
+   ],
+   "servings": 12,
+   "yieldText": "1 loaf",
+   "prepMin": 20,
+   "cookMin": 35,
+   "totalMin": 55,
+   "folderId": "starter-baking-basics",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-baking-basics-fudgy-brownies",
+   "title": "Fudgy Brownies",
+   "description": "",
+   "ingredients": [
+    "½ cup butter",
+    "1 cup sugar",
+    "2 eggs",
+    "1 tsp vanilla",
+    "⅓ cup cocoa powder",
+    "½ cup flour",
+    "¼ tsp salt",
+    "¼ tsp baking powder"
+   ],
+   "steps": [
+    "Heat the oven to 350°F. Grease an 8-inch square pan.",
+    "Melt the butter. Stir in the sugar, eggs and vanilla.",
+    "Beat in the cocoa, flour, salt and baking powder.",
+    "Spread in the pan. Bake for 25 minutes.",
+    "Cool before cutting."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 130",
+    "Protein: 2 g",
+    "Fat: 7 g",
+    "Carbohydrate: 17 g",
+    "Fiber: 1 g",
+    "Sugar: 13 g",
+    "Sodium: 70 mg"
+   ],
+   "servings": 16,
+   "yieldText": "16 brownies",
+   "prepMin": 15,
+   "cookMin": 25,
+   "totalMin": 40,
+   "folderId": "starter-baking-basics",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-baking-basics-vanilla-cake",
+   "title": "Vanilla Cake",
+   "description": "",
+   "ingredients": [
+    "2 cups flour",
+    "1½ cups sugar",
+    "1 tbsp baking powder",
+    "½ tsp salt",
+    "½ cup butter, softened",
+    "1 cup milk",
+    "3 eggs",
+    "2 tsp vanilla"
+   ],
+   "steps": [
+    "Heat the oven to 350°F. Grease two 8-inch round pans.",
+    "Mix the flour, sugar, baking powder and salt. Beat in the butter until sandy.",
+    "Add the milk, eggs and vanilla. Beat for 2 minutes.",
+    "Divide between the pans. Bake for 30 minutes, until a skewer comes out clean.",
+    "Cool in the pans for 10 minutes, then turn out."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 270",
+    "Protein: 4 g",
+    "Fat: 10 g",
+    "Carbohydrate: 42 g",
+    "Fiber: 1 g",
+    "Sugar: 26 g",
+    "Sodium: 270 mg"
+   ],
+   "servings": 12,
+   "yieldText": "one 2-layer cake",
+   "prepMin": 15,
+   "cookMin": 30,
+   "totalMin": 45,
+   "folderId": "starter-baking-basics",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-baking-basics-blueberry-muffins",
+   "title": "Blueberry Muffins",
+   "description": "",
+   "ingredients": [
+    "2 cups flour",
+    "¾ cup sugar",
+    "2 tsp baking powder",
+    "½ tsp salt",
+    "⅓ cup oil",
+    "1 egg",
+    "¾ cup milk",
+    "1 tsp vanilla",
+    "1 cup blueberries"
+   ],
+   "steps": [
+    "Heat the oven to 400°F. Line a muffin tin.",
+    "Whisk the flour, sugar, baking powder and salt.",
+    "Whisk the oil, egg, milk and vanilla in another bowl.",
+    "Stir the wet into the dry until just mixed. Fold in the blueberries.",
+    "Fill the cups two-thirds full. Bake for 20 minutes."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 200",
+    "Protein: 3 g",
+    "Fat: 7 g",
+    "Carbohydrate: 31 g",
+    "Fiber: 1 g",
+    "Sugar: 15 g",
+    "Sodium: 190 mg"
+   ],
+   "servings": 12,
+   "yieldText": "12 muffins",
+   "prepMin": 10,
+   "cookMin": 20,
+   "totalMin": 30,
+   "folderId": "starter-baking-basics",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-baking-basics-scones",
+   "title": "Scones",
+   "description": "",
+   "ingredients": [
+    "2 cups flour",
+    "¼ cup sugar",
+    "1 tbsp baking powder",
+    "½ tsp salt",
+    "½ cup cold butter, cubed",
+    "⅔ cup milk",
+    "1 egg"
+   ],
+   "steps": [
+    "Heat the oven to 425°F.",
+    "Rub the butter into the flour, sugar, baking powder and salt.",
+    "Stir in the milk and egg to make a soft dough.",
+    "Pat into a 1-inch-thick circle and cut into 8 wedges.",
+    "Bake for 15 minutes, until golden."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 260",
+    "Protein: 5 g",
+    "Fat: 13 g",
+    "Carbohydrate: 32 g",
+    "Fiber: 1 g",
+    "Sugar: 7 g",
+    "Sodium: 390 mg"
+   ],
+   "servings": 8,
+   "yieldText": "8 scones",
+   "prepMin": 15,
+   "cookMin": 15,
+   "totalMin": 30,
+   "folderId": "starter-baking-basics",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-baking-basics-cornbread",
+   "title": "Cornbread",
+   "description": "",
+   "ingredients": [
+    "1 cup cornmeal",
+    "1 cup flour",
+    "¼ cup sugar",
+    "1 tbsp baking powder",
+    "½ tsp salt",
+    "1 cup milk",
+    "1 egg",
+    "⅓ cup melted butter"
+   ],
+   "steps": [
+    "Heat the oven to 400°F. Grease an 8-inch square pan.",
+    "Mix the dry ingredients. Mix the wet ones separately.",
+    "Stir together until just combined.",
+    "Pour into the pan and bake for 22 minutes, until golden."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 220",
+    "Protein: 4 g",
+    "Fat: 9 g",
+    "Carbohydrate: 31 g",
+    "Fiber: 2 g",
+    "Sugar: 7 g",
+    "Sodium: 340 mg"
+   ],
+   "servings": 9,
+   "yieldText": "9 servings",
+   "prepMin": 10,
+   "cookMin": 22,
+   "totalMin": 32,
+   "folderId": "starter-baking-basics",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-baking-basics-sugar-cookies",
+   "title": "Sugar Cookies",
+   "description": "",
+   "ingredients": [
+    "1 cup butter, softened",
+    "1 cup sugar",
+    "1 egg",
+    "1 tsp vanilla",
+    "2½ cups flour",
+    "1 tsp baking powder",
+    "¼ tsp salt"
+   ],
+   "steps": [
+    "Heat the oven to 375°F.",
+    "Beat the butter and sugar. Beat in the egg and vanilla.",
+    "Stir in the flour, baking powder and salt.",
+    "Roll into 1-inch balls and flatten slightly on sheets.",
+    "Bake for 9 minutes, until the edges are barely golden."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 150",
+    "Protein: 2 g",
+    "Fat: 8 g",
+    "Carbohydrate: 18 g",
+    "Fiber: 0 g",
+    "Sugar: 8 g",
+    "Sodium: 80 mg"
+   ],
+   "servings": 24,
+   "yieldText": "24 cookies",
+   "prepMin": 15,
+   "cookMin": 9,
+   "totalMin": 24,
+   "folderId": "starter-baking-basics",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-baking-basics-shortbread",
+   "title": "Shortbread",
+   "description": "",
+   "ingredients": [
+    "1 cup butter, softened",
+    "½ cup sugar",
+    "2 cups flour",
+    "pinch of salt"
+   ],
+   "steps": [
+    "Heat the oven to 325°F.",
+    "Beat the butter and sugar. Work in the flour and salt.",
+    "Press into an 8-inch square pan and prick all over with a fork.",
+    "Bake for 30 minutes, until pale gold.",
+    "Cut into pieces while warm. Cool in the pan."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 180",
+    "Protein: 2 g",
+    "Fat: 12 g",
+    "Carbohydrate: 18 g",
+    "Fiber: 0 g",
+    "Sugar: 6 g",
+    "Sodium: 50 mg"
+   ],
+   "servings": 16,
+   "yieldText": "16 pieces",
+   "prepMin": 10,
+   "cookMin": 30,
+   "totalMin": 40,
+   "folderId": "starter-baking-basics",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  },
+  {
+   "id": "starter-baking-basics-pie-crust",
+   "title": "Pie Crust",
+   "description": "",
+   "ingredients": [
+    "1¼ cups flour",
+    "½ tsp salt",
+    "½ cup cold butter, cubed",
+    "4 tbsp ice water"
+   ],
+   "steps": [
+    "Rub the butter into the flour and salt until it looks like crumbs with pea-sized bits.",
+    "Add the water a spoonful at a time, just until it holds together.",
+    "Shape into a disk, wrap and chill for 30 minutes.",
+    "Roll out on a floured surface to fit your pie dish."
+   ],
+   "notes": "",
+   "nutrition": [
+    "Calories: 170",
+    "Protein: 2 g",
+    "Fat: 12 g",
+    "Carbohydrate: 15 g",
+    "Fiber: 1 g",
+    "Sugar: 0 g",
+    "Sodium: 190 mg"
+   ],
+   "servings": 8,
+   "yieldText": "one 9-inch crust",
+   "prepMin": 15,
+   "cookMin": null,
+   "totalMin": 15,
+   "folderId": "starter-baking-basics",
+   "sourceName": "Recipe Box",
+   "sourceUrl": "",
+   "created": 1792281600000,
+   "updated": 1792281600000
+  }
+ ]
+}
