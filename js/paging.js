@@ -103,6 +103,14 @@ export class Pager {
     if (this.onTurn) this.onTurn(this.v);
   }
 
+  /** Turns to the page that shows `el`, a row inside the content. */
+  reveal(el) {
+    if (!el) return;
+    const top = el.getBoundingClientRect().top - this.content.getBoundingClientRect().top;
+    this.v = [...this.starts()].reverse().find((s) => s <= top + 1) ?? 0;
+    this.layout();
+  }
+
   toEnd() {
     const all = this.starts();
     this.v = all[all.length - 1];

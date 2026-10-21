@@ -233,6 +233,18 @@ const stop = new Set(descriptors.map(singular));
 const vague = new Set(generic.map(singular));
 const words = (s) => s.toLowerCase().split(/[^a-z]+/).filter((w) => w.length >= 3).map(singular);
 
+const amountLead = /^[\d½¼¾⅓⅔⅛⅜⅝⅞/.\s–-]+(x\s*)?/i;
+const measureLead = /^(cups?|tbsps?|tsps?|tablespoons?|teaspoons?|fl\.? oz|oz|ounces?|lbs?|pounds?|g|grams?|kg|ml|l|litres?|liters?|cans?|tins?|jars?|packages?|packets?|bags?|pinch(es)?|handfuls?|cloves?|sticks?|bunch(es)?|slices?|pieces?|heaped|level|large|small|medium|of)\b\.?\s*/i;
+
+/** What an ingredient line is, for searching: "½ cup hot sauce (Frank's), warm" → "hot sauce". */
+export function ingredientName(line) {
+  // Asides go, wherever they are: "1 can (14 oz) diced tomatoes" is diced tomatoes.
+  let s = line.replace(/^## /, '').replace(/\([^)]*\)/g, ' ').split('(')[0].split(',')[0].replace(/\s+/g, ' ').trim();
+  s = s.replace(amountLead, '');
+  for (let i = 0; i < 4; i++) s = s.replace(amountLead, '').replace(measureLead, '');
+  return s.trim() || line.trim();
+}
+
 /** Indices of the ingredient lines a method step mentions ("Add the onions" → "2 large onions"). */
 export function ingredientsInStep(step, ingredients) {
   const stepWords = new Set(words(step));
@@ -256,7 +268,23 @@ export function formatMinutes(min) {
   return [d ? `${d}d` : '', h ? `${h}h` : '', m ? `${m}m` : ''].filter(Boolean).join(' ');
 }
 
-const timerRx = /(\d+)(?:\s*(?:-|–|to)\s*\d+)?\s*(hours?|hrs?|minutes?|mins?)\b/gi;
+/** Lenient, for times typed by hand: "45", "45m", "1h 30m", "1:30". */
+export function parseMinutes(s) {
+  const t = String(s ?? '').trim().toLowerCase();
+  if (!t || t === '–') return null;
+  if (/^\d+$/.test(t)) return +t;
+  const hm = /^(\d+):(\d{1,2})$/.exec(t);
+  if (hm) return +hm[1] * 60 + +hm[2];
+  let total = 0;
+  let any = false;
+  for (const m of t.matchAll(/(\d+)\s*(d|h|m)/g)) {
+    any = true;
+    total += +m[1] * { d: 1440, h: 60, m: 1 }[m[2]];
+  }
+  return any ? total : null;
+}
+
+const timerRx =/(\d+)(?:\s*(?:-|–|to)\s*\d+)?\s*(hours?|hrs?|minutes?|mins?)\b/gi;
 
 /** Timers a step mentions, in minutes: "Bake for 25 minutes" → [25]. At most three. */
 export function stepTimers(step) {

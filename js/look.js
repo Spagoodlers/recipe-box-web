@@ -68,8 +68,36 @@ export const palettes = {
   Olive: ['Olive', 'Green', '', () => light(0x6e6e1e, 0xf8f8ee, 0x242412), () => darkOf(0xb8b860, 0x181810, 0xeeeedc)],
   Forest: ['Forest', 'Green', '', () => light(0x1f5233, 0xf1f6f2, 0x0e1e14), () => darkOf(0x4f9e6a, 0x0d1510, 0xddebe1)],
   Pistachio: ['Pistachio', 'Green', '', () => light(0x6a8f2e, 0xf7faf0, 0x1e2612), () => darkOf(0xa9cf6e, 0x151a0f, 0xeaf2dd)],
+  // Developer schemes (Palette Paella): each has a light and a dark side too.
+  Terminal: ['Green screen', 'Developer', 'A 1983 terminal', () => scheme(0x0b5a1e, 0xe6f7e9, 0x0f8a2e), () => scheme(0x33ff66, 0x020a03, 0x33ff66)],
+  Amber: ['Amber CRT', 'Developer', 'The other 1983 terminal', () => scheme(0x5a3a00, 0xfff4dc, 0xb86e00), () => scheme(0xffb000, 0x0d0800, 0xffb000)],
+  Blueprint: ['Blueprint', 'Developer', 'White lines on drafting blue', () => scheme(0x1c4e9c, 0xf4f8ff, 0x1c4e9c), () => scheme(0xf2f7ff, 0x1c4e9c, 0xf2f7ff)],
+  Parchment: ['Parchment', 'Developer', 'A very old cookbook', () => scheme(0x3b2412, 0xefe2c2, 0x7b2d12), () => scheme(0xefe2c2, 0x2a1d10, 0xd9824a)],
+  Vaporwave: ['Vaporwave', 'Developer', 'Pink and cyan on purple', () => scheme(0x3b1260, 0xffe9fa, 0xd6249f), () => scheme(0xffe6ff, 0x2a0f45, 0xff4fd8)],
+  HiVis: ['Hi-vis', 'Developer', 'Safety yellow', () => scheme(0x000000, 0xffe600, 0x000000), () => scheme(0xffe600, 0x000000, 0xffe600)],
+  NightShift: ['Night shift', 'Developer', 'Red on black, keeps night vision', () => scheme(0x7a0a06, 0xffecea, 0xc4170f), () => scheme(0xff3b30, 0x000000, 0xff3b30)],
+  GameBoy: ['Pocket console', 'Developer', 'Four greens', () => scheme(0x0f380f, 0x9bbc0f, 0x306230), () => scheme(0x9bbc0f, 0x0f380f, 0x8bac0f)],
+  Commodore: ['8-bit blue', 'Developer', 'Light blue on dark blue', () => scheme(0x2a2aa8, 0xdcdcff, 0x4040e0), () => scheme(0xd4d4ff, 0x2b2b9e, 0xa5a5ff)],
+  Cyberpunk: ['Neon', 'Developer', 'Yellow, cyan and pink on black', () => scheme(0x1a1a2e, 0xfffbd1, 0xd6008f), () => scheme(0xfcee0a, 0x0b0b12, 0x00f0ff)],
+  Bubblegum: ['Bubblegum', 'Developer', 'Very pink', () => scheme(0x5a0f3a, 0xffd6ec, 0xff4fa3), () => scheme(0xffd6ec, 0x3a0b26, 0xff6fb5)],
+  Diner: ['Ketchup & mustard', 'Developer', 'A roadside diner', () => scheme(0x1a1a1a, 0xfff4d6, 0xd62828), () => scheme(0xffe08a, 0x2a0e0e, 0xff5a4a)],
+  PunchCard: ['Punch card', 'Developer', 'Manila card, red rules', () => scheme(0x1e1a14, 0xebddb8, 0xb3261e), () => scheme(0xebddb8, 0x241e16, 0xe0645a)],
+  Desktop: ['Teal desktop', 'Developer', 'A 1995 desktop', () => scheme(0x000000, 0x2aa3a3, 0x000080), () => scheme(0x7fe0e0, 0x001e1e, 0x5fd7d7)],
+  Syntax: ['Syntax', 'Developer', 'Recipes highlighted like code', () => vsLight(), () => vsDark()],
+  SyntaxLight: ['Syntax light', 'Developer', 'Code highlighting on white', () => vsDark(), () => vsLight()],
+  Monokai: ['Monokai', 'Developer', 'Code highlighting, warm and loud', () => code(0x272822, 0xfafaf5, 0x5e8c00, 0x7a3fd1, 0x0f8fad, 0xc45a00, 0x8a7a00, 0x8f8a75, 0xd0105a), () => code(0xf8f8f2, 0x272822, 0xa6e22e, 0xae81ff, 0x66d9ef, 0xfd971f, 0xe6db74, 0x75715e, 0xf92672)],
+  Dracula: ['Night code', 'Developer', 'Code highlighting, purple', () => code(0x1f1f2e, 0xfffbeb, 0x644ac9, 0x644ac9, 0x036a96, 0xcb3a2a, 0x846e15, 0x635d97, 0xa3144d), () => code(0xf8f8f2, 0x282a36, 0xbd93f9, 0xbd93f9, 0x8be9fd, 0xff5555, 0xf1fa8c, 0x6272a4, 0xff79c6)],
+  SolarizedDark: ['Solarized dark', 'Developer', 'Code highlighting, low contrast', () => solLight(), () => solDark()],
+  SolarizedLight: ['Solarized light', 'Developer', 'Code highlighting, cream', () => solDark(), () => solLight()],
+  Nord: ['Arctic', 'Developer', 'Code highlighting, icy blues', () => code(0x2e3440, 0xeceff4, 0x5e81ac, 0x8a5c82, 0x4c8c8a, 0xbf616a, 0x9a7a2c, 0x7b88a1, 0x5e81ac), () => code(0xeceff4, 0x2e3440, 0x88c0d0, 0xb48ead, 0x8fbcbb, 0xbf616a, 0xebcb8b, 0x616e88, 0x81a1c1)],
 };
+const vsDark = () => code(0xd4d4d4, 0x1e1e1e, 0x569cd6, 0xb5cea8, 0x4ec9b0, 0xf48771, 0xdcdcaa, 0x6a9955, 0xc586c0);
+const vsLight = () => code(0x24292f, 0xffffff, 0x0969da, 0x0550ae, 0x116329, 0xcf222e, 0x953800, 0x6e7781, 0x8250df);
+const solDark = () => code(0x93a1a1, 0x002b36, 0x268bd2, 0x2aa198, 0x859900, 0xdc322f, 0xb58900, 0x586e75, 0xd33682);
+// On the cream side the cyan, green and yellow are taken a shade darker so they read.
+const solLight = () => code(0x586e75, 0xfdf6e3, 0x268bd2, 0x1f7f78, 0x667600, 0xdc322f, 0x8f6b00, 0x93a1a1, 0xd33682);
 export const paletteGroups = ['Black & white', 'Warm', 'Cool', 'Green'];
+export const devGroup = 'Developer';
 
 // Highlighting for a scheme without its own: cooking words in its accent, amounts and units on hues
 // round the wheel from it, temperatures warm, times golden. Black and white uses ink and weight.
@@ -174,6 +202,8 @@ export function highlight(text) {
 // ---------------------------------------------------------------- casing
 
 export const casings = { AsWritten: 'As written', Title: 'Title Case', Lower: 'lowercase' };
+/** Programmer casings (Case-Sensitive Casserole, in Developer Recipes). */
+export const devCasings = { Snake: 'snake_case', Camel: 'camelCase', Pascal: 'PascalCase', Kebab: 'kebab-case', Screaming: 'SCREAMING_SNAKE', Sponge: 'sPoNgEcAsE' };
 const small = new Set(['a', 'an', 'and', 'as', 'at', 'but', 'by', 'for', 'from', 'in', 'into', 'nor', 'of', 'on', 'or', 'the', 'to', 'with', 'vs', 'via', 'per', 'e', 'g']);
 
 /** Title Case: each word capitalised, small words lower (except first and last). */
@@ -194,7 +224,23 @@ export function applyCase(text, mode, name) {
   if (mode === 'AsWritten' || !/\p{L}/u.test(text)) return text;
   if (mode === 'Lower') return text.toLowerCase();
   if (!name) return text;
-  return mode === 'Title' ? titleCase(text) : text;
+  if (mode === 'Title') return titleCase(text);
+  // A programmer casing keeps the spaces around a name, so "Books " doesn't run into the next word.
+  const lead = text.match(/^\s*/)[0];
+  const tail = text.match(/\s*$/)[0];
+  const words = text.replace(/['’]/g, '').match(/[\p{L}\p{N}]+/gu) || [];
+  const cap = (w) => w.charAt(0).toUpperCase() + w.slice(1);
+  let out;
+  switch (mode) {
+    case 'Snake': out = words.map((w) => w.toLowerCase()).join('_'); break;
+    case 'Kebab': out = words.map((w) => w.toLowerCase()).join('-'); break;
+    case 'Screaming': out = words.map((w) => w.toUpperCase()).join('_'); break;
+    case 'Camel': out = words.map((w, i) => (i ? cap(w.toLowerCase()) : w.toLowerCase())).join(''); break;
+    case 'Pascal': out = words.map((w) => cap(w.toLowerCase())).join(''); break;
+    case 'Sponge': { let up = false; out = text.trim().replace(/\p{L}/gu, (c) => { up = !up; return up ? c.toLowerCase() : c.toUpperCase(); }); break; }
+    default: return text;
+  }
+  return out ? lead + out + tail : text;
 }
 
 // ---------------------------------------------------------------- spelling (the app's own words only)

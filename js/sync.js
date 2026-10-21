@@ -175,7 +175,7 @@ export class Sync {
     try {
       const text = await this.read();
       const remote = text && text.trim() ? parseBox(text) : null;
-      const mine = this.box.data;
+      const mine = this.box.syncData();
       const mineText = boxText(mine);
       const fileChanged = (text ? await hash(text) : null) !== this.state.seen;
       const boxChanged = (await hash(mineText)) !== this.state.base;
@@ -196,7 +196,7 @@ export class Sync {
         await this.write(mineText);
         seen = await hash(mineText);
       } else if (action === 'download') {
-        this.box.set(remote);
+        this.box.replaceSync(remote);
         const n = remote.recipes.length;
         message = `Synced from ${this.name}: ${n === 1 ? '1 card' : `${n} cards`}.`;
       } else if (action === 'local') {
@@ -204,7 +204,7 @@ export class Sync {
       }
       // A read-only link that kept local changes keeps its old base, so the next file change asks.
       this.state.seen = seen;
-      if (action !== 'local') this.state.base = await hash(boxText(this.box.data));
+      if (action !== 'local') this.state.base = await hash(boxText(this.box.syncData()));
       this.state.last = Date.now();
       this.state.message = message || 'Up to date.';
       this.save();
