@@ -128,12 +128,13 @@ h1, h2, h3 { margin: 0; line-height: 1.2; }
 .tile .name { font-weight: 700; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; flex: 0 1 auto; min-height: 0; }
 .tile .meta { flex: none; }
 .tile .meta { font-size: 0.8em; color: var(--dim); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.shelf { display: flex; gap: 6px; overflow: hidden; flex-wrap: wrap; max-height: calc(2 * (var(--tap) + 30px) + 6px); }
+.shelf { display: grid; gap: 6px; touch-action: none; }
 .cover {
-  border: 2px solid var(--ink); border-left-width: 8px; padding: 6px 10px; min-width: 110px; flex: 1 1 110px; max-width: 200px;
+  border: 2px solid var(--ink); border-left-width: 8px; padding: 6px 10px; min-width: 0;
   min-height: calc(var(--tap) + 30px); cursor: pointer; display: flex; flex-direction: column; justify-content: space-between;
-  background: var(--paper); text-align: left; overflow: hidden; hyphens: auto; overflow-wrap: break-word;
+  background: var(--paper); text-align: left; overflow: hidden; hyphens: auto;
 }
+.cover.turn { border-left-width: 2px; }
 .cover.on { background: var(--accent); color: var(--on-accent); }
 .cover .n { font-size: 0.8em; opacity: 0.8; }
 .search { display: flex; gap: 6px; }
@@ -206,3 +207,66 @@ textarea.field { min-height: 8em; resize: vertical; line-height: 1.4; }
 @media print {
   #app { display: none; }
 }
+
+/* ---------------------------------------------------------------- phase 1: look and modes */
+
+/* Recipe text highlighted like code, in the scheme's own colours (weight too, for black and white). */
+.syn-number { color: var(--syn-number); font-weight: var(--syn-weight); }
+.syn-unit { color: var(--syn-unit); }
+.syn-temp { color: var(--syn-temp); font-weight: 700; }
+.syn-time { color: var(--syn-time); font-weight: var(--syn-weight); }
+.syn-aside { color: var(--syn-aside); font-style: italic; }
+.syn-verb { color: var(--syn-verb); font-weight: 700; }
+
+/* A switch is a whole row: name, a line on what it does, ON / OFF. */
+button.toggle { width: 100%; border: 0; background: none; text-align: left; padding: 8px 0; color: inherit; }
+:root[data-big="1"] button.toggle { padding: 14px 0; }
+.about { display: block; color: var(--dim); font-size: 0.82em; font-weight: 400; }
+
+/* A big answer to tap (first run, Who it's for). */
+.choice {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 2px; width: 100%; text-align: left;
+  border: 2px solid var(--ink); background: var(--paper); color: var(--ink); padding: 10px 14px; margin: 4px 0; cursor: pointer;
+}
+.choice.on { border-width: 4px; padding: 8px 12px; }
+.q { font-size: 1.35em; margin: 6px 0 2px; }
+.keyrow { display: grid; grid-template-columns: minmax(5em, max-content) 1fr; gap: 14px; align-items: center; padding: 6px 0; }
+.keyrow b { font-size: 1.3em; }
+.welcome { border: 3px solid var(--ink); padding: 16px 18px; flex: 1; min-height: 0; display: flex; flex-direction: column; }
+.linkish { background: none; border: 0; color: var(--dim); text-decoration: underline; align-self: center; padding: 8px; cursor: pointer; }
+
+/* Setup's first page: a row per section, saying how it's set now. */
+.setup-row {
+  display: flex; align-items: center; gap: 10px; width: 100%; text-align: left; margin-bottom: 6px;
+  border: 2px solid var(--ink); background: var(--paper); color: var(--ink); padding: 10px 14px; min-height: calc(var(--tap) + 20px); cursor: pointer;
+}
+.setup-row > span:first-child { flex: 1; min-width: 0; }
+.setup-row b { font-size: 1.1em; }
+
+/* Colour schemes, each in its own colours. */
+.swatch { display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px 6px 6px; border: 2px solid var(--ink); cursor: pointer; min-height: calc(var(--tap) - 6px); }
+.swatch.on { border-width: 4px; padding: 4px 8px 4px 4px; }
+.swatch .chip { width: 18px; height: 18px; border: 1px solid; flex: none; }
+
+/* The rolodex: names around this card, then the letters that have cards. */
+.rolodex-block { display: flex; flex-direction: column; gap: 4px; }
+.letters { display: flex; flex-wrap: wrap; }
+.letters button { flex: 1 0 2.2em; min-height: calc(var(--tap) - 10px); border: 1px solid var(--ink); background: var(--paper); color: var(--ink); font-weight: 700; cursor: pointer; }
+.letters button.on { background: var(--accent); color: var(--on-accent); }
+
+/* A button's name, shown while it's held (icon mode). */
+.hint { border: 2px solid var(--paper); background: var(--ink); color: var(--paper); padding: 8px 10px; font-weight: 700; }
+.warn { margin-top: 10px; border: 3px solid var(--ink); padding: 8px 12px; font-weight: 700; font-size: 1.15em; }
+
+/* Controls at the top: the same screens, mirrored, so what you press is up top and the card reads down. */
+:root[data-top="1"] #app { flex-direction: column-reverse; }
+:root[data-top="1"] #screen { flex-direction: column-reverse; }
+:root[data-top="1"] .card .card-actions { order: -2; }
+:root[data-top="1"] .card .cardtabs { order: -1; }
+:root[data-top="1"] .cook .cook-go { order: -1; }
+:root[data-top="1"] .welcome, :root[data-top="1"] .empty { order: 0; }
+
+/* Icons in buttons and card tabs: the size of a capital letter and a bit, never more. */
+.btn svg, .cardtabs svg, .setup-row svg { width: 1.3em; height: 1.3em; flex: none; }
+:root[data-big="1"] .btn svg, :root[data-big="1"] .cardtabs svg { width: 1.6em; height: 1.6em; }
+.cardtabs button { display: flex; align-items: center; justify-content: center; }

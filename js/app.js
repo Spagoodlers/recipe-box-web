@@ -5,21 +5,30 @@ import { Box, ALL, parseBox, boxText } from './box.js';
 import { Sync } from './sync.js';
 import { Pager, swipe } from './paging.js';
 import { printHtml, printDefaults, copyHtml } from './print.js';
-import { scale, convert, convertTemps, ingredientsInStep, formatMinutes, stepTimers, matches, unitLabel, formatAmount } from './units.js';
+import { scale, convert, convertTemps, ingredientsInStep, formatMinutes, stepTimers, matches, unitLabel, formatAmount, fold } from './units.js';
+import { palette, palettes, paletteGroups, paletteVars, colourOf, highlight, applyCase, casings, toUs, defaultSpelling } from './look.js';
 
-const VERSION = '0.1.0';
+const VERSION = '0.2.0';
 const KO_FI = 'https://ko-fi.com/spagoodlers';
 
 // ---------------------------------------------------------------- settings (this browser only)
 
 const region = (navigator.language || 'en-US').split('-')[1]?.toUpperCase();
 const usCustomary = ['US', 'LR', 'MM', 'PR', 'GU', 'VI', 'AS', 'MP'];
+const stored = (() => { try { return JSON.parse(localStorage.getItem('recipebox.settings')) || {}; } catch { return {}; } })();
+const box = new Box();
 const settings = {
   textScale: 1.15, typeface: 'Sans', theme: 'system', roomy: false, big: false,
+  palette: 'Ink', accent: 'Full', highContrast: false, syntax: false, casing: 'AsWritten', spelling: defaultSpelling(region),
+  focus: false, iconMode: false, controlsTop: false,
   units: usCustomary.includes(region) ? 'US' : 'Metric', readAloud: false, keepAwake: true, amountsInMethod: true,
-  print: { ...printDefaults },
-  ...(() => { try { return JSON.parse(localStorage.getItem('recipebox.settings')) || {}; } catch { return {}; } })(),
+  mode: 'Home', simple: false, simpleFor: 'Plain', simpleList: true, beforeSimple: null,
+  // Someone who already has recipes has no need of the first-run questions.
+  welcomed: box.recipes.length > 0,
+  ...stored,
 };
+settings.print = { ...printDefaults, ...(stored.print || {}) };
+
 function saveSettings() {
   try { localStorage.setItem('recipebox.settings', JSON.stringify(settings)); } catch { /* ignore */ }
   applySettings();
@@ -36,27 +45,40 @@ const typefaces = {
   'Comic Neue': { css: "'Comic Neue', sans-serif", about: 'Friendly and casual; easy for many dyslexic readers.', width: 1 },
 };
 const sizes = [[0.85, 'XS'], [1, 'S'], [1.15, 'M'], [1.3, 'L'], [1.5, 'XL'], [2, 'XXL']];
+const modes = {
+  Home: ['Home cook', 'Books, cards, cooking, a shopping list, and planning the week at home.'],
+  Chef: ['Chef', 'Everything for a kitchen: prep sheets and receipt-printer prints, batch sizes, cards in several books.'],
+};
+const simpleFor = {
+  Kid: ['A kid', 'Just books and cards, with icons. Nothing to change by accident.'],
+  Plain: ['Someone who wants it plain', 'Big, plain cards with words on every button. Can still keep a shopping list.'],
+};
+const isDark = () => settings.theme === 'dark' || (settings.theme === 'system' && matchMedia('(prefers-color-scheme: dark)').matches);
+/** Icons instead of words: icon mode, or a kid's simple mode. */
+const icons = () => settings.iconMode || (settings.simple && settings.simpleFor === 'Kid');
 
 function applySettings() {
   const root = document.documentElement;
   root.style.setProperty('--scale', settings.textScale);
   root.style.setProperty('--font', (typefaces[settings.typeface] || typefaces.Sans).css);
-  if (settings.theme === 'system') delete root.dataset.theme; else root.dataset.theme = settings.theme;
+  const p = palette(settings.palette, isDark(), { highContrast: settings.highContrast, accent: settings.accent });
+  for (const [k, v] of Object.entries(paletteVars(p))) root.style.setProperty(k, v);
+  root.style.colorScheme = p.dark ? 'dark' : 'light';
   root.dataset.big = settings.big ? '1' : '0';
   root.dataset.roomy = settings.roomy ? '1' : '0';
-  const dark = settings.theme === 'dark' || (settings.theme === 'system' && matchMedia('(prefers-color-scheme: dark)').matches);
-  document.querySelector('meta[name=theme-color]')?.setAttribute('content', dark ? '#000000' : '#ffffff');
+  root.dataset.top = settings.controlsTop ? '1' : '0';
+  document.querySelector('meta[name=theme-color]')?.setAttribute('content', colourOf(p, 'paper'));
 }
 /** How much wider than Sans a line runs (wide typefaces, roomy spacing), for choosing columns. */
 const textWidth = () => (typefaces[settings.typeface]?.width || 1) * (settings.roomy ? 1.08 : 1) * settings.textScale;
 
 // ---------------------------------------------------------------- state
 
-const box = new Box();
 const sync = new Sync(box);
 const ui = {
-  folder: ALL, query: '', notice: null, tilePage: 0, fromEnd: false,
+  folder: ALL, query: '', notice: null, hint: null, tilePage: 0, fromEnd: false,
   sessions: new Map(), timers: [], pages: new Map(), confirm: null, starter: null,
+  welcome: { page: 0, cook: null, picked: new Set(), who: null },
 };
 let pager = null;
 let pageKeys = null;
@@ -73,6 +95,8 @@ function session(r) {
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const plural = (n, one, many = `${one}s`) => (n === 1 ? `1 ${one}` : `${n} ${many}`);
 function notice(text) { ui.notice = text; render(); }
+/** Recipe text: highlighted like code when that's on, as plain text otherwise. */
+const rtext = (s) => (settings.syntax ? highlight(s) : esc(s));
 
 // ---------------------------------------------------------------- routes (the back button works)
 
@@ -86,11 +110,37 @@ window.addEventListener('hashchange', () => { ui.confirm = null; render(); });
 
 // ---------------------------------------------------------------- icons
 
-const icon = {
-  books: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h4v16H4zM10 4h4v16h-4zM16 5l3.5-1 3 15-3.5 1z"/></svg>',
-  list: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4h2l2.5 11h10L20 7H6.5"/><circle cx="9" cy="19" r="1.4"/><circle cx="17" cy="19" r="1.4"/></svg>',
-  setup: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/><circle cx="9" cy="7" r="2" fill="var(--paper)"/><circle cx="15" cy="12" r="2" fill="var(--paper)"/><circle cx="8" cy="17" r="2" fill="var(--paper)"/></svg>',
+const svg = (body) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${body}</svg>`;
+const glyph = {
+  books: svg('<path d="M4 4h4v16H4zM10 4h4v16h-4zM16 5l3.5-1 3 15-3.5 1z"/>'),
+  list: svg('<path d="M3 4h2l2.5 11h10L20 7H6.5"/><circle cx="9" cy="19" r="1.4"/><circle cx="17" cy="19" r="1.4"/>'),
+  setup: svg('<path d="M4 7h16M4 12h16M4 17h16"/><circle cx="9" cy="7" r="2" fill="var(--paper)"/><circle cx="15" cy="12" r="2" fill="var(--paper)"/><circle cx="8" cy="17" r="2" fill="var(--paper)"/>'),
+  cook: svg('<path d="M7 4l13 8-13 8z"/>'),
+  edit: svg('<path d="M4 20l4-1 11-11-3-3L5 16z"/>'),
+  clear: svg('<path d="M4 12a8 8 0 1 0 3-6.2M4 4v4h4"/>'),
+  print: svg('<rect x="3" y="9" width="18" height="8" rx="1"/><rect x="7" y="3" width="10" height="6"/><rect x="7" y="14" width="10" height="7"/>'),
+  read: svg('<path d="M3 9h4l5-4v14l-5-4H3z"/><path d="M16 9a4 4 0 0 1 0 6M18.5 6.5a8 8 0 0 1 0 11"/>'),
+  close: svg('<path d="M5 5l14 14M19 5L5 19"/>'),
+  back: svg('<path d="M15 5l-7 7 7 7"/>'),
+  next: svg('<path d="M9 5l7 7-7 7"/>'),
+  plus: svg('<path d="M12 5v14M5 12h14"/>'),
+  ingredients: svg('<circle cx="5" cy="6" r="1.2"/><circle cx="5" cy="12" r="1.2"/><circle cx="5" cy="18" r="1.2"/><path d="M9 6h11M9 12h11M9 18h11"/>'),
+  method: svg('<path d="M4 18h5v-5h5V8h6"/>'),
+  notes: svg('<rect x="5" y="3" width="14" height="18" rx="1"/><path d="M8 8h8M8 12h8M8 16h5"/>'),
+  nutrition: svg('<path d="M5 19c0-8 6-14 14-14 0 8-6 14-14 14zM5 19l8-8"/>'),
+  info: svg('<circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/>'),
+  timer: svg('<circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/>'),
 };
+
+/**
+ * A button with an icon and its name. In icon mode the name goes (the icon says it, and holding
+ * shows it); a screen reader always hears it.
+ */
+function btn(act, label, { g = null, cls = '', attrs = '', icon = icons() } = {}) {
+  const showIcon = g && glyph[g];
+  const bare = icon && showIcon;
+  return `<button class="btn ${cls}" data-act="${act}" ${attrs} ${bare ? `aria-label="${esc(label)}" data-hint="${esc(label)}"` : ''}>${showIcon ? glyph[g] : ''}${bare ? '' : `<span>${esc(label)}</span>`}</button>`;
+}
 
 // ---------------------------------------------------------------- drawing
 
@@ -98,35 +148,68 @@ function render() {
   const app = document.getElementById('app');
   if (pager) { pager.destroy(); pager = null; }
   pageKeys = null;
-  const r = route();
-  const views = { books: viewBooks, card: viewCard, cook: viewCook, edit: viewEdit, print: viewPrint, list: viewList, setup: viewSetup };
+  let r = route();
+  if (!settings.welcomed && r.view !== 'welcome') { location.replace('#/welcome'); r = route(); }
+  // Simple mode keeps Setup and editing out of reach.
+  if (settings.simple && ['setup', 'edit', 'print'].includes(r.view)) { location.replace('#/books'); r = route(); }
+  const views = { books: viewBooks, card: viewCard, cook: viewCook, edit: viewEdit, print: viewPrint, list: viewList, setup: viewSetup, welcome: viewWelcome };
   const view = (views[r.view] || viewBooks)(r.id);
   const tab = ['list', 'setup'].includes(r.view) ? r.view : 'books';
-  const showTabs = !['cook', 'print', 'edit'].includes(r.view);
+  const tabs = [['books', 'Books'], ...(settings.simple && !settings.simpleList ? [] : [['list', 'List']]), ...(settings.simple ? [] : [['setup', 'Setup']])];
+  const showTabs = !['cook', 'print', 'edit', 'welcome'].includes(r.view);
   app.innerHTML = `
     <div id="timers">${timersHtml()}</div>
     ${conflictHtml()}
     <div id="screen">${view.html}</div>
+    ${ui.hint ? `<div class="hint" role="status">${esc(ui.hint)}</div>` : ''}
     ${ui.notice ? `<div class="notice" role="status"><span>${esc(ui.notice)}</span><button class="btn small" data-act="notice-ok">OK</button></div>` : ''}
     ${showTabs ? `<nav class="tabs" aria-label="Sections">
-      ${[['books', 'Books'], ['list', 'List'], ['setup', 'Setup']].map(([k, label]) => `
-        <button class="${tab === k ? 'on' : ''}" data-act="tab" data-to="${k}" aria-current="${tab === k ? 'page' : 'false'}" title="${label}">${icon[k]}<span class="word">${label}</span></button>`).join('')}
+      ${tabs.map(([k, label]) => `
+        <button class="${tab === k ? 'on' : ''}" data-act="tab" data-to="${k}" aria-current="${tab === k ? 'page' : 'false'}" aria-label="${label}" data-hint="${label}" ${k === 'books' && settings.simple ? 'data-hold="leave-simple"' : ''}>${glyph[k]}<span class="word">${label}</span></button>`).join('')}
     </nav>` : ''}`;
   view.mount?.(document.getElementById('screen'));
+  polish(app);
   fitTabLabels();
   keepAwake(['card', 'cook'].includes(r.view) && settings.keepAwake);
+}
+
+/**
+ * The finishing pass over drawn text, as the app does in its Text: the app's own words in the
+ * chosen spelling (recipes, marked .rx, stay as written), then the chosen casing (names take
+ * Title Case; lowercase takes everything).
+ */
+const nameSel = 'button, h1, h2, .label, .title, .tabs, .cover, .section, .from, .nm';
+function polish(root) {
+  if (settings.spelling !== 'US' && settings.casing === 'AsWritten') return;
+  const walk = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+  for (let n = walk.nextNode(); n; n = walk.nextNode()) {
+    const el = n.parentElement;
+    if (!el || el.closest('[data-raw], textarea, style, script')) continue;
+    let t = n.nodeValue;
+    if (settings.spelling === 'US' && !el.closest('.rx')) t = toUs(t);
+    // A line about something (under a switch, a Setup row) is body text, not a name.
+    t = applyCase(t, settings.casing, !!el.closest(nameSel) && !el.closest('.about, .n, .meta, .dim'));
+    if (t !== n.nodeValue) n.nodeValue = t;
+  }
+  for (const el of root.querySelectorAll('[placeholder]')) {
+    let t = el.getAttribute('placeholder');
+    if (settings.spelling === 'US') t = toUs(t);
+    el.setAttribute('placeholder', applyCase(t, settings.casing, false));
+  }
 }
 
 /** Tab names go when any would wrap (a narrow phone, big text): icons for all, rather than some broken. */
 function fitTabLabels() {
   const tabs = document.querySelector('.tabs');
   if (!tabs) return;
-  tabs.querySelectorAll('.word').forEach((w) => { w.style.display = ''; });
+  const words = tabs.querySelectorAll('.word');
+  if (icons()) { words.forEach((w) => { w.style.display = 'none'; }); return; }
+  words.forEach((w) => { w.style.display = ''; });
   const tooWide = [...tabs.querySelectorAll('button')].some((b) => {
     const w = b.querySelector('.word');
     return b.scrollWidth > b.clientWidth || w.getBoundingClientRect().height > parseFloat(getComputedStyle(w).lineHeight) * 1.5;
   });
-  if (tooWide) tabs.querySelectorAll('.word').forEach((w) => { w.style.display = 'none'; });
+  if (tooWide) words.forEach((w) => { w.style.display = 'none'; });
 }
 
 async function keepAwake(on) {
@@ -141,10 +224,124 @@ function paged(el, key, { onEdge = null, bottom = false, fromEnd = false } = {})
   const viewport = el.querySelector('.pages');
   const content = viewport.querySelector('.content');
   const count = el.querySelector('.count');
-  pager = new Pager(viewport, content, { onEdge, countEl: count, bottom, start: ui.pages.get(key) || 0, onTurn: (v) => ui.pages.set(key, v) });
+  // Content that fits sits by the thumb: at the foot (the head, with controls at the top).
+  pager = new Pager(viewport, content, { onEdge, countEl: count, bottom: bottom && !settings.controlsTop, start: ui.pages.get(key) || 0, onTurn: (v) => ui.pages.set(key, v) });
   if (fromEnd) { pager.toEnd(); ui.pages.set(key, pager.v); }
   pageKeys = (dir) => pager.turn(dir);
   swipe(viewport, (dir) => pager.turn(dir));
+}
+
+// ---------------------------------------------------------------- first run
+
+const cookChoices = {
+  New: ['I’m new to cooking', 'Start with the basics, explained step by step.', ['learning-to-cook', 'weeknight-dinners']],
+  Often: ['I cook most days', 'Quick dinners, soups and the sauces that go with them.', ['weeknight-dinners', 'soups-and-stews', 'sauces-and-staples']],
+  Baker: ['I mostly bake', 'Bread, cakes, cookies and puddings.', ['baking-basics', 'desserts', 'breakfast-and-brunch']],
+  Own: ['I’ve got my own recipes', 'Start empty: write yours in, bring them from a file, or connect the phone app’s sync file.', []],
+};
+
+function choice(act, value, title, about, on) {
+  return `<button class="choice a ${on ? 'on' : ''}" data-act="${act}" data-v="${value}" role="radio" aria-checked="${on}">
+    <span class="bold nm">${on ? '●' : '○'} ${esc(title)}</span><span class="about">${esc(about)}</span></button>`;
+}
+
+function viewWelcome() {
+  loadStarters();
+  const w = ui.welcome;
+  const order = ['size', 'paging', 'units', 'cook', 'who', 'card'];
+  const page = order[w.page];
+  let body = '';
+  if (page === 'size') {
+    body = `<h1 class="title a">Recipe Box</h1>
+      <p class="a" style="font-size:1.12em;margin:4px 0 16px">Your recipes as cards in books. No ads, no life stories, no scrolling. Just the card.</p>
+      <h2 class="q a">How big should the words be?</h2>
+      <p class="dim a">Pick one you can read from the counter. You can change it any time in Setup.</p>
+      <div class="row-btns a">${sizes.slice(1).map(([v, l]) => `<button class="btn grow big ${Math.abs(settings.textScale - v) < 0.01 ? 'on' : ''}" data-act="size" data-v="${v}">${l}</button>`).join('')}</div>
+      <p class="a rx" style="margin-top:14px">2 cups flour<br>Bake for 25 minutes, until golden.</p>`;
+  } else if (page === 'paging') {
+    body = `<h2 class="q a">Turning pages</h2>
+      ${[['↑ ←', 'Swipe up or left: the next page'], ['↓ →', 'Swipe down or right: back a page'], ['⌨', 'Arrow and page keys, or the mouse wheel: the same'], ['Esc', 'Go back']]
+        .map(([k, v]) => `<div class="keyrow a"><b data-raw>${k}</b><span>${v}</span></div>`).join('')}
+      <p class="dim a">Nothing scrolls. Past a card’s last page comes the next card.</p>
+      <p class="bold a" style="font-size:1.1em">Try it now: swipe up or left, or press →, to go on to the next question.</p>`;
+  } else if (page === 'units') {
+    const sample = ['2 cups flour', '1 tbsp butter', '450 g chicken'];
+    body = `<h2 class="q a">How do you measure?</h2>
+      <p class="dim a">Cards show amounts this way; each card has a units button to switch.</p>
+      ${[['US', 'Cups, ounces and °F'], ['Metric', 'Grams, millilitres and °C'], ['AsWritten', 'Left as each recipe has it']].map(([u, about]) =>
+        choice('units-default', u, unitLabel[u], `${about}: ${sample.map((s) => convert(s, u)).join(', ')}`, settings.units === u)).join('')}`;
+  } else if (page === 'cook') {
+    body = `<h2 class="q a">How much do you cook?</h2>
+      <p class="dim a">We’ll start your box with the books that suit you.</p>
+      ${Object.entries(cookChoices).map(([k, [t, a]]) => choice('w-cook', k, t, a, w.cook === k)).join('')}
+      <div class="a" style="margin-top:12px"><h2 class="q">Your starter books</h2>
+        <p class="dim">${w.picked.size ? 'These suit you. Tap to add or take away.' : 'Tap any you’d like. You can add more later in Setup.'}</p>
+        <div class="flow">${(ui.starter || []).map((b) => `<button class="btn small a ${w.picked.has(b.file) ? 'on' : ''}" data-act="w-book" data-file="${b.file}">${w.picked.has(b.file) ? '✓ ' : ''}${esc(b.name)}</button>`).join('')}</div>
+        ${w.picked.size ? `<p class="small dim">${(ui.starter || []).filter((b) => w.picked.has(b.file)).reduce((n, b) => n + b.count, 0)} recipes to start with.</p>` : ''}</div>`;
+  } else if (page === 'who') {
+    body = `<h2 class="q a">Who’s it for?</h2>
+      ${Object.entries(modes).map(([k, [t, a]]) => choice('w-who', k, t, a, (w.who ?? settings.mode) === k)).join('')}
+      ${Object.entries(simpleFor).map(([k, [t, a]]) => choice('w-who', `simple:${k}`, t, a, w.who === `simple:${k}`)).join('')}
+      ${w.who?.startsWith('simple') ? '<p class="small dim a">Editing and Setup stay locked. A grown-up leaves simple mode by pressing and holding the Books tab for three seconds.</p>' : ''}`;
+  } else {
+    body = `<h2 class="q a">How a card works</h2>
+      ${[['ingredients', 'Tick', 'Tap a line to tick it off, so you don’t lose your place.'], ['cook', 'Cook', 'One big step at a time, with its timers.'], ['read', 'Read', 'In cook mode: the step, out loud.'], ['list', '+ List', 'The card’s ingredients onto the shopping list.']]
+        .map(([g, n, a]) => `<div class="keyrow a"><span class="btn small" style="pointer-events:none">${glyph[g]}<span>${n}</span></span><span>${a}</span></div>`).join('')}
+      <p class="a" style="margin-top:12px">That’s it. All of this, and more (colours, sync with the phone app), is in Setup.</p>`;
+  }
+  const last = w.page === order.length - 1;
+  return {
+    html: `<div class="dim bold small">Setting up · ${w.page + 1} of ${order.length}</div>
+      <div class="welcome"><div class="pages"><div class="content">${body}</div></div><div class="count"></div></div>
+      <div class="row-btns">${w.page ? '<button class="btn big" data-act="w-step" data-dir="-1">◀ Back</button>' : ''}
+        <button class="btn big primary grow" data-act="w-step" data-dir="1">${last ? 'Start cooking' : 'Next ▶'}</button></div>
+      ${w.page === 0 ? '<button class="linkish" data-act="w-finish">Skip setup</button>' : ''}`,
+    mount(el) { paged(el, `welcome:${w.page}`, { onEdge: (dir) => welcomeStep(dir) }); },
+  };
+}
+
+function welcomeStep(dir) {
+  const w = ui.welcome;
+  if (dir > 0 && w.page === 5) { finishWelcome(); return; }
+  w.page = Math.max(0, Math.min(5, w.page + dir));
+  render();
+}
+
+async function finishWelcome() {
+  const w = ui.welcome;
+  settings.welcomed = true;
+  if (w.who?.startsWith('simple:')) {
+    settings.simpleFor = w.who.split(':')[1];
+    setSimple(true);
+    // A kid's box starts with the kids' book.
+    if (settings.simpleFor === 'Kid') w.picked.add('cooking-with-kids');
+  } else if (w.who) settings.mode = w.who;
+  saveSettings();
+  const added = [];
+  for (const file of w.picked) {
+    try {
+      const book = await (await fetch(`books/${file}.json`)).json();
+      box.importBox(book);
+      added.push(book.folders?.[0]?.name);
+    } catch { /* offline: the books can be added later */ }
+  }
+  ui.folder = ALL;
+  location.replace('#/books');
+  if (added.length) notice(`Added ${added.join(', ')}. Swipe to turn pages.`);
+  else render();
+}
+
+function setSimple(on) {
+  if (on) {
+    settings.beforeSimple = { iconMode: settings.iconMode };
+    settings.simple = true;
+    if (settings.simpleFor === 'Kid') settings.simpleList = false;
+  } else {
+    settings.simple = false;
+    if (settings.beforeSimple) settings.iconMode = settings.beforeSimple.iconMode;
+    settings.beforeSimple = null;
+  }
+  saveSettings();
 }
 
 // ---------------------------------------------------------------- Books
@@ -157,14 +354,11 @@ function viewBooks() {
       <div class="pages" id="tiles"><div class="content"></div></div>
       <div class="count" id="tcount"></div>
       <hr class="rule">
-      <div class="shelf" role="list">${box.scopes().map((id) => {
-        const n = box.inBook(id).length;
-        return `<button class="cover ${id === ui.folder ? 'on' : ''}" role="listitem" data-act="book" data-id="${id ?? ''}"><span class="bold">${esc(box.folderName(id))}</span><span class="n">${plural(n, 'recipe')}</span></button>`;
-      }).join('')}</div>
+      <div class="shelf" role="list" id="shelf"></div>
       <div class="search">
         <input class="field" id="q" type="search" placeholder="Search ${esc(name)}" value="${esc(ui.query)}" aria-label="Search">
-        ${ui.query ? '<button class="btn" data-act="clear-q">Clear</button>' : ''}
-        <button class="btn" data-act="new">+ New</button>
+        ${ui.query ? btn('clear-q', 'Clear', { icon: false }) : ''}
+        ${settings.simple ? '' : btn('new', 'New', { g: 'plus' })}
       </div>`,
     mount(el) {
       const tiles = el.querySelector('#tiles');
@@ -188,14 +382,38 @@ function viewBooks() {
           ? `<div class="tiles" style="grid-template-columns: repeat(${cols}, 1fr); grid-auto-rows: ${tileH}px">${shown.map((r) => {
             const t = r.totalMin || (r.prepMin || 0) + (r.cookMin || 0);
             const from = ui.folder === ALL ? box.folderName(r.folderId ?? null) : '';
-            return `<button class="tile" data-act="open" data-id="${esc(r.id)}"><span class="name">${esc(r.title || 'Untitled recipe')}</span><span class="meta">${[t ? formatMinutes(t) : '', from].filter(Boolean).map(esc).join(' · ')}</span></button>`;
+            return `<button class="tile" data-act="open" data-id="${esc(r.id)}"><span class="name rx nm">${esc(r.title || 'Untitled recipe')}</span>${settings.focus ? '' : `<span class="meta rx">${[t ? formatMinutes(t) : '', from].filter(Boolean).map(esc).join(' · ')}</span>`}</button>`;
           }).join('')}</div>`
           : `<p class="dim">${ui.query ? `Nothing in ${esc(name)} matches.` : `No cards in ${esc(name)} yet.`}</p>`;
         const count = el.querySelector('#tcount');
         count.textContent = pages > 1 ? `${ui.tilePage + 1} / ${pages}${ui.tilePage === 0 ? ' · more ▶' : ''}` : '';
         count.classList.toggle('more', pages > 1 && ui.tilePage === 0);
+        polish(tiles);
         return pages;
       };
+      // The shelf: two rows of covers, as many across as fit. With more books than that, the first
+      // cover turns back a shelf and the last turns on (a swipe on the shelf does too).
+      const shelf = el.querySelector('#shelf');
+      const drawShelf = () => {
+        const all = box.scopes();
+        const cols = Math.max(3, Math.min(7, Math.floor((shelf.clientWidth + 6) / (112 * textWidth() + 6))));
+        const one = all.length <= cols * 2;
+        const per = one ? all.length : cols * 2 - 2;
+        const shelves = Math.max(1, Math.ceil(all.length / per));
+        if (ui.shelf == null) ui.shelf = Math.floor(Math.max(0, all.indexOf(ui.folder)) / per);
+        ui.shelf = ((ui.shelf % shelves) + shelves) % shelves;
+        const cover = (id) => {
+          const n = box.inBook(id).length;
+          return `<button class="cover ${id === ui.folder ? 'on' : ''}" role="listitem" data-act="book" data-id="${id ?? ''}"><span class="bold ${id === ALL || id === null ? '' : 'rx'}">${esc(box.folderName(id))}</span><span class="n">${plural(n, 'recipe')}</span></button>`;
+        };
+        const turnCover = (dir) => `<button class="cover turn" data-act="shelf" data-dir="${dir}"><span class="bold">${dir < 0 ? '◀ Previous shelf' : 'Next shelf ▶'}</span><span class="n">${((ui.shelf + dir + shelves) % shelves) + 1} of ${shelves}</span></button>`;
+        const books = all.slice(ui.shelf * per, (ui.shelf + 1) * per).map(cover);
+        shelf.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+        shelf.innerHTML = one ? books.join('') : [turnCover(-1), ...books, turnCover(1)].join('');
+        polish(shelf);
+      };
+      drawShelf();
+      swipe(shelf, (dir) => { ui.shelf = (ui.shelf ?? 0) + dir; drawShelf(); });
       let pages = draw();
       const turn = (dir) => {
         const p = ui.tilePage + dir;
@@ -217,7 +435,7 @@ function viewBooks() {
       };
       pageKeys = turn;
       swipe(tiles, turn);
-      new ResizeObserver(() => { pages = draw(); }).observe(tiles);
+      new ResizeObserver(() => { pages = draw(); drawShelf(); }).observe(tiles);
       const q = el.querySelector('#q');
       q.addEventListener('input', () => {
         ui.query = q.value;
@@ -231,17 +449,17 @@ function viewBooks() {
 function viewEmpty() {
   loadStarters();
   return {
-    // The things to do sit at the foot, by the thumb; a long list of books pages like the rest.
+    // The things to do sit by the thumb; a long list of books pages like the rest.
     html: `<div class="empty"><div class="pages"><div class="content">
       <div class="title a">Empty box.</div>
       <p class="dim a" style="margin:0">Your recipes as cards in books. No ads, no life stories, no scrolling. Just the card.</p>
       <div class="label keep a">Start with a starter book</div>
       <div class="flow a">${(ui.starter || []).map((b) => `<button class="btn small" style="width:auto" data-act="starter" data-file="${b.file}">+ ${esc(b.name)}</button>`).join('') || '<span class="dim">Loading…</span>'}</div>
-      <div class="label keep a">Or</div>
-      <button class="btn a" data-act="tab" data-to="setup">Connect your sync file</button>
+      ${settings.simple ? '' : `<div class="label keep a">Or</div>
+      <button class="btn a" data-act="setup-part" data-part="recipes">Connect your sync file</button>
       <button class="btn a" data-act="new">Write my own</button>
       <button class="btn a" data-act="open-file">Bring in a file</button>
-      <p class="small dim a" style="margin:0">The sync file is the one the phone app uses. A file can be a backup or a shared book.</p>
+      <p class="small dim a" style="margin:0">The sync file is the one the phone app uses. A file can be a backup or a shared book.</p>`}
     </div></div><div class="count"></div></div>`,
     mount(el) { paged(el, 'empty', { bottom: true }); },
   };
@@ -249,6 +467,7 @@ function viewEmpty() {
 
 async function loadStarters() {
   if (ui.starter) return;
+  ui.starter = [];
   try {
     const ids = await (await fetch('books/index.json')).json();
     ui.starter = await Promise.all(ids.map(async (file) => {
@@ -256,7 +475,7 @@ async function loadStarters() {
       return { file, name: book.folders?.[0]?.name || file, about: book.about || '', count: (book.recipes || []).length };
     }));
     render();
-  } catch { ui.starter = []; }
+  } catch { /* offline */ }
 }
 
 async function addStarter(file) {
@@ -271,6 +490,8 @@ async function addStarter(file) {
 
 function cardTabs(r) {
   const tabs = [['ingredients', 'Ingredients'], ['method', 'Method']];
+  // Focus mode keeps only what you cook from.
+  if (settings.focus) return tabs;
   if (r.notes || r.description) tabs.push(['notes', 'Notes']);
   if ((r.nutrition || []).length) tabs.push(['nutrition', 'Nutrition']);
   tabs.push(['info', 'Info']);
@@ -279,12 +500,12 @@ function cardTabs(r) {
 
 function checkList(lines, set, { numbered, text, extra = () => '', kind }) {
   let n = 0;
-  return `<ul class="checks">${lines.map((line, i) => {
+  return `<ul class="checks rx">${lines.map((line, i) => {
     if (line.startsWith('## ')) return `<li class="heading a" style="border:0;cursor:default">${esc(line.slice(3))}</li>`;
     n++;
     const on = set.has(i);
     return `<li class="a ${on ? 'on' : ''}" role="checkbox" aria-checked="${on}" tabindex="0" data-act="tick" data-kind="${kind}" data-i="${i}">
-      <span class="box"></span>${numbered ? `<span class="n">${n}.</span>` : ''}<span class="txt">${esc(text(line))}${extra(line, i)}</span></li>`;
+      <span class="box"></span>${numbered ? `<span class="n">${n}.</span>` : ''}<span class="txt">${on ? esc(text(line)) : rtext(text(line))}${extra(line, i)}</span></li>`;
   }).join('') || '<li class="dim" style="border:0">Nothing here yet.</li>'}</ul>`;
 }
 
@@ -301,9 +522,9 @@ function cardBody(r, s) {
         },
       });
     case 'notes':
-      return [r.description, r.notes].filter(Boolean).map((p) => p.split('\n').filter(Boolean).map((line) => `<p class="a" style="margin:0 0 8px">${esc(line)}</p>`).join('')).join('');
+      return `<div class="rx">${[r.description, r.notes].filter(Boolean).map((p) => p.split('\n').filter(Boolean).map((line) => `<p class="a" style="margin:0 0 8px">${esc(line)}</p>`).join('')).join('')}</div>`;
     case 'nutrition':
-      return `<ul class="checks">${r.nutrition.map((line) => `<li class="a" style="cursor:default"><span class="txt grow">${esc(line.split(':')[0])}</span><b>${esc(line.split(':').slice(1).join(':').trim())}</b></li>`).join('')}</ul>
+      return `<ul class="checks rx">${r.nutrition.map((line) => `<li class="a" style="cursor:default"><span class="txt" style="flex:1">${esc(line.split(':')[0])}</span><b>${esc(line.split(':').slice(1).join(':').trim())}</b></li>`).join('')}</ul>
         <p class="small dim">Per serving${r.id.startsWith('starter-') ? ' · estimated' : ''}.</p>`;
     case 'info': {
       const rows = [
@@ -311,14 +532,30 @@ function cardBody(r, s) {
         ['Source', r.sourceName], ['By', r.author], ['Yield', r.yieldText], ['Cuisine', r.cuisine], ['Category', r.category],
         ['Added', r.created ? new Date(r.created).toLocaleDateString() : ''], ['Changed', r.updated ? new Date(r.updated).toLocaleDateString() : ''],
       ].filter(([, v]) => v);
-      return `${rows.map(([k, v]) => `<div class="a"><span class="label">${k}</span><div>${esc(v)}</div></div>`).join('')}
-        ${r.sourceUrl ? `<div class="a"><span class="label">Web page</span><div><a href="${esc(r.sourceUrl)}" target="_blank" rel="noopener">${esc(r.sourceUrl)}</a></div></div>` : ''}`;
+      return `${rows.map(([k, v]) => `<div class="a"><span class="label">${k}</span><div class="rx">${esc(v)}</div></div>`).join('')}
+        ${r.sourceUrl ? `<div class="a"><span class="label">Web page</span><div data-raw><a href="${esc(r.sourceUrl)}" target="_blank" rel="noopener">${esc(r.sourceUrl)}</a></div></div>` : ''}`;
     }
     default: {
-      const about = r.description ? `<p class="dim a small" style="margin:0 0 8px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden">${esc(r.description)}</p>` : '';
+      const about = r.description && !settings.focus ? `<p class="dim a small rx" style="margin:0 0 8px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden">${esc(r.description)}</p>` : '';
       return about + checkList(r.ingredients, s.checked, { numbered: false, kind: 'ing', text: ing });
     }
   }
+}
+
+const letterOf = (r) => { const c = fold(r.title.trim())[0]?.toUpperCase() || '#'; return c >= 'A' && c <= 'Z' ? c : '#'; };
+
+/** Names around this card and the letters that have cards: a rolodex to jump about the book. */
+function rolodexHtml(cards, i) {
+  if (cards.length < 2 || i < 0) return '';
+  const cols = Math.max(2, Math.min(5, Math.floor((document.getElementById('app')?.clientWidth || 600) / (150 * textWidth()))));
+  const start = Math.max(0, Math.min(i - Math.floor(cols / 2), cards.length - cols));
+  const names = cards.slice(start, start + cols).map((r, k) => `<button class="${start + k === i ? 'on' : ''}" data-act="open-swap" data-id="${esc(r.id)}"><span class="rx nm">${esc(r.title)}</span></button>`).join('');
+  const ordered = box.folders.find((f) => f.id === ui.folder)?.ordered;
+  const letters = [...new Set(cards.map(letterOf))];
+  const current = letterOf(cards[i]);
+  const showLetters = !ordered && letters.length > 1 && settings.textScale < 1.5;
+  return `<div class="rolodex-block"><div class="rolodex">${names}</div>
+    ${showLetters ? `<div class="letters" data-raw>${letters.map((l) => `<button class="${l === current ? 'on' : ''}" data-act="letter" data-l="${l}">${l}</button>`).join('')}</div>` : ''}</div>`;
 }
 
 function viewCard(id) {
@@ -327,6 +564,7 @@ function viewCard(id) {
   const s = session(r);
   const cards = box.inBook(ui.folder).filter((x) => matches(x, ui.query));
   const i = cards.findIndex((x) => x.id === r.id);
+  const kid = settings.simple && settings.simpleFor === 'Kid';
   const times = [r.prepMin && `Prep ${formatMinutes(r.prepMin)}`, r.cookMin && `Cook ${formatMinutes(r.cookMin)}`,
     (r.totalMin || r.prepMin || r.cookMin) && `Total ${formatMinutes(r.totalMin || (r.prepMin || 0) + (r.cookMin || 0))}`].filter(Boolean);
   const serves = r.servings ? `Serves ${formatAmount(r.servings * s.factor)}` : s.factor === 1 ? 'Scale' : `${formatAmount(s.factor)}×`;
@@ -335,30 +573,31 @@ function viewCard(id) {
   const key = `${r.id}:${s.tab}`;
   return {
     html: `
-      <div class="bar">
-        <button class="btn" data-act="back-books">◀ Back</button>
-        <div class="grow bold">${esc(box.folderName(ui.folder))}${i >= 0 ? ` · ${i + 1} / ${cards.length}` : ''}</div>
-        ${i >= 0 ? `<button class="btn" data-act="step-card" data-dir="-1" aria-label="Previous card">◀</button><button class="btn" data-act="step-card" data-dir="1" aria-label="Next card">▶</button>` : ''}
-      </div>
       <article class="card">
-        <h1 class="title">${esc(r.title || 'Untitled recipe')}</h1>
-        ${times.length ? `<div class="times">${times.join('   ·   ')}</div>` : ''}
-        <div class="scale">
+        <h1 class="title rx">${esc(r.title || 'Untitled recipe')}</h1>
+        ${times.length && !settings.focus ? `<div class="times">${times.join('   ·   ')}</div>` : ''}
+        ${kid ? (r.servings ? `<div class="bold">Serves ${r.servings}</div>` : '') : `<div class="scale">
           <button class="serves" data-act="serves">${serves}</button>
-          ${[[0.5, '½×'], [1, '1×'], [2, '2×'], [3, '3×']].map(([f, l]) => `<button class="btn small ${s.factor === f ? 'on' : ''}" data-act="factor" data-f="${f}">${l}</button>`).join('')}
+          ${[[0.5, '½×'], [1, '1×'], [2, '2×'], [3, '3×']].map(([f, l]) => `<button class="btn small ${s.factor === f ? 'on' : ''}" data-act="factor" data-f="${f}" data-raw>${l}</button>`).join('')}
           <button class="btn small on" data-act="units" title="Units: tap to change">${unitLabel[s.units]}</button>
-        </div>
+        </div>`}
         <div class="pages" id="cardpages"><div class="content">${cardBody(r, s)}</div></div>
         <div class="count"></div>
-        <div class="cardtabs" role="tablist">${tabs.map(([k, l]) => `<button role="tab" aria-selected="${s.tab === k}" class="${s.tab === k ? 'on' : ''}" data-act="card-tab" data-tab="${k}">${l}</button>`).join('')}</div>
-        <div class="row-btns">
-          ${r.steps.some((x) => !x.startsWith('## ')) ? '<button class="btn small" data-act="cook">▷ Cook</button>' : ''}
-          <button class="btn small" data-act="edit">Edit</button>
-          <button class="btn small" data-act="to-list">+ List</button>
-          <button class="btn small" data-act="clear-ticks" ${s.checked.size || s.done.size ? '' : 'disabled'}>Clear</button>
-          <button class="btn small" data-act="print">Print</button>
+        <div class="cardtabs" role="tablist">${tabs.map(([k, l]) => `<button role="tab" aria-selected="${s.tab === k}" class="${s.tab === k ? 'on' : ''}" data-act="card-tab" data-tab="${k}" ${icons() ? `aria-label="${l}" data-hint="${l}"` : ''}>${icons() ? glyph[k] : l}</button>`).join('')}</div>
+        <div class="row-btns card-actions">
+          ${r.steps.some((x) => !x.startsWith('## ')) ? btn('cook', 'Cook', { g: 'cook', cls: 'small' }) : ''}
+          ${settings.simple ? '' : btn('edit', 'Edit', { g: 'edit', cls: 'small' })}
+          ${settings.simple && !settings.simpleList ? '' : btn('to-list', '+ List', { g: 'list', cls: 'small' })}
+          ${btn('clear-ticks', 'Clear', { g: 'clear', cls: 'small', attrs: s.checked.size || s.done.size ? '' : 'disabled' })}
+          ${settings.simple ? '' : btn('print', 'Print', { g: 'print', cls: 'small' })}
         </div>
-      </article>`,
+      </article>
+      ${rolodexHtml(cards, i)}
+      <div class="bar">
+        ${btn('back-books', 'Back', { g: 'back' })}
+        <div class="grow bold"><span class="${ui.folder === ALL || ui.folder === null ? '' : 'rx'} nm">${esc(box.folderName(ui.folder))}</span>${i >= 0 ? ` · ${i + 1} / ${cards.length}` : ''}</div>
+        ${i >= 0 ? `${btn('step-card', 'Previous card', { g: 'back', attrs: 'data-dir="-1"', icon: true })}${btn('step-card', 'Next card', { g: 'next', attrs: 'data-dir="1"', icon: true })}` : ''}
+      </div>`,
     mount(el) {
       paged(el, key, {
         fromEnd: ui.fromEnd,
@@ -382,6 +621,7 @@ function stepCard(id, dir) {
 
 // ---------------------------------------------------------------- cook mode
 
+const grownUp = /\b(oven|stove|hob|heat|boil|boiling|simmer|fry|frying|grill|broil|knife|chop|slice|dice|grate|hot|microwave|blender|bake|toast)\w*/i;
 function cookSteps(r) { return r.steps.map((text, index) => ({ text, index })).filter((x) => !x.text.startsWith('## ')); }
 
 function spoken(r, s) {
@@ -407,12 +647,13 @@ function viewCook(id) {
   if (s.step == null) s.step = toGet.length ? -1 : 0;
   s.step = Math.max(-1, Math.min(s.step, steps.length - 1));
   const ing = (line) => convert(scale(line, s.factor), s.units);
+  const kid = settings.simple && settings.simpleFor === 'Kid';
   let body;
   let label;
   let primary;
   if (s.step < 0) {
     label = toGet.length ? `Gather first · ${toGet.length} to get out` : 'Got everything';
-    body = `<ul class="checks gather">${r.ingredients.map((line, i) => (line.startsWith('## ') || !toGet.includes(i) && !s.checked.has(i) ? '' : `
+    body = `<ul class="checks gather rx">${r.ingredients.map((line, i) => (line.startsWith('## ') || (!toGet.includes(i) && !s.checked.has(i)) ? '' : `
       <li class="a ${s.checked.has(i) ? 'on' : ''}" role="checkbox" aria-checked="${s.checked.has(i)}" tabindex="0" data-act="tick" data-kind="ing" data-i="${i}"><span class="box"></span><span class="txt">${esc(ing(line))}</span></li>`)).join('')}</ul>`;
     primary = toGet.some((i) => !s.checked.has(i)) ? 'Start anyway' : 'Start cooking';
   } else {
@@ -422,21 +663,22 @@ function viewCook(id) {
     const done = s.done.has(index);
     const uses = ingredientsInStep(text, r.ingredients);
     const last = s.step === steps.length - 1;
-    body = `<div class="step a ${done ? 'done' : ''}" data-act="tick" data-kind="step" data-i="${index}" role="checkbox" aria-checked="${done}" tabindex="0">${esc(convertTemps(text, s.units))}</div>
-      ${uses.length ? `<ul class="checks a" style="margin-top:14px">${uses.map((i) => `<li class="${s.checked.has(i) ? 'on' : ''}" data-act="tick" data-kind="ing" data-i="${i}"><span class="box"></span><span class="txt">${esc(ing(r.ingredients[i]))}</span></li>`).join('')}</ul>` : ''}
-      ${stepTimers(text).length ? `<div class="row-btns a" style="margin-top:14px">${stepTimers(text).map((m) => `<button class="btn" data-act="timer" data-min="${m}">⏱ ${formatMinutes(m)} timer</button>`).join('')}</div>` : ''}
-      ${last && r.notes ? `<div class="box-panel a" style="margin-top:14px"><span class="label" style="margin:0">Notes</span>${esc(r.notes).replace(/\n/g, '<br>')}</div>` : ''}`;
+    body = `<div class="step a rx ${done ? 'done' : ''}" data-act="tick" data-kind="step" data-i="${index}" role="checkbox" aria-checked="${done}" tabindex="0">${done ? esc(convertTemps(text, s.units)) : rtext(convertTemps(text, s.units))}</div>
+      ${kid && grownUp.test(text) ? '<div class="warn a">⚠ Ask a grown-up to help with this one</div>' : ''}
+      ${uses.length ? `<ul class="checks a rx" style="margin-top:14px">${uses.map((i) => `<li class="${s.checked.has(i) ? 'on' : ''}" data-act="tick" data-kind="ing" data-i="${i}"><span class="box"></span><span class="txt">${esc(ing(r.ingredients[i]))}</span></li>`).join('')}</ul>` : ''}
+      ${stepTimers(text).length ? `<div class="row-btns a" style="margin-top:14px">${stepTimers(text).map((m) => btn('timer', `${formatMinutes(m)} timer`, { g: 'timer', attrs: `data-min="${m}"`, icon: false })).join('')}</div>` : ''}
+      ${last && r.notes ? `<div class="box-panel a" style="margin-top:14px"><span class="label" style="margin:0">Notes</span><span class="rx">${esc(r.notes).replace(/\n/g, '<br>')}</span></div>` : ''}`;
     primary = last ? 'Done' : 'Next ▶';
   }
   return {
     html: `<section class="cook">
-      <div class="bar"><div class="grow title" style="font-size:1.15em">${esc(r.title)}</div>
-        ${'speechSynthesis' in window ? '<button class="btn small" data-act="read">🔊 Read</button>' : ''}
-        <button class="btn small" data-act="close-cook">Close</button></div>
+      <div class="bar cook-head"><div class="grow title rx" style="font-size:1.15em">${esc(r.title)}</div>
+        ${'speechSynthesis' in window ? btn('read', 'Read', { g: 'read', cls: 'small' }) : ''}
+        ${btn('close-cook', 'Close', { g: 'close', cls: 'small', icon: false })}</div>
       <div class="dim bold">${esc(label)}</div>
       <div class="pages"><div class="content">${body}</div></div>
       <div class="count"></div>
-      <div class="row-btns">${s.step > (toGet.length ? -1 : 0) ? '<button class="btn big" data-act="cook-step" data-dir="-1">◀</button>' : ''}
+      <div class="row-btns cook-go">${s.step > (toGet.length ? -1 : 0) ? '<button class="btn big" data-act="cook-step" data-dir="-1" aria-label="Back a step">◀</button>' : ''}
         <button class="btn big primary grow" data-act="cook-step" data-dir="1">${primary}</button></div>
     </section>`,
     mount(el) {
@@ -456,7 +698,7 @@ function cookStep(r, dir) {
   if (dir > 0 && s.step >= 0) s.done.add(steps[s.step].index);
   if (dir > 0 && s.step >= steps.length - 1) {
     s.step = null;
-    speechSynthesis?.cancel();
+    if ('speechSynthesis' in window) speechSynthesis.cancel();
     location.replace(`#/card/${encodeURIComponent(r.id)}`);
     return;
   }
@@ -500,12 +742,9 @@ setInterval(() => {
   if (finished) {
     beep();
     if (settings.readAloud) say('Time’s up.');
-    const el = document.getElementById('timers');
-    if (el) el.innerHTML = timersHtml();
-    return;
   }
   const el = document.getElementById('timers');
-  if (el) el.innerHTML = timersHtml();
+  if (el) { el.innerHTML = timersHtml(); polish(el); }
 }, 1000);
 
 // ---------------------------------------------------------------- the shopping list
@@ -523,8 +762,8 @@ function viewList() {
     html: `
       <div class="dim bold">${items.length ? `${left} to get` : 'The list is empty.'}</div>
       <div class="pages"><div class="content">
-        ${[...groups].map(([from, list]) => `<div class="from a keep">${esc(from)}</div>
-          <ul class="checks list">${list.map((s) => `<li class="a ${s.done ? 'on' : ''}" role="checkbox" aria-checked="${s.done}" tabindex="0" data-act="shop" data-id="${s.id}">
+        ${[...groups].map(([from, list]) => `<div class="from a keep ${from === 'Other' ? '' : 'rx'}">${esc(from)}</div>
+          <ul class="checks list rx">${list.map((s) => `<li class="a ${s.done ? 'on' : ''}" role="checkbox" aria-checked="${s.done}" tabindex="0" data-act="shop" data-id="${s.id}">
             <span class="box"></span><span class="txt" style="flex:1">${esc(s.text)}</span>
             <button class="btn small" data-act="shop-remove" data-id="${s.id}" aria-label="Take ${esc(s.text)} off the list">×</button></li>`).join('')}</ul>`).join('')}
         ${items.length ? '<p class="small dim a">Tap to tick. × takes it off the list.</p>' : '<p class="dim">Add what you need below, or use + List on a card.</p>'}
@@ -540,8 +779,8 @@ function viewList() {
 // ---------------------------------------------------------------- Setup
 
 function toggle(key, label, about, on) {
-  return `<button class="toggle a" role="switch" aria-checked="${on}" data-act="toggle" data-key="${key}" style="width:100%;border:0;background:none;text-align:left;padding:8px 0">
-    <span class="what"><b>${label}</b>${about ? `<span class="about">${about}</span>` : ''}</span><span class="sw ${on ? 'on' : ''}">${on ? 'ON' : 'OFF'}</span></button>`;
+  return `<button class="toggle a" role="switch" aria-checked="${on}" data-act="toggle" data-key="${key}">
+    <span class="what"><b class="nm">${label}</b>${about ? `<span class="about">${about}</span>` : ''}</span><span class="sw ${on ? 'on' : ''}">${on ? 'ON' : 'OFF'}</span></button>`;
 }
 
 function syncHtml() {
@@ -555,7 +794,7 @@ function syncHtml() {
       <p class="small dim a">A link is read only: changes here stay in this browser.</p>`;
   }
   const when = sync.state.last ? new Date(sync.state.last).toLocaleString() : '';
-  return `<div class="a"><span class="label">Syncing with${sync.readOnly ? ' (read only)' : ''}</span><div class="bold" style="word-break:break-all">${esc(sync.name)}</div>
+  return `<div class="a"><span class="label">Syncing with${sync.readOnly ? ' (read only)' : ''}</span><div class="bold" style="word-break:break-all" data-raw>${esc(sync.name)}</div>
       <div class="small dim">${[when && `Last synced ${when}`, sync.state.message].filter(Boolean).map(esc).join(' · ')}</div></div>
     ${sync.needsPermission ? `<button class="btn primary a" data-act="sync-allow">Allow access to ${esc(sync.name)}</button><p class="small dim a">Browsers ask again after a restart: one tap.</p>` : ''}
     <div class="row-btns a"><button class="btn primary grow" data-act="sync-now" ${sync.busy || sync.needsPermission ? 'disabled' : ''}>${sync.busy ? 'Syncing…' : 'Sync now'}</button>
@@ -576,44 +815,114 @@ function conflictHtml() {
       <button class="btn grow" data-act="keep" data-keep="file">Use the file’s</button></div></div>`;
 }
 
-function viewSetup() {
-  loadStarters();
+/** Setup's sections: a row each on Setup's first page, each opening on a page of its own. */
+const setupParts = {
+  reading: 'Reading', access: 'Accessibility', colours: 'Colours', cooking: 'Cooking', who: 'Who it’s for', recipes: 'Your recipes', about: 'About',
+};
+
+function setupSummary(k) {
   const s = settings;
+  switch (k) {
+    case 'reading': return [`${sizes.find(([v]) => Math.abs(v - s.textScale) < 0.01)?.[1] || 'M'} text`, s.typeface, s.roomy && 'Roomy', `${s.spelling} spelling`, { system: 'System', light: 'Light', dark: 'Dark' }[s.theme]].filter(Boolean).join(' · ');
+    case 'access': return [s.big && 'Big buttons', s.highContrast && 'High contrast', s.readAloud && 'Reads steps aloud', s.focus && 'Focus', s.iconMode && 'Icons', s.controlsTop && 'Controls on top'].filter(Boolean).join(' · ') || 'Bigger buttons, reading aloud, focus, icons';
+    case 'colours': return [palettes[s.palette]?.[0], { Full: 'Full', Soft: 'Soft', Ink: 'Ink only' }[s.accent], s.syntax && 'Highlighting'].filter(Boolean).join(' · ');
+    case 'cooking': return [unitLabel[s.units], s.keepAwake ? 'Screen stays on' : 'Screen may sleep'].join(' · ');
+    case 'who': return modes[s.mode][0];
+    case 'recipes': return `${plural(box.recipes.length, 'card')} in ${plural(box.folders.length, 'book')} · ${sync.on ? 'Syncing' : 'Sync, backup, starter books'}`;
+    default: return `Version ${VERSION} · Tip jar`;
+  }
+}
+
+function viewSetup(part) {
+  if (part && setupParts[part]) return viewSetupPart(part);
   return {
-    html: `<div class="pages"><div class="content">
-      <h1 class="title a">Setup</h1>
-      <div class="section a keep">Sync</div>${syncHtml()}
-      <div class="section a keep">Reading</div>
+    html: `<h1 class="title">Setup</h1>
+      <div class="pages"><div class="content">${Object.entries(setupParts).map(([k, label]) => `
+        <button class="setup-row a" data-act="setup-part" data-part="${k}"><span><b class="nm">${label}</b><span class="about">${esc(setupSummary(k))}</span></span><span aria-hidden="true" data-raw>▶</span></button>`).join('')}
+      </div></div><div class="count"></div>`,
+    // The heading out of the way at the top; the rows (what you press) by the thumb.
+    mount(el) { paged(el, 'setup', { bottom: true }); },
+  };
+}
+
+function setupPartBody(part) {
+  const s = settings;
+  const pick = (act, opts, current) => `<div class="row-btns a">${opts.map(([v, l]) => `<button class="btn small grow ${current === v ? 'on' : ''}" data-act="${act}" data-v="${v}">${l}</button>`).join('')}</div>`;
+  switch (part) {
+    case 'reading': return `
       <div class="label keep">Text size</div>
       <div class="row-btns a">${sizes.map(([v, l]) => `<button class="btn small grow ${Math.abs(s.textScale - v) < 0.01 ? 'on' : ''}" data-act="size" data-v="${v}">${l}</button>`).join('')}</div>
-      <div class="label keep">Typeface</div>
-      <div class="flow a">${Object.keys(typefaces).map((t) => `<button class="btn small ${s.typeface === t ? 'on' : ''}" style="font-family:${typefaces[t].css}" data-act="typeface" data-v="${t}">${t}</button>`).join('')}</div>
-      <p class="small dim a" style="margin:4px 0">${esc(typefaces[s.typeface]?.about || '')}</p>
+      <div class="a"><div class="label">Typeface</div>
+        <div class="flow">${Object.keys(typefaces).map((t) => `<button class="btn small ${s.typeface === t ? 'on' : ''}" style="font-family:${typefaces[t].css}" data-act="typeface" data-v="${t}" data-raw>${t}</button>`).join('')}</div>
+        <p class="small dim" style="margin:4px 0">${esc(typefaces[s.typeface]?.about || '')}</p></div>
       ${toggle('roomy', 'Roomier spacing', 'More space between lines and letters. Helps many dyslexic readers.', s.roomy)}
+      <div class="label keep">Spelling</div>
+      <div class="row-btns a" data-raw>${[['US', 'US: color, gray, liter'], ['UK', 'UK: colour, grey, litre']].map(([v, l]) => `<button class="btn small grow ${s.spelling === v ? 'on' : ''}" data-act="spelling" data-v="${v}">${l}</button>`).join('')}</div>
+      <p class="small dim a">For the app’s own words. Recipes stay as their cooks wrote them.</p>
+      <div class="label keep">Casing</div>
+      <div class="row-btns a" data-raw>${Object.entries(casings).map(([v, l]) => `<button class="btn small grow ${s.casing === v ? 'on' : ''}" data-act="casing" data-v="${v}">${l}</button>`).join('')}</div>
+      <p class="small dim a">How names and labels are shown. lowercase changes everything.</p>
       <div class="label keep">Light / dark</div>
-      <div class="row-btns a">${[['system', 'System'], ['light', 'Light'], ['dark', 'Dark']].map(([v, l]) => `<button class="btn small grow ${s.theme === v ? 'on' : ''}" data-act="theme" data-v="${v}">${l}</button>`).join('')}</div>
-      <div class="section a keep">Cooking</div>
+      ${pick('theme', [['system', 'System'], ['light', 'Light'], ['dark', 'Dark']], s.theme)}`;
+    case 'access': return `
+      ${toggle('big', 'Bigger buttons', 'Larger tap targets everywhere, for unsteady or messy hands.', s.big)}
+      ${toggle('highContrast', 'High contrast', 'Pure black (or white) text and darker greys.', s.highContrast)}
+      <div class="a">${toggle('readAloud', 'Read steps aloud', 'Cook mode says each step as it comes up, with your device’s own voice. Read says it again.', s.readAloud)}
+        ${'speechSynthesis' in window ? '<button class="btn" style="width:100%" data-act="test-voice">Test the voice</button>' : ''}</div>
+      ${toggle('focus', 'Focus mode', 'Cards show just ingredients and method.', s.focus)}
+      ${toggle('iconMode', 'Icon mode', 'Icons instead of words. Press and hold one to see its name.', s.iconMode)}
+      ${toggle('controlsTop', 'Controls at the top', 'Tabs and buttons up top instead of under your thumb. This browser only.', s.controlsTop)}
+      <div class="section a keep">Keys and screen readers</div>
+      <p class="dim a">Turn pages with the arrow and page keys, the mouse wheel, or a swipe; Esc goes back. Ticks and switches say whether they’re on.</p>`;
+    case 'colours': {
+      const dark = isDark();
+      return `<p class="dim a">${esc(palettes[s.palette]?.[0])}${palettes[s.palette]?.[2] ? `: ${esc(palettes[s.palette][2].toLowerCase())}` : ''}. Ink is best on e-ink.</p>
+        ${paletteGroups.map((g) => `<div class="a"><div class="label">${g}</div><div class="flow">${Object.entries(palettes).filter(([, d]) => d[1] === g).map(([k, d]) => {
+          const p = palette(k, dark);
+          return `<button class="swatch ${s.palette === k ? 'on' : ''}" data-act="palette" data-v="${k}" style="background:${colourOf(p, 'paper')};color:${colourOf(p, 'ink')}" aria-pressed="${s.palette === k}"><span class="chip" style="background:${colourOf(p, 'accent')};border-color:${colourOf(p, 'ink')}"></span><span class="bold nm">${s.palette === k ? '✓ ' : ''}${d[0]}</span></button>`;
+        }).join('')}</div></div>`).join('')}
+        <div class="label keep">Colour strength</div>
+        ${pick('accent', [['Full', 'Full'], ['Soft', 'Soft'], ['Ink', 'Ink only']], s.accent)}
+        <p class="small dim a">Soft tones the colour down. Ink only keeps a scheme’s paper and type but makes buttons black, for e-ink screens.</p>
+        <div class="a">${toggle('syntax', 'Syntax highlighting', 'Amounts, units, temperatures, times and cooking words, in each scheme’s own colours.', s.syntax)}
+          ${s.syntax ? `<div class="box-panel rx">${highlight('Heat the oven to 400°F. Roast 2 lb potatoes for 35 minutes (turn them once).')}<br>${highlight('1½ cups flour, sifted')}</div>` : ''}</div>`;
+    }
+    case 'cooking': return `
       <div class="label keep">Amounts start in</div>
-      <div class="row-btns a">${['US', 'Metric', 'AsWritten'].map((u) => `<button class="btn small grow ${s.units === u ? 'on' : ''}" data-act="units-default" data-v="${u}">${unitLabel[u]}</button>`).join('')}</div>
+      ${pick('units-default', ['US', 'Metric', 'AsWritten'].map((u) => [u, unitLabel[u]]), s.units)}
+      <p class="small dim a">Cards open in this. Each card’s units button goes round US → Metric → As written.</p>
       ${toggle('amountsInMethod', 'Amounts under each step', 'Each step lists the amounts of what it uses.', s.amountsInMethod)}
-      ${toggle('keepAwake', 'Keep screen on', 'While a card or cook mode is open.', s.keepAwake)}
-      <div class="section a keep">Accessibility</div>
-      ${toggle('big', 'Bigger buttons', 'Larger tap targets everywhere.', s.big)}
-      ${toggle('readAloud', 'Read steps aloud', 'Cook mode says each step as it comes up. Read says it again.', s.readAloud)}
-      ${'speechSynthesis' in window ? '<button class="btn a" data-act="test-voice">Test the voice</button>' : ''}
-      <p class="small dim a">Turn pages with the arrow and page keys, the mouse wheel, or a swipe. Esc goes back.</p>
-      <div class="section a keep">Your recipes</div>
-      <p class="dim a">${plural(box.recipes.length, 'card')} in ${plural(box.folders.length, 'book')} · ${plural(box.shopping.length, 'line')} on the list.</p>
-      <div class="label keep">Starter books</div>
+      ${toggle('keepAwake', 'Keep screen on', 'While a card or cook mode is open.', s.keepAwake)}`;
+    case 'who': return `
+      ${Object.entries(modes).map(([k, [t, a]]) => choice('mode', k, t, a, s.mode === k)).join('')}
+      <div class="section a keep">Simple mode</div>
+      <p class="a">Big, plain cards with nothing to change by accident: no editing and no Setup. A grown-up leaves it by pressing and holding the Books tab for three seconds.</p>
+      ${Object.entries(simpleFor).map(([k, [t, a]]) => choice('simple-for', k, t, a, s.simpleFor === k)).join('')}
+      ${toggle('simpleList', 'Can use the shopping list', '', s.simpleList)}
+      <button class="btn a ${ui.confirm === 'simple' ? 'on' : ''}" style="width:100%" data-act="simple-on">${ui.confirm === 'simple' ? 'Tap again to turn on simple mode' : 'Turn on simple mode'}</button>`;
+    case 'recipes': return `
+      <div class="section a keep">Sync</div>${syncHtml()}
+      <div class="section a keep">Starter books</div>
       <div class="flow a">${(ui.starter || []).map((b) => `<button class="btn small" data-act="starter" data-file="${b.file}">+ ${esc(b.name)}</button>`).join('')}</div>
-      <div class="row-btns a" style="margin-top:8px"><button class="btn grow" data-act="open-file">Bring in a file…</button><button class="btn grow" data-act="save-copy">Save a copy…</button></div>
-      <p class="small dim a">A copy is a Recipe Box file: the phone app opens it too.</p>
-      <div class="section a keep">About</div>
+      <div class="section a keep">Files</div>
+      <div class="row-btns a"><button class="btn grow" data-act="open-file">Bring in a file…</button><button class="btn grow" data-act="save-copy">Save a copy…</button></div>
+      <p class="small dim a">A copy is a Recipe Box file: the phone app opens it too. ${plural(box.recipes.length, 'card')} in ${plural(box.folders.length, 'book')} · ${plural(box.shopping.length, 'line')} on the list.</p>`;
+    default: return `
       <p class="a"><b>Recipe Box</b>. The no-nonsense recipe box. No ads. No accounts. No life stories, pop-ups or autoplay videos. Just the card.</p>
       <div class="a">Recipe Box is free. If it’s earned a place in your kitchen, you can tip the cook.<br><a class="btn" style="margin-top:6px;text-decoration:none" href="${KO_FI}" target="_blank" rel="noopener">Support on Ko-fi</a></div>
-      <p class="small dim a">Version ${VERSION} · <a href="privacy.html" target="_blank">Privacy</a> · <a href="fonts/OFL.txt" target="_blank">Font licences</a> · Everything stays in this browser and your own sync file.</p>
-    </div></div><div class="count"></div>`,
-    mount(el) { paged(el, 'setup'); },
+      <div class="section a keep">Start again</div>
+      <button class="btn a" style="width:100%" data-act="rewelcome">Run first-time setup again</button>
+      <p class="small dim a">Version ${VERSION} · <a href="privacy.html" target="_blank">Privacy</a> · <a href="fonts/OFL.txt" target="_blank">Font licences</a> · <a href="https://github.com/Spagoodlers/recipe-box-web" target="_blank" rel="noopener">Source</a></p>`;
+  }
+}
+
+function viewSetupPart(part) {
+  if (part === 'recipes') loadStarters();
+  return {
+    html: `<div class="pages"><div class="content"><h1 class="title a">${setupParts[part]}</h1><hr class="rule a" style="margin:2px 0 8px">${setupPartBody(part)}</div></div>
+      <div class="count"></div>
+      <div class="bar">${btn('setup-back', 'Back', { g: 'back', icon: false })}<div class="grow bold">Setup</div></div>`,
+    mount(el) { paged(el, `setup:${part}`); },
   };
 }
 
@@ -626,7 +935,7 @@ function viewEdit(id) {
   ui.draft = r;
   const opt = (v, l, sel) => `<option value="${esc(v)}" ${sel ? 'selected' : ''}>${esc(l)}</option>`;
   return {
-    html: `<div class="bar"><div class="grow title">${isNew ? 'New card' : 'Edit card'}</div></div>
+    html: `<div class="title">${isNew ? 'New card' : 'Edit card'}</div>
       <div class="pages"><div class="content"><form class="form" data-form="edit" autocomplete="off">
         <div class="a"><label for="f-title">Name</label><input class="field" id="f-title" name="title" value="${esc(r.title)}" required></div>
         <div class="pair a">
@@ -645,7 +954,6 @@ function viewEdit(id) {
       <div class="row-btns"><button class="btn grow" data-act="edit-cancel">Close</button><button class="btn primary grow" data-act="edit-save">Save &amp; close</button></div>`,
     mount(el) {
       paged(el, `edit:${id}`);
-      // Typing shouldn't turn pages: the fields keep their keys.
       el.querySelector('.pages').style.touchAction = 'pan-y';
       el.querySelector('#f-book').addEventListener('change', (e) => {
         if (e.target.value !== '__new__') return;
@@ -691,12 +999,12 @@ function viewPrint(id) {
   const opt = (key, v, l) => `<button class="btn small ${o[key] === v ? 'on' : ''}" data-act="print-opt" data-key="${key}" data-v="${v}">${l}</button>`;
   const flag = (key, l) => `<button class="btn small ${o[key] ? 'on' : ''}" data-act="print-flag" data-key="${key}">${l}</button>`;
   return {
-    html: `<div class="bar"><div class="grow title">Print · ${esc(r.title)}</div><button class="btn" data-act="print-back">◀ Back</button></div>
+    html: `<div class="title"><span>Print · </span><span class="rx">${esc(r.title)}</span></div>
       <div style="flex:1;min-height:0"><iframe class="preview" title="Print preview" sandbox="allow-same-origin allow-modals" srcdoc="${esc(html)}"></iframe></div>
       <div class="flow">${opt('style', 'sheet', 'Kitchen sheet')}${opt('style', 'large', 'Large print')}${opt('paper', 'letter', 'Letter')}${opt('paper', 'a4', 'A4')}
         ${opt('size', 0, 'S')}${opt('size', 1, 'M')}${opt('size', 2, 'L')}${flag('serif', 'Serif')}</div>
       <div class="flow">${flag('notes', 'Notes')}${flag('info', 'Times & source')}${flag('boxes', 'Boxes to tick')}${flag('stepAmounts', 'Amounts under steps')}${flag('keepTogether', 'Keep things whole across pages')}</div>
-      <div class="row-btns"><button class="btn primary grow" data-act="do-print">Print or save PDF</button><button class="btn" data-act="copy-html">Copy HTML</button></div>`,
+      <div class="row-btns"><button class="btn primary grow" data-act="do-print">Print or save PDF</button><button class="btn" data-act="copy-html">Copy HTML</button>${btn('print-back', 'Back', { g: 'back', icon: false })}</div>`,
   };
 }
 
@@ -706,9 +1014,15 @@ const actions = {
   'notice-ok': () => notice(null),
   tab: (el) => { go(`#/${el.dataset.to}`); },
   book: (el) => { ui.folder = el.dataset.id === '' ? null : el.dataset.id; ui.tilePage = 0; render(); },
+  shelf: (el) => { ui.shelf = (ui.shelf ?? 0) + +el.dataset.dir; render(); },
   'clear-q': () => { ui.query = ''; render(); },
   new: () => go('#/edit/new'),
   open: (el) => go(`#/card/${encodeURIComponent(el.dataset.id)}`),
+  'open-swap': (el) => location.replace(`#/card/${encodeURIComponent(el.dataset.id)}`),
+  letter: (el) => {
+    const r = box.inBook(ui.folder).filter((x) => matches(x, ui.query)).find((x) => letterOf(x) === el.dataset.l);
+    if (r) location.replace(`#/card/${encodeURIComponent(r.id)}`);
+  },
   'back-books': () => go('#/books'),
   'step-card': (el) => { const { id } = route(); stepCard(id, +el.dataset.dir); },
   'card-tab': (el) => { const r = box.find(route().id); session(r).tab = el.dataset.tab; render(); },
@@ -770,12 +1084,32 @@ const actions = {
     try { await navigator.clipboard.writeText(text); notice('Copied the list.'); } catch { notice('The browser didn’t allow copying.'); }
   },
   starter: async (el) => { await addStarter(el.dataset.file); go('#/books'); },
+  'setup-part': (el) => go(`#/setup/${el.dataset.part}`),
+  'setup-back': () => go('#/setup'),
   toggle: (el) => { settings[el.dataset.key] = !settings[el.dataset.key]; saveSettings(); render(); },
   size: (el) => { settings.textScale = +el.dataset.v; saveSettings(); render(); },
   typeface: (el) => { settings.typeface = el.dataset.v; saveSettings(); render(); },
   theme: (el) => { settings.theme = el.dataset.v; saveSettings(); render(); },
+  palette: (el) => { settings.palette = el.dataset.v; saveSettings(); render(); },
+  accent: (el) => { settings.accent = el.dataset.v; saveSettings(); render(); },
+  casing: (el) => { settings.casing = el.dataset.v; saveSettings(); render(); },
+  spelling: (el) => { settings.spelling = el.dataset.v; saveSettings(); render(); },
+  mode: (el) => { settings.mode = el.dataset.v; saveSettings(); render(); },
+  'simple-for': (el) => { settings.simpleFor = el.dataset.v; settings.simpleList = el.dataset.v !== 'Kid'; saveSettings(); render(); },
+  'simple-on': () => {
+    if (ui.confirm !== 'simple') { ui.confirm = 'simple'; render(); return; }
+    ui.confirm = null;
+    setSimple(true);
+    go('#/books');
+  },
   'units-default': (el) => { settings.units = el.dataset.v; saveSettings(); ui.sessions.forEach((s) => { s.units = settings.units; }); render(); },
   'test-voice': () => say('Step 1. Heat the oven to 400 degrees. You’ll need: 2 cups flour.'),
+  rewelcome: () => { settings.welcomed = false; ui.welcome = { page: 0, cook: null, picked: new Set(), who: null }; saveSettings(); go('#/welcome'); },
+  'w-step': (el) => welcomeStep(+el.dataset.dir),
+  'w-finish': () => finishWelcome(),
+  'w-cook': (el) => { ui.welcome.cook = el.dataset.v; ui.welcome.picked = new Set(cookChoices[el.dataset.v][2]); render(); },
+  'w-book': (el) => { const p = ui.welcome.picked; if (p.has(el.dataset.file)) p.delete(el.dataset.file); else p.add(el.dataset.file); render(); },
+  'w-who': (el) => { ui.welcome.who = el.dataset.v; render(); },
   'open-file': () => openFile(),
   'save-copy': () => {
     const blob = new Blob([boxText(box.data)], { type: 'application/json' });
@@ -790,6 +1124,30 @@ const actions = {
   'sync-stop': () => { sync.stop(); notice('Sync off. The file is left as it is.'); },
   keep: (el) => syncCall(() => sync.run(el.dataset.keep), true),
 };
+
+/** Held, not tapped: shows a button's name (icon mode), or leaves simple mode (a grown-up, three seconds). */
+const holds = {
+  'leave-simple': () => {
+    if (confirm('Leave simple mode? Editing and Setup come back.')) { setSimple(false); render(); }
+  },
+};
+let holdTimer = null;
+let held = false;
+document.addEventListener('pointerdown', (e) => {
+  const el = e.target.closest('[data-hold], [data-hint]');
+  held = false;
+  clearTimeout(holdTimer);
+  if (!el) return;
+  const hold = el.dataset.hold;
+  // A hint only when the name isn't already showing.
+  if (!hold && el.querySelector('.word') && el.querySelector('.word').style.display !== 'none') return;
+  holdTimer = setTimeout(() => {
+    held = true;
+    if (hold && holds[hold]) holds[hold]();
+    else if (el.dataset.hint) { ui.hint = el.dataset.hint; render(); setTimeout(() => { ui.hint = null; render(); }, 1600); }
+  }, hold ? 3000 : 550);
+});
+['pointerup', 'pointercancel', 'pointerleave'].forEach((t) => document.addEventListener(t, () => clearTimeout(holdTimer)));
 
 async function syncCall(f, sayUpToDate = false) {
   try {
@@ -821,6 +1179,8 @@ function openFile() {
 }
 
 document.addEventListener('click', (e) => {
+  // A hold that did something isn't also a tap.
+  if (held) { held = false; e.preventDefault(); return; }
   const el = e.target.closest('[data-act]');
   if (!el || el.disabled) return;
   const f = actions[el.dataset.act];
@@ -858,7 +1218,6 @@ box.onChange(() => {
   syncSoon = setTimeout(() => quietSync(), 2500);
 });
 sync.onChange(() => {
-  // Only Setup and the question change with sync; redraw those without losing a page.
   if (route().view === 'setup' || sync.conflict || document.querySelector('[role=alertdialog]')) render();
 });
 
@@ -868,7 +1227,7 @@ async function quietSync() {
   if (said && (said.startsWith('Synced') || said.startsWith('Couldn'))) notice(said);
 }
 document.addEventListener('visibilitychange', () => { if (sync.on) quietSync(); });
-matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applySettings);
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => { applySettings(); render(); });
 window.addEventListener('resize', () => fitTabLabels());
 
 applySettings();
